@@ -849,8 +849,8 @@ th.num {
 }
 .deflist > div {
   display: grid;
-  grid-template-columns: minmax(120px, 200px) 1fr;
-  gap: 16px;
+  grid-template-columns: minmax(104px, 132px) 1fr;
+  gap: 12px;
   padding: 10px 0;
   border-bottom: 1px solid var(--border);
 }
@@ -1724,8 +1724,9 @@ figure.diagram img {
 }
 
 /* Exam numbers worth memorizing — amber "highlighter" chip, distinct from
-   key-term colors and from user note-highlights. */
-.num {
+   key-term colors, from user note-highlights, and from the td.num/th.num
+   numeric-table-column style. */
+.k-num {
   background: var(--num-bg);
   color: var(--num-fg);
   font-weight: 700;

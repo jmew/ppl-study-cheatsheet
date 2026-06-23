@@ -41,7 +41,7 @@
 
           <div class="callout callout--warn">
             <div class="callout__label">Carb ice watch-out</div>
-            <p class="mb-0">Carburetor icing is most likely in <strong>high humidity</strong> with outside temps roughly <span class="num">20–70 °F (−7 to +21 °C)</span> — and can occur even on warm days. First sign with a fixed-pitch prop: a gradual <strong>RPM drop</strong>.</p>
+            <p class="mb-0">Carburetor icing is most likely in <strong>high humidity</strong> with outside temps roughly <span class="k-num">20–70 °F (−7 to +21 °C)</span> — and can occur even on warm days. First sign with a fixed-pitch prop: a gradual <strong>RPM drop</strong>.</p>
           </div>
         </section>
 
@@ -85,7 +85,7 @@
           <p>Three instruments run off air pressure. The <strong>pitot tube</strong> senses <em>ram</em> (dynamic) pressure; the <strong>static port</strong> senses ambient (still) pressure.</p>
 
           <figure class="diagram">
-            <img src="images/pitot-static.png" loading="lazy" width="932" height="652"
+            <img src="images/pitot-static.png" style="max-width:85%;margin-inline:auto" loading="lazy" width="932" height="652"
                  alt="Pitot-static plumbing: the pitot tube feeds only the airspeed indicator; the static port feeds the airspeed indicator, altimeter and vertical speed indicator." />
             <figcaption><span class="pill" style="color:var(--accent);border-color:var(--accent)">Pitot</span> → ASI only. <span class="pill" style="color:var(--tip-border);border-color:var(--tip-border)">Static</span> → ASI + Altimeter + VSI.</figcaption>
           </figure>
@@ -96,6 +96,10 @@
             <li><strong>Pitot tube blocked:</strong> affects <span class="k-amber">only the airspeed indicator</span>.</li>
             <li>At <strong>higher altitude the airspeed indicator reads slower</strong> than your true airspeed — fewer air molecules ram into the tube. (Indicated airspeed &lt; true airspeed up high.)</li>
           </ul>
+          <div class="callout callout--warn">
+            <div class="callout__label">Static + alternate both blocked</div>
+            <p class="mb-0"><strong>Break the glass on the VSI</strong> — cabin air then becomes the static source, restoring the <span class="k-blue">altimeter</span> and <span class="k-blue">airspeed indicator</span>. The VSI is sacrificed, and the altimeter reads slightly high (cabin pressure is a touch lower than outside).</p>
+          </div>
         </section>
 
         <!-- ALTITUDE TYPES -->
@@ -108,7 +112,7 @@
                 <tr><td><strong>Indicated</strong></td><td>What the altimeter shows with the current setting in the Kollsman window.</td></tr>
                 <tr><td><span class="k-green">True</span></td><td>Actual height above <span class="k-green">mean sea level (MSL)</span>.</td></tr>
                 <tr><td><span class="k-amber">Absolute</span></td><td>Height <span class="k-amber">above ground level (AGL)</span>.</td></tr>
-                <tr><td><strong>Pressure</strong></td><td>Altitude shown when the altimeter is set to <span class="num">29.92 "Hg</span> (the standard datum).</td></tr>
+                <tr><td><strong>Pressure</strong></td><td>Altitude shown when the altimeter is set to <span class="k-num">29.92 "Hg</span> (the standard datum).</td></tr>
                 <tr><td><strong>Density</strong></td><td>Pressure altitude <strong>corrected for non-standard temperature</strong> — the altitude the airplane "feels." See <a href="performance.html#density-altitude">Performance</a>.</td></tr>
               </tbody>
             </table>
@@ -116,7 +120,7 @@
 
           <div class="callout callout--note">
             <div class="callout__label">Handy conversion</div>
-            <p class="mb-0"><span class="num">1 inch of Hg ≈ 1,000 ft</span> of altitude. Mnemonic for the basics: <span class="adage">True = MSL, Absolute = AGL.</span></p>
+            <p class="mb-0"><span class="k-num">1 inch of Hg ≈ 1,000 ft</span> of altitude. Mnemonic for the basics: <span class="adage">True = MSL, Absolute = AGL.</span></p>
           </div>
 
           <div class="callout callout--tip">

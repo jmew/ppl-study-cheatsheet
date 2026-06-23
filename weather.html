@@ -91,6 +91,32 @@
               <line x1="280" y1="180" x2="280" y2="76" style="stroke: var(--formula-border)" stroke-width="2.5" />
               <polygon points="280,70 272,88 288,88" style="fill: var(--formula-border)" />
               <text x="280" y="205" text-anchor="middle" style="fill: var(--formula-border)" font-size="11" font-weight="700">rising air</text>
+              <!-- LOW: converging inflow (dotted, pointing toward the centre) -->
+              <g style="stroke: var(--accent)" stroke-width="2.5" stroke-dasharray="3 4" stroke-linecap="round" fill="none">
+                <line x1="160" y1="50" x2="160" y2="88" />
+                <line x1="160" y1="190" x2="160" y2="152" />
+                <line x1="230" y1="120" x2="192" y2="120" />
+                <line x1="90" y1="120" x2="128" y2="120" />
+              </g>
+              <g style="fill: var(--accent)">
+                <polygon points="160,95 153,83 167,83" />
+                <polygon points="160,145 153,157 167,157" />
+                <polygon points="185,120 197,113 197,127" />
+                <polygon points="135,120 123,113 123,127" />
+              </g>
+              <!-- HIGH: diverging outflow (dotted, pointing away from the centre) -->
+              <g style="stroke: var(--warn-border)" stroke-width="2.5" stroke-dasharray="3 4" stroke-linecap="round" fill="none">
+                <line x1="400" y1="86" x2="400" y2="56" />
+                <line x1="400" y1="154" x2="400" y2="184" />
+                <line x1="430" y1="120" x2="464" y2="120" />
+                <line x1="370" y1="120" x2="336" y2="120" />
+              </g>
+              <g style="fill: var(--warn-border)">
+                <polygon points="400,47 393,59 407,59" />
+                <polygon points="400,193 393,181 407,181" />
+                <polygon points="473,120 461,113 461,127" />
+                <polygon points="327,120 339,113 339,127" />
+              </g>
             </svg>
             <figcaption>Northern Hemisphere. With your back to the wind, <span class="k-red">low pressure</span> is on your left, <span class="k-blue">high pressure</span> on your right (Buys Ballot's law).</figcaption>
           </figure>

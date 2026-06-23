@@ -24,8 +24,8 @@
         <section class="section" id="metar-taf">
           <h2>METAR &amp; TAF</h2>
           <div class="grid grid--2">
-            <div class="card"><h3 class="mt-0">METAR</h3><p class="mb-0">A <strong>current observation</strong> of conditions at an airport, issued hourly.</p></div>
-            <div class="card"><h3 class="mt-0">TAF</h3><p class="mb-0">A <strong>forecast</strong> for the area within ~5 SM of an airport. <strong>TAF visibility only goes up to 6 SM</strong> — shown as <code>P6SM</code> ("greater than 6 SM").</p></div>
+            <div class="card"><h3 class="mt-0">METAR</h3><p class="mb-0">A <span class="k-blue">current observation</span> of conditions at an airport, issued hourly.</p></div>
+            <div class="card"><h3 class="mt-0">TAF</h3><p class="mb-0">A <span class="k-green">forecast</span> for the area within ~5 SM of an airport. <strong>TAF visibility only goes up to <span class="num">6 SM</span></strong> — shown as <code>P6SM</code> ("greater than 6 SM").</p></div>
           </div>
 
           <h3>Decoded example</h3>
@@ -41,18 +41,18 @@
           <div class="deflist" style="margin-top:1rem">
             <div><dt class="mono" style="color:var(--accent)">KCGS</dt><dd>Station identifier (College Park).</dd></div>
             <div><dt class="mono" style="color:var(--warn-border)">211853Z</dt><dd>21st of the month, 1853 <strong>Zulu</strong> (UTC).</dd></div>
-            <div><dt class="mono" style="color:var(--tip-border)">22015G25KT</dt><dd>Wind from <strong>220°</strong> at <strong>15 kts, gusting 25</strong>.</dd></div>
-            <div><dt class="mono">10SM</dt><dd>Visibility <strong>10 statute miles</strong>.</dd></div>
+            <div><dt class="mono" style="color:var(--tip-border)">22015G25KT</dt><dd>Wind from <span class="num">220°</span> at <span class="num">15 kts, gusting 25</span>.</dd></div>
+            <div><dt class="mono">10SM</dt><dd>Visibility <span class="num">10 statute miles</span>.</dd></div>
             <div><dt class="mono" style="color:var(--accent)">FEW050 SCT250</dt><dd>Few clouds at 5,000′, scattered at 25,000′ (heights ×100 ft).</dd></div>
-            <div><dt class="mono" style="color:var(--warn-border)">27/14</dt><dd>Temperature <strong>27°C</strong> / dew point <strong>14°C</strong>. (An <code>M</code> means minus: <code>M07</code> = −7°C.)</dd></div>
-            <div><dt class="mono" style="color:var(--tip-border)">A2992</dt><dd>Altimeter setting <strong>29.92</strong> "Hg.</dd></div>
+            <div><dt class="mono" style="color:var(--warn-border)">27/14</dt><dd>Temperature <span class="num">27°C</span> / dew point <span class="num">14°C</span>. (An <code>M</code> means minus: <code>M07</code> = −7°C.)</dd></div>
+            <div><dt class="mono" style="color:var(--tip-border)">A2992</dt><dd>Altimeter setting <span class="num">29.92</span> "Hg.</dd></div>
           </div>
         </section>
 
         <!-- SKY COVER -->
         <section class="section" id="sky-cover">
           <h2>Sky cover</h2>
-          <p>Coverage is reported in <strong>eighths (oktas)</strong> of the sky. A <strong>ceiling</strong> is the lowest <strong>broken</strong> or <strong>overcast</strong> layer.</p>
+          <p>Coverage is reported in <span class="k-blue">eighths (oktas)</span> of the sky. A <span class="k-purple">ceiling</span> is the lowest <strong>broken</strong> or <strong>overcast</strong> layer.</p>
           <figure class="diagram">
             <svg viewBox="0 0 600 175" role="img" aria-labelledby="sky-t">
               <title id="sky-t">Sky cover scale from clear through few, scattered, broken and overcast</title>
@@ -130,16 +130,16 @@
         <!-- WINDS ALOFT -->
         <section class="section" id="winds-aloft">
           <h2>Winds &amp; temps aloft</h2>
-          <p>Each group reads <strong>direction + speed + temperature</strong>. The trick: <strong>if the coded direction is over 36, the wind is over 100 kts</strong> — subtract 50 from the direction and add 100 to the speed.</p>
+          <p>Each group reads <strong>direction + speed + temperature</strong>. The trick: <strong>if the coded direction is over <span class="num">36</span>, the wind is over <span class="num">100 kts</span></strong> — subtract 50 from the direction and add 100 to the speed.</p>
 
           <h3>1 · High winds (direction over 36)</h3>
           <div class="card" style="font-family:var(--mono);font-size:1.7rem;letter-spacing:4px;text-align:center;font-weight:700">
             <span style="color:var(--accent)">73</span><span style="color:var(--tip-border)">06</span><span style="color:var(--warn-border)">49</span>
           </div>
           <div class="deflist" style="margin-top:.8rem">
-            <div><dt class="mono" style="color:var(--accent)">73</dt><dd><strong>Direction.</strong> Over 36 → subtract 50 → from <strong>230°</strong> (this also flags the speed as over 100 kts).</dd></div>
-            <div><dt class="mono" style="color:var(--tip-border)">06</dt><dd><strong>Speed.</strong> Add 100 → <strong>106 kts</strong>.</dd></div>
-            <div><dt class="mono" style="color:var(--warn-border)">49</dt><dd><strong>Temp −49°C.</strong> Above 24,000 ft it's always negative, so the sign is dropped.</dd></div>
+            <div><dt class="mono" style="color:var(--accent)">73</dt><dd><strong>Direction.</strong> Over 36 → subtract 50 → from <span class="num">230°</span> (this also flags the speed as over 100 kts).</dd></div>
+            <div><dt class="mono" style="color:var(--tip-border)">06</dt><dd><strong>Speed.</strong> Add 100 → <span class="num">106 kts</span>.</dd></div>
+            <div><dt class="mono" style="color:var(--warn-border)">49</dt><dd><strong>Temp <span class="num">−49°C</span>.</strong> Above <span class="num">24,000 ft</span> it's always negative, so the sign is dropped.</dd></div>
           </div>
 
           <h3 style="margin-top:1.6rem">2 · Low altitude (signed temperature)</h3>
@@ -147,9 +147,9 @@
             <span style="color:var(--accent)">20</span><span style="color:var(--tip-border)">06</span><span style="color:var(--warn-border)">+03</span>
           </div>
           <div class="deflist" style="margin-top:.8rem">
-            <div><dt class="mono" style="color:var(--accent)">20</dt><dd><strong>Direction.</strong> 36 or less → read straight → from <strong>200°</strong> (no subtract-50).</dd></div>
-            <div><dt class="mono" style="color:var(--tip-border)">06</dt><dd><strong>Speed</strong> <strong>6 kts</strong> (under 100, no +100).</dd></div>
-            <div><dt class="mono" style="color:var(--warn-border)">+03</dt><dd><strong>Temp +3°C.</strong> Below 24,000 ft the temperature carries a <strong>+ or −</strong> sign.</dd></div>
+            <div><dt class="mono" style="color:var(--accent)">20</dt><dd><strong>Direction.</strong> 36 or less → read straight → from <span class="num">200°</span> (no subtract-50).</dd></div>
+            <div><dt class="mono" style="color:var(--tip-border)">06</dt><dd><strong>Speed</strong> <span class="num">6 kts</span> (under 100, no +100).</dd></div>
+            <div><dt class="mono" style="color:var(--warn-border)">+03</dt><dd><strong>Temp <span class="num">+3°C</span>.</strong> Below <span class="num">24,000 ft</span> the temperature carries a <strong>+ or −</strong> sign.</dd></div>
           </div>
         </section>
 
@@ -160,9 +160,9 @@
             <div class="card">
               <h3 class="mt-0">AIRMET <span class="muted">(light aircraft)</span></h3>
               <ul class="mb-0">
-                <li><strong>Sierra</strong> — IFR / mountain obscuration</li>
-                <li><strong>Tango</strong> — Turbulence</li>
-                <li><strong>Zulu</strong> — Icing</li>
+                <li><span class="k-blue">Sierra</span> — IFR / mountain obscuration</li>
+                <li><span class="k-amber">Tango</span> — Turbulence</li>
+                <li><span class="k-purple">Zulu</span> — Icing</li>
               </ul>
             </div>
             <div class="card">
@@ -170,13 +170,13 @@
               <ul class="mb-0">
                 <li>Severe turbulence / icing</li>
                 <li>Widespread dust, sand, volcanic ash</li>
-                <li><strong>Convective SIGMET</strong> = thunderstorms</li>
+                <li><span class="k-red">Convective SIGMET</span> = thunderstorms</li>
               </ul>
             </div>
           </div>
           <div class="callout callout--note">
             <div class="callout__label">Briefings</div>
-            <p class="mb-0">An <strong>outlook briefing</strong> is for a departure <strong>6 or more hours away</strong>. (Standard = full briefing; abbreviated = an update.) <strong>Flight Service is on 122.2.</strong></p>
+            <p class="mb-0">An <span class="k-blue">outlook briefing</span> is for a departure <span class="num">6 or more hours</span> away. (Standard = full briefing; abbreviated = an update.) <strong>Flight Service is on <span class="num">122.2</span>.</strong></p>
           </div>
         </section>
       </div>

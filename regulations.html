@@ -38,7 +38,7 @@
           <div class="grid grid--2">
             <div class="mnemonic">
               <div class="mnemonic__word"><span>ATOMATOFLAMES</span></div>
-              <p class="muted mt-0" style="font-size:.88rem">Required for <strong>day VFR</strong>:</p>
+              <p class="muted mt-0" style="font-size:.88rem">Required for <span class="k-amber">day VFR</span>:</p>
               <ul style="font-size:.92rem">
                 <li><b>A</b> — Airspeed indicator</li>
                 <li><b>T</b> — Tachometer</li>
@@ -57,7 +57,7 @@
             </div>
             <div class="mnemonic">
               <div class="mnemonic__word"><span>FLAPS</span></div>
-              <p class="muted mt-0" style="font-size:.88rem"><strong>Night VFR</strong> adds these:</p>
+              <p class="muted mt-0" style="font-size:.88rem"><span class="k-purple">Night VFR</span> adds these:</p>
               <ul style="font-size:.92rem">
                 <li><b>F</b> — Fuses (spare set) or breakers</li>
                 <li><b>L</b> — Landing light (if for hire)</li>
@@ -89,7 +89,7 @@
             <img src="images/right-of-way.png" alt="Right-of-way rules: approaching head-on, both aircraft turn right; converging traffic gives way to the aircraft on its right; when overtaking, pass and keep to the right." loading="lazy" />
           </figure>
           <ul>
-            <li><span class="k-blue">Least maneuverable has priority</span>: balloons &gt; gliders &gt; airships &gt; airplanes. An aircraft <strong>in distress</strong> always has the right of way, and a <strong>towing</strong> aircraft outranks a plain airplane.</li>
+            <li><span class="k-blue">Least maneuverable has priority</span>: balloons &gt; gliders &gt; airships &gt; airplanes. An aircraft <span class="k-red">in distress</span> always has the right of way, and a <span class="k-amber">towing</span> aircraft outranks a plain airplane.</li>
           </ul>
           <figure class="diagram">
             <img src="images/minimum-safe-altitudes.png" alt="Minimum safe altitudes: congested areas 1,000 ft above the highest obstacle within 2,000 ft; other areas 500 ft AGL; over open water or sparsely populated areas, 500 ft from any person, vessel, or structure." loading="lazy" />
@@ -100,7 +100,7 @@
         <!-- CRUISING ALTITUDES -->
         <section class="section" id="cruising-altitudes">
           <h2>VFR cruising altitudes</h2>
-          <p>Above <strong>3,000′ AGL</strong>, pick your altitude by <span class="k-blue">magnetic course</span>:</p>
+          <p>Above <span class="num">3,000′ AGL</span>, pick your altitude by <span class="k-blue">magnetic course</span>:</p>
           <figure class="diagram">
             <svg viewBox="0 0 560 330" role="img" aria-labelledby="cruise-t">
               <title id="cruise-t">By magnetic course: eastbound 0 to 179 degrees uses odd thousands plus 500; westbound 180 to 359 degrees uses even thousands plus 500</title>
@@ -131,7 +131,7 @@
                 <text x="116" y="196" style="fill: var(--text-muted)" font-size="12">4,500 · 6,500 · 8,500</text>
               </g>
             </svg>
-            <figcaption>Pick by <strong>magnetic course</strong> (above 3,000′ AGL). Mnemonic: <strong>"East is odd; West is even"</strong> — then add 500 ft for VFR.</figcaption>
+            <figcaption>Pick by <strong>magnetic course</strong> (above 3,000′ AGL). Mnemonic: <span class="adage">"East is odd; West is even"</span> — then add 500 ft for VFR.</figcaption>
           </figure>
         </section>
 
@@ -159,17 +159,17 @@
             <table>
               <thead><tr><th>Item</th><th>Interval</th></tr></thead>
               <tbody>
-                <tr><td><strong>Annual inspection</strong> (all aircraft)</td><td>Every 12 calendar months</td></tr>
-                <tr><td><strong>100-hour inspection</strong></td><td>Every 100 hours — required for aircraft <strong>for hire</strong> (commercial / instruction)</td></tr>
-                <tr><td><strong>Transponder</strong></td><td>Every 24 calendar months</td></tr>
-                <tr><td><strong>ELT inspection</strong></td><td>Every 12 calendar months</td></tr>
-                <tr><td><strong>Pitot-static &amp; altimeter</strong> (IFR)</td><td>Every 24 calendar months</td></tr>
+                <tr><td><span class="k-green">Annual inspection</span> (all aircraft)</td><td>Every <span class="num">12 calendar months</span></td></tr>
+                <tr><td><span class="k-blue">100-hour inspection</span></td><td>Every <span class="num">100 hours</span> — required for aircraft <span class="k-amber">for hire</span> (commercial / instruction)</td></tr>
+                <tr><td><strong>Transponder</strong></td><td>Every <span class="num">24 calendar months</span></td></tr>
+                <tr><td><strong>ELT inspection</strong></td><td>Every <span class="num">12 calendar months</span></td></tr>
+                <tr><td><strong>Pitot-static &amp; altimeter</strong> (IFR)</td><td>Every <span class="num">24 calendar months</span></td></tr>
               </tbody>
             </table>
           </div>
           <div class="callout callout--note">
             <div class="callout__label">ELT</div>
-            <p class="mb-0">The ELT transmits on <strong>121.5 and 243.0 MHz</strong>. Replace the battery after <strong>1 cumulative hour</strong> of use or at <strong>50% of useful life</strong>.</p>
+            <p class="mb-0">The ELT transmits on <span class="num">121.5 and 243.0 MHz</span>. Replace the battery after <span class="num">1 cumulative hour</span> of use or at <span class="num">50% of useful life</span>.</p>
           </div>
         </section>
 
@@ -177,23 +177,27 @@
         <section class="section" id="currency-medical">
           <h2>Pilot currency &amp; medical</h2>
           <ul>
-            <li><strong>Flight review</strong> every <strong>24 calendar months</strong>.</li>
-            <li><strong>To carry passengers:</strong> 3 takeoffs &amp; landings in the previous <strong>90 days</strong> (same category/class). At <strong>night</strong>, those 3 must be to a <strong>full stop</strong>.</li>
-            <li><strong>Type rating</strong> required for aircraft over <strong>12,500 lbs</strong> (and turbojets).</li>
+            <li><strong>Flight review</strong> every <span class="num">24 calendar months</span>.</li>
+            <li><strong>To carry passengers:</strong> 3 takeoffs &amp; landings in the previous <span class="num">90 days</span> (same category/class). At <strong>night</strong>, those 3 must be to a <span class="k-amber">full stop</span>.</li>
+            <li><strong>Type rating</strong> required for aircraft over <span class="num">12,500 lbs</span> (and turbojets).</li>
           </ul>
           <div class="table-wrap">
             <table>
               <thead><tr><th>Medical</th><th>Validity</th></tr></thead>
               <tbody>
-                <tr><td>3rd class — <strong>under 40</strong></td><td>60 calendar months (5 years)</td></tr>
-                <tr><td>3rd class — <strong>40 and over</strong></td><td>24 calendar months (2 years)</td></tr>
-                <tr><td><strong>BasicMed</strong></td><td>Physician exam every 48 months; online course every 24 months</td></tr>
+                <tr><td>3rd class — <span class="k-green">under 40</span></td><td><span class="num">60 calendar months</span> (5 years)</td></tr>
+                <tr><td>3rd class — <span class="k-amber">40 and over</span></td><td><span class="num">24 calendar months</span> (2 years)</td></tr>
+                <tr><td><span class="k-purple">BasicMed</span></td><td>Physician exam every <span class="num">48 months</span>; online course every <span class="num">24 months</span></td></tr>
               </tbody>
             </table>
           </div>
           <div class="callout callout--note">
-            <div class="callout__label">BasicMed &amp; night</div>
-            <p class="mb-0">Keep a <strong>copy of the BasicMed certificate in your logbook</strong>. "Night" for currency is <strong>1 hour after sunset to 1 hour before sunrise</strong>; position lights are required <strong>sunset to sunrise</strong>.</p>
+            <div class="callout__label">BasicMed</div>
+            <p class="mb-0">Keep a <strong>copy of the BasicMed certificate in your logbook</strong>.</p>
+          </div>
+          <div class="callout callout--note">
+            <div class="callout__label">Night</div>
+            <p class="mb-0">"Night" for currency is <span class="num">1 hour after sunset</span> to <span class="num">1 hour before sunrise</span>; position lights are required <strong>sunset to sunrise</strong>.</p>
           </div>
         </section>
 
@@ -201,9 +205,9 @@
         <section class="section" id="alcohol-aerobatic">
           <h2>Alcohol &amp; aerobatic limits</h2>
           <ul>
-            <li><strong>Alcohol:</strong> no flying within <span class="k-amber">8 hours</span> of drinking ("bottle to throttle") or with a BAC of <span class="k-amber">0.04 or higher</span>.</li>
-            <li><strong>Parachutes:</strong> required when intentionally exceeding <strong>30° of pitch or 60° of bank</strong> with passengers aboard.</li>
-            <li><strong>NTSB:</strong> notify immediately of an accident; file the <strong>written report within 10 days</strong>.</li>
+            <li><strong>Alcohol:</strong> no flying within <span class="k-amber">8 hours</span> of drinking (<span class="adage">"bottle to throttle"</span>) or with a BAC of <span class="k-amber">0.04 or higher</span>.</li>
+            <li><strong>Parachutes:</strong> required when intentionally exceeding <span class="num">30° of pitch</span> or <span class="num">60° of bank</span> with passengers aboard.</li>
+            <li><strong>NTSB:</strong> notify immediately of an accident; file the written report within <span class="num">10 days</span>.</li>
           </ul>
         </section>
 
@@ -218,14 +222,14 @@
             <table>
               <thead><tr><th></th><th>Category</th><th>Class</th></tr></thead>
               <tbody>
-                <tr><td><strong>Airmen</strong> (pilot cert)</td><td>Airplane, rotorcraft, glider, lighter-than-air…</td><td>Single-engine land, multi-engine land, single-engine sea…</td></tr>
-                <tr><td><strong>Aircraft</strong> (airworthiness)</td><td>Normal, utility, acrobatic, transport…</td><td>Airplane, rotorcraft, glider, balloon…</td></tr>
+                <tr><td><span class="k-blue">Airmen</span> (pilot cert)</td><td>Airplane, rotorcraft, glider, lighter-than-air…</td><td>Single-engine land, multi-engine land, single-engine sea…</td></tr>
+                <tr><td><span class="k-green">Aircraft</span> (airworthiness)</td><td>Normal, utility, acrobatic, transport…</td><td>Airplane, rotorcraft, glider, balloon…</td></tr>
               </tbody>
             </table>
           </div>
           <div class="callout callout--note">
             <div class="callout__label">Also good to know</div>
-            <p class="mb-0"><strong>Advisory Circulars (ACs) are non-binding</strong> guidance (not regulatory).</p>
+            <p class="mb-0"><strong>Advisory Circulars (ACs)</strong> are <span class="k-red">non-binding</span> guidance (not regulatory).</p>
           </div>
         </section>
       </div>

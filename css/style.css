@@ -37,6 +37,11 @@
   --hl-bg-active: #ffe261;
   --hl-border: #e0a106;
 
+  /* Exam emphasis: numbers to memorize (amber chip) + memory adages (teal) */
+  --num-bg: #ffe2a6;
+  --num-fg: #4a3700;
+  --adage: #0e7c86;
+
   /* Chart symbology accents (sectional-style) */
   --chart-blue: #2f6fed;
   --chart-magenta: #c0367a;
@@ -84,6 +89,10 @@
   --hl-bg: #54470f;
   --hl-bg-active: #6f5c14;
   --hl-border: #e0a106;
+
+  --num-bg: rgba(224, 161, 6, 0.22);
+  --num-fg: #f2d27c;
+  --adage: #62d0d8;
 
   --chart-blue: #5b9bff;
   --chart-magenta: #e06aa3;
@@ -1712,6 +1721,25 @@ figure.diagram img {
 }
 [data-theme="dark"] .k-red {
   color: #ff6b6b;
+}
+
+/* Exam numbers worth memorizing — amber "highlighter" chip, distinct from
+   key-term colors and from user note-highlights. */
+.num {
+  background: var(--num-bg);
+  color: var(--num-fg);
+  font-weight: 700;
+  padding: 0 0.32em;
+  border-radius: 4px;
+}
+
+/* Memory adages / sayings (e.g. "High to low, look out below") — serif italic
+   in a distinct hue so they read as a mnemonic and stick out for recall. */
+.adage {
+  font-family: Georgia, Cambria, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--adage);
 }
 
 /* stacked fraction (e.g. 2 over 8) for the sky-cover oktas graphic */

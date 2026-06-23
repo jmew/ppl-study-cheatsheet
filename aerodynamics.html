@@ -36,13 +36,13 @@
           <h2>The four forces</h2>
           <p>
             In steady, unaccelerated flight the four forces are in balance:
-            <strong>lift = weight</strong> and <strong>thrust = drag</strong>.
+            <span class="k-blue">lift = weight</span> and <span class="k-green">thrust = drag</span>.
             When any pair is unequal, the airplane accelerates in that direction
             (climbs, descends, speeds up or slows down).
           </p>
 
           <figure class="diagram">
-            <img src="images/four-forces.png" alt="The four forces on an airplane: lift acts upward, weight downward, thrust forward, and drag aft." loading="lazy" />
+            <img src="images/four-forces.png" style="max-width:80%;margin-inline:auto" alt="The four forces on an airplane: lift acts upward, weight downward, thrust forward, and drag aft." loading="lazy" />
           </figure>
         </section>
 
@@ -51,16 +51,16 @@
           <h2>Drag: parasite vs. induced</h2>
           <div class="grid grid--2">
             <div class="card">
-              <h3 class="mt-0">Parasite drag</h3>
+              <h3 class="mt-0"><span class="k-amber">Parasite drag</span></h3>
               <p class="mb-0">
                 Everything sticking out of the airplane hitting the air —
                 antennas, gear, rivets, the airframe itself. It
                 <strong>increases with airspeed</strong> (with the square of
-                speed, in fact — <em>"air is soup at higher speeds"</em>).
+                speed, in fact — <span class="adage">"air is soup at higher speeds"</span>).
               </p>
             </div>
             <div class="card">
-              <h3 class="mt-0">Induced drag</h3>
+              <h3 class="mt-0"><span class="k-blue">Induced drag</span></h3>
               <p class="mb-0">
                 The unavoidable by-product of making lift — the rearward,
                 horizontal component of the lift vector, plus
@@ -69,11 +69,6 @@
               </p>
             </div>
           </div>
-
-          <figure class="diagram">
-            <img src="images/wingtip-vortices.png" alt="Front view of an airplane: higher-pressure air under the wing curls up and around the wingtip toward the lower-pressure air on top, forming a wingtip vortex." loading="lazy" />
-            <figcaption>High pressure under the wing spills around the tip into the low-pressure air above — a <span class="k-amber">wingtip vortex</span>, the source of induced drag.</figcaption>
-          </figure>
 
           <figure class="diagram">
             <svg viewBox="0 0 560 300" role="img" aria-labelledby="airfoil-t">
@@ -152,24 +147,24 @@
           </p>
           <ol>
             <li>
-              <strong>P-factor</strong> — when climbing (high AoA), the
+              <span class="k-blue">P-factor</span> — when climbing (high AoA), the
               descending blade on the <em>right</em> takes a bigger bite of air
               and makes more thrust than the left blade → nose yaws left.
             </li>
             <li>
-              <strong>Spiraling slipstream</strong> — the propwash corkscrews
+              <span class="k-green">Spiraling slipstream</span> — the propwash corkscrews
               clockwise around the fuselage and strikes the
               <strong>left</strong> side of the vertical tail/rudder → yaws left.
             </li>
             <li>
-              <strong>Torque (Newton's 3rd law)</strong> — the prop spins right,
+              <span class="k-amber">Torque (Newton's 3rd law)</span> — the prop spins right,
               so the airframe is pushed to roll <strong>left</strong>.
             </li>
           </ol>
           <div class="callout callout--note">
             <div class="callout__label">Note</div>
             <p class="mb-0">
-              A fourth cause is often tested: <strong>gyroscopic precession</strong>
+              A fourth cause is often tested: <span class="k-purple">gyroscopic precession</span>
               (felt mainly in tailwheel airplanes when the tail comes up).
               <strong>Torque and P-factor are strongest at low airspeed, high
               power, and high angle of attack</strong> — i.e. the climb. That's
@@ -220,42 +215,9 @@
           </div>
 
           <figure class="diagram">
-            <svg viewBox="0 0 600 200" role="img" aria-labelledby="axes-t">
-              <title id="axes-t">The three axes of rotation: roll about the longitudinal axis, pitch about the lateral axis, yaw about the vertical axis</title>
-              <!-- ROLL: front view -->
-              <g style="stroke: var(--text-muted); fill: var(--text-muted)">
-                <line x1="54" y1="80" x2="146" y2="80" stroke-width="7" stroke-linecap="round" />
-                <circle cx="100" cy="80" r="10" stroke="none" />
-                <line x1="100" y1="71" x2="100" y2="56" stroke-width="5" />
-              </g>
-              <path d="M152 80 A52 52 0 1 1 100 28" fill="none" style="stroke: var(--accent)" stroke-width="3" />
-              <polygon points="94,28 108,22 108,34" style="fill: var(--accent)" />
-              <text x="100" y="160" text-anchor="middle" style="fill: var(--text)" font-size="15" font-weight="800">ROLL</text>
-              <text x="100" y="180" text-anchor="middle" style="fill: var(--text-muted)" font-size="12">Ailerons · longitudinal</text>
-
-              <!-- PITCH: side view -->
-              <g style="stroke: var(--text-muted); fill: var(--text-muted)">
-                <ellipse cx="300" cy="80" rx="40" ry="11" stroke="none" />
-                <polygon points="340,80 356,74 340,68" stroke="none" />
-                <polygon points="268,80 268,60 282,80" stroke="none" />
-              </g>
-              <path d="M352 80 A52 52 0 1 1 300 28" fill="none" style="stroke: var(--accent)" stroke-width="3" />
-              <polygon points="294,28 308,22 308,34" style="fill: var(--accent)" />
-              <text x="300" y="160" text-anchor="middle" style="fill: var(--text)" font-size="15" font-weight="800">PITCH</text>
-              <text x="300" y="180" text-anchor="middle" style="fill: var(--text-muted)" font-size="12">Elevator · lateral</text>
-
-              <!-- YAW: top view -->
-              <g style="stroke: var(--text-muted); fill: var(--text-muted)">
-                <ellipse cx="500" cy="80" rx="8" ry="38" stroke="none" />
-                <line x1="460" y1="76" x2="540" y2="76" stroke-width="7" stroke-linecap="round" />
-                <line x1="484" y1="110" x2="516" y2="110" stroke-width="6" stroke-linecap="round" />
-              </g>
-              <path d="M556 80 A56 56 0 1 1 500 24" fill="none" style="stroke: var(--accent)" stroke-width="3" />
-              <polygon points="494,24 508,18 508,30" style="fill: var(--accent)" />
-              <text x="500" y="160" text-anchor="middle" style="fill: var(--text)" font-size="15" font-weight="800">YAW</text>
-              <text x="500" y="180" text-anchor="middle" style="fill: var(--text-muted)" font-size="12">Rudder · vertical</text>
-            </svg>
-            <figcaption>Each view looks straight down its axis of rotation (front = roll, side = pitch, top = yaw). <strong>Longitudinal = length</strong> (nose to tail).</figcaption>
+            <img src="images/axes-of-rotation.png" style="max-width:600px;margin-inline:auto" loading="lazy" width="1200" height="916"
+                 alt="The three axes of rotation through an airplane's center of gravity: the longitudinal axis (roll, nose to tail), the lateral axis (pitch, wingtip to wingtip), and the vertical axis (yaw)." />
+            <figcaption><strong>Longitudinal = length</strong> (nose to tail).</figcaption>
           </figure>
         </section>
 
@@ -269,8 +231,8 @@
               <span class="muted">(Static stability = initial tendency; dynamic stability = what happens over time.)</span>
             </li>
             <li>
-              The <strong>center of gravity (CG) should be ahead of the center of
-              pressure (CP)</strong> — and ahead of the main wheels. A
+              The <span class="k-blue">center of gravity (CG)</span> should be ahead of the <span class="k-green">center of
+              pressure (CP)</span> — and ahead of the main wheels. A
               forward CG is more stable (the tail provides a downward balancing
               force).
             </li>
@@ -290,7 +252,7 @@
           <h2>Stalls &amp; spins</h2>
           <ul>
             <li>
-              A <strong>spin</strong> happens when <strong>both wings are
+              A <span class="k-red">spin</span> happens when <strong>both wings are
               stalled but one is more stalled than the other</strong> — the
               less-stalled wing keeps flying, so the airplane autorotates.
             </li>
@@ -341,27 +303,13 @@
           <p>
             Near the ground, the surface interrupts the wingtip vortices and
             downwash, <strong>reducing induced drag</strong>. It's most
-            prominent within <strong>one wingspan's height above the runway</strong>.
+            prominent within <span class="num">one wingspan</span>'s height above the runway.
             The airplane feels like it "floats." Beware of trying to climb out of
             ground effect before reaching a safe airspeed.
           </p>
           <figure class="diagram">
-            <svg viewBox="0 0 560 210" role="img" aria-labelledby="ge-t">
-              <title id="ge-t">In ground effect wingtip vortices are smaller, reducing induced drag</title>
-              <!-- ground -->
-              <line x1="30" y1="175" x2="530" y2="175" style="stroke: var(--text)" stroke-width="3" />
-              <g style="fill: var(--text-muted)" opacity="0.4" font-size="0"><rect x="30" y="175" width="500" height="10"/></g>
-              <!-- in ground effect plane -->
-              <ellipse cx="160" cy="150" rx="55" ry="9" style="fill: var(--text-muted)" opacity="0.6" />
-              <path d="M120 150 a10 10 0 1 1 -0.1 0" fill="none" style="stroke: var(--accent)" stroke-width="2" />
-              <path d="M200 150 a10 10 0 1 0 0.1 0" fill="none" style="stroke: var(--accent)" stroke-width="2" />
-              <text x="105" y="200" style="fill: var(--accent)" font-size="12">small vortices (in ground effect)</text>
-              <!-- out of ground effect plane -->
-              <ellipse cx="410" cy="70" rx="55" ry="9" style="fill: var(--text-muted)" opacity="0.6" />
-              <path d="M360 70 a22 22 0 1 1 -0.1 0" fill="none" style="stroke: var(--warn-border)" stroke-width="2" />
-              <path d="M460 70 a22 22 0 1 0 0.1 0" fill="none" style="stroke: var(--warn-border)" stroke-width="2" />
-              <text x="350" y="120" style="fill: var(--warn-border)" font-size="12">large vortices (free air)</text>
-            </svg>
+            <img src="images/wingtip-vortices.png" alt="Front view of an airplane: higher-pressure air under the wing curls up and around the wingtip toward the lower-pressure air on top, forming a wingtip vortex." loading="lazy" />
+            <figcaption>A <span class="k-amber">wingtip vortex</span> — the source of induced drag. Near the ground the surface squashes these vortices, so the airplane "floats."</figcaption>
           </figure>
         </section>
       </div>

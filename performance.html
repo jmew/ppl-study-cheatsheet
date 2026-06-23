@@ -23,16 +23,11 @@
         <!-- V-SPEEDS -->
         <section class="section" id="v-speeds">
           <h2>V-speeds</h2>
-          <p><strong>V<sub>A</sub> (maneuvering speed) depends on weight:</strong> <strong>heavier → higher V<sub>A</sub></strong>, lighter → lower V<sub>A</sub>. (A heavier airplane absorbs gusts before reaching a damaging load factor.)</p>
+          <p><strong>V<sub>A</sub> (maneuvering speed) depends on weight:</strong> <span class="k-blue">heavier → higher V<sub>A</sub></span>, <span class="k-amber">lighter → lower V<sub>A</sub></span>. (A heavier airplane absorbs gusts before reaching a damaging load factor.)</p>
           <div class="table-wrap">
             <table>
               <thead><tr><th>Speed</th><th>Meaning</th><th>ASI marking</th></tr></thead>
               <tbody>
-                <tr><td><strong>V<sub>SO</sub></strong></td><td>Stall, landing configuration</td><td>Bottom of white arc</td></tr>
-                <tr><td><strong>V<sub>S1</sub></strong></td><td>Stall, clean configuration</td><td>Bottom of green arc</td></tr>
-                <tr><td><strong>V<sub>FE</sub></strong></td><td>Max flaps-extended speed</td><td>Top of white arc</td></tr>
-                <tr><td><strong>V<sub>NO</sub></strong></td><td>Max structural cruising</td><td>Top of green / start of yellow</td></tr>
-                <tr><td><strong>V<sub>NE</sub></strong></td><td>Never exceed</td><td>Red line</td></tr>
                 <tr><td><strong>V<sub>A</sub></strong></td><td>Maneuvering (varies with weight)</td><td>Not marked</td></tr>
                 <tr><td><strong>V<sub>X</sub> / V<sub>Y</sub></strong></td><td>Best <em>angle</em> / best <em>rate</em> of climb</td><td>Not marked</td></tr>
               </tbody>
@@ -48,16 +43,13 @@
         <!-- FACTORS -->
         <section class="section" id="factors">
           <h2>The four factors affecting performance</h2>
-          <p>All four work by changing <strong>air density</strong>. Thinner air = worse performance.</p>
-          <div class="grid grid--2">
-            <div class="card"><h3 class="mt-0">1 · Altitude</h3><p class="mb-0">Lower = better, higher = worse.</p></div>
-            <div class="card"><h3 class="mt-0">2 · Temperature</h3><p class="mb-0">Lower = better, higher = worse <span class="muted">(heat spreads the air out).</span></p></div>
-            <div class="card"><h3 class="mt-0">3 · Pressure</h3><p class="mb-0"><strong>Higher = better</strong>, lower = worse.</p></div>
-            <div class="card"><h3 class="mt-0">4 · Humidity</h3><p class="mb-0">Lower = better, higher = worse <span class="muted">(water molecules are lighter → less dense air).</span></p></div>
-          </div>
+          <figure class="diagram">
+            <img src="images/four-factors.jpg" loading="lazy" width="1400" height="685"
+                 alt="The four key performance factors, all driven by air density (thinner air = worse performance): higher altitude, higher temperature, lower pressure, and higher humidity each worsen performance; lower altitude, lower temperature, higher pressure, and lower humidity each improve it." />
+          </figure>
           <div class="callout callout--note">
             <div class="callout__label">Pressure systems</div>
-            <p class="mb-0"><strong>High pressure = cool, sinking air</strong> (better performance). <strong>Low pressure = warm, rising air.</strong> Performance is worse on low-pressure and high-humidity days.</p>
+            <p class="mb-0"><span class="k-blue">High pressure</span> = cool, sinking air (better performance). <span class="k-amber">Low pressure</span> = warm, rising air. Performance is worse on low-pressure and high-humidity days.</p>
           </div>
         </section>
 
@@ -88,14 +80,14 @@
             <div class="callout__label">High density altitude = worse performance</div>
             <ul class="mb-0">
               <li><strong>Longer takeoff roll</strong> and a <strong>slower, shallower climb angle</strong>.</li>
-              <li>You lift off at the <strong>same indicated airspeed</strong> but a <strong>higher true airspeed</strong>, while the engine and prop make <strong>less thrust</strong> in thin air.</li>
+              <li>You lift off at the same <span class="k-green">indicated airspeed</span> but a higher <span class="k-amber">true airspeed</span>, while the engine and prop make <strong>less thrust</strong> in thin air.</li>
             </ul>
           </div>
 
           <div class="callout callout--note">
             <div class="callout__label">Rules of thumb</div>
             <ul class="mb-0">
-              <li><strong>~15 °F above standard ≈ +1,000 ft</strong> density altitude (≈ 120 ft per °C).</li>
+              <li><span class="num">~15 °F above standard ≈ +1,000 ft</span> density altitude (≈ <span class="num">120 ft per °C</span>).</li>
               <li><strong>True airspeed increases when it's hot</strong> — thinner air means a lower <em>indicated</em> airspeed, so you fly faster (higher TAS) for the same IAS. (Same reason the ASI reads slow up high — see <a href="systems.html#pitot-static">Systems</a>.)</li>
             </ul>
           </div>
@@ -121,37 +113,11 @@
         <!-- WEIGHT & BALANCE -->
         <section class="section" id="weight-balance">
           <h2>Weight &amp; balance</h2>
-          <p>The <strong>center of gravity (CG) should be ahead of the center of pressure (CP)</strong> and ahead of the main wheels. A forward CG is more stable; an aft CG is less stable (and can make recovery from stalls/spins difficult).</p>
+          <p>The <span class="k-blue">center of gravity (CG)</span> should be ahead of the <span class="k-green">center of pressure (CP)</span> and ahead of the main wheels. A forward CG is more stable; an aft CG is less stable (and can make recovery from stalls/spins difficult).</p>
 
           <figure class="diagram">
-            <svg viewBox="0 0 560 250" role="img" aria-labelledby="wb-t">
-              <title id="wb-t">Center of gravity sits ahead of the center of pressure and the main wheels</title>
-              <!-- reference datum -->
-              <line x1="80" y1="40" x2="80" y2="210" style="stroke: var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 4" />
-              <text x="60" y="30" style="fill: var(--text-muted)" font-size="11">datum</text>
-              <!-- airplane (nose / spinner at the datum on the left) -->
-              <g style="fill: var(--text-muted)" opacity="0.55">
-                <rect x="102" y="112" width="330" height="24" rx="12" />
-                <polygon points="80,124 104,112 104,136" />
-                <polygon points="122,112 146,96 184,112" />
-                <polygon points="402,112 440,84 446,112" />
-                <rect x="296" y="135" width="8" height="14" />
-              </g>
-              <!-- main wheels -->
-              <circle cx="300" cy="158" r="13" style="fill:none;stroke:var(--text)" stroke-width="3" />
-              <text x="300" y="195" text-anchor="middle" style="fill: var(--text-muted)" font-size="11">main wheels</text>
-              <!-- CG (weight down) -->
-              <line x1="250" y1="123" x2="250" y2="190" style="stroke: var(--text)" stroke-width="3" />
-              <polygon points="250,200 244,186 256,186" style="fill: var(--text)" />
-              <text x="250" y="218" text-anchor="middle" style="fill: var(--text)" font-size="12" font-weight="700">CG (weight)</text>
-              <!-- CP (lift up) -->
-              <line x1="330" y1="123" x2="330" y2="55" style="stroke: var(--accent)" stroke-width="3" />
-              <polygon points="330,45 324,59 336,59" style="fill: var(--accent)" />
-              <text x="330" y="40" text-anchor="middle" style="fill: var(--accent)" font-size="12" font-weight="700">CP (lift)</text>
-              <!-- arm bracket -->
-              <line x1="80" y1="235" x2="250" y2="235" style="stroke: var(--text-muted)" stroke-width="1.2" />
-              <text x="150" y="248" text-anchor="middle" style="fill: var(--text-muted)" font-size="11">arm</text>
-            </svg>
+            <img src="images/weight-balance.png" loading="lazy" width="1200" height="745"
+                 alt="Side view of a light airplane showing the center of lift acting upward near the wing, the weight acting downward at the center of gravity ahead of it, and a downward tail force that balances the nose-down tendency." />
           </figure>
 
           <div class="callout callout--formula">
@@ -160,7 +126,7 @@
           </div>
           <div class="callout callout--note">
             <div class="callout__label">Fuel weight</div>
-            <p class="mb-0"><strong>1 gal = 6 lbs.</strong></p>
+            <p class="mb-0"><span class="num">1 gal = 6 lbs</span>.</p>
           </div>
         </section>
       </div>

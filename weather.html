@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather — PPL Study Guide</title>
+    <meta name="description" content="PPL weather: air stability and lapse rate, high/low pressure systems, thunderstorm ingredients and stages, fronts, fog types, temperature inversions and hazards." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
+    <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
+  </head>
+  <body>
+    <main id="main" class="layout">
+      <aside><nav class="toc" data-toc aria-label="On this page"></nav></aside>
+      <div class="content">
+        <div class="page-head">
+          <p class="breadcrumbs"><a href="index.html">Home</a> › Weather</p>
+          <span class="eyebrow">Lectures 7 &amp; 8 · Aviation Weather</span>
+          <h1>Weather</h1>
+          <p class="lead">Why air rises, where storms come from, what fronts and fog do, and the hazards that matter most to a VFR pilot.</p>
+        </div>
+
+        <!-- STABILITY -->
+        <section class="section" id="stability">
+          <h2>Stability &amp; lapse rate</h2>
+          <p><span class="k-blue">Lapse rate</span> = how rapidly air cools as it rises (standard ≈ <strong>2 °C per 1,000 ft</strong>). A steep lapse rate makes air <span class="k-amber">unstable</span>. "<span class="k-blue">Stable</span>" means a lack of vertical movement.</p>
+          <div class="grid grid--2">
+            <div class="card">
+              <h3 class="mt-0">Stable air → stratus</h3>
+              <ul class="mb-0">
+                <li><strong>Stratiform</strong> (layered) clouds</li>
+                <li>Poor visibility</li>
+                <li>Steady, continuous precipitation</li>
+                <li>Smooth air</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3 class="mt-0">Unstable air → cumulus</h3>
+              <ul class="mb-0">
+                <li><strong>Cumuliform</strong> (puffy) clouds</li>
+                <li>Good visibility</li>
+                <li>Showery precipitation</li>
+                <li>Turbulence</li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid grid--2">
+            <figure class="diagram" style="margin:0">
+              <img src="images/cloud-stratiform.png" alt="Stratiform clouds form in stable air: a rising thermal cools to the surrounding air temperature and stops climbing, so the cloud spreads out flat and layered." loading="lazy" />
+              <figcaption><span class="k-blue">Stable</span> air → flat, layered <strong>stratiform</strong> clouds.</figcaption>
+            </figure>
+            <figure class="diagram" style="margin:0">
+              <img src="images/cloud-cumuliform.png" alt="Cumuliform clouds form in unstable air: a rising thermal stays warmer than the surrounding air, so it keeps climbing and the cloud builds up tall and puffy." loading="lazy" />
+              <figcaption><span class="k-amber">Unstable</span> air → puffy, towering <strong>cumuliform</strong> clouds.</figcaption>
+            </figure>
+          </div>
+          <div class="callout callout--formula">
+            <div class="callout__label">Condensation level (cloud base)</div>
+            <div class="formula"><span class="k-blue">Cloud base</span> = ((<span class="k-amber">Temp</span> − <span class="k-green">Dewpoint</span>) ÷ 2.5) × 1,000 + <span class="k-purple">field elevation</span></div>
+            <p class="mb-0 muted">Forms where the temperature cools to the dew point — about <strong>400 ft per 1 °C</strong> of temperature/dew-point spread.</p>
+          </div>
+        </section>
+
+        <!-- PRESSURE SYSTEMS -->
+        <section class="section" id="pressure-systems">
+          <h2>Pressure systems</h2>
+          <figure class="diagram">
+            <svg viewBox="0 0 560 270" role="img" aria-labelledby="press-t">
+              <title id="press-t">Low pressure rotates counter-clockwise with rising air; high pressure rotates clockwise with sinking air</title>
+              <!-- LOW -->
+              <g style="stroke: var(--accent)" fill="none" stroke-width="2.5">
+                <circle cx="160" cy="120" r="70" /><circle cx="160" cy="120" r="45" /><circle cx="160" cy="120" r="22" />
+              </g>
+              <text x="160" y="128" text-anchor="middle" font-weight="800" style="fill: var(--accent)" font-size="26">L</text>
+              <!-- CCW arrow -->
+              <path d="M160 38 A82 82 0 0 0 78 120" fill="none" style="stroke: var(--accent)" stroke-width="2.5" />
+              <polygon points="78,120 86,106 70,108" style="fill: var(--accent)" />
+              <text x="160" y="225" text-anchor="middle" style="fill: var(--text)" font-size="12" font-weight="600">Counter-clockwise · inflow · rising</text>
+              <text x="160" y="243" text-anchor="middle" style="fill: var(--text-muted)" font-size="11">clouds &amp; bad weather</text>
+              <!-- HIGH -->
+              <g style="stroke: var(--warn-border)" fill="none" stroke-width="2.5">
+                <circle cx="400" cy="120" r="70" /><circle cx="400" cy="120" r="45" /><circle cx="400" cy="120" r="22" />
+              </g>
+              <text x="400" y="128" text-anchor="middle" font-weight="800" style="fill: var(--warn-border)" font-size="26">H</text>
+              <!-- CW arrow -->
+              <path d="M400 38 A82 82 0 0 1 482 120" fill="none" style="stroke: var(--warn-border)" stroke-width="2.5" />
+              <polygon points="482,120 490,108 474,106" style="fill: var(--warn-border)" />
+              <text x="400" y="225" text-anchor="middle" style="fill: var(--text)" font-size="12" font-weight="600">Clockwise · outflow · sinking</text>
+              <text x="400" y="243" text-anchor="middle" style="fill: var(--text-muted)" font-size="11">fair weather</text>
+              <!-- rising air between the systems -->
+              <line x1="280" y1="180" x2="280" y2="76" style="stroke: var(--formula-border)" stroke-width="2.5" />
+              <polygon points="280,70 272,88 288,88" style="fill: var(--formula-border)" />
+              <text x="280" y="205" text-anchor="middle" style="fill: var(--formula-border)" font-size="11" font-weight="700">rising air</text>
+            </svg>
+            <figcaption>Northern Hemisphere. With your back to the wind, <strong>low pressure is on your left, high pressure on your right</strong> (Buys Ballot's law).</figcaption>
+          </figure>
+          <div class="callout callout--note">
+            <div class="callout__label">Altimeter caution</div>
+            <p class="mb-0">"<strong>High to low, look out below</strong>" — flying into lower pressure (or colder air) without re-setting the altimeter means you're <strong>lower than indicated</strong>.</p>
+          </div>
+        </section>
+
+        <!-- THUNDERSTORMS -->
+        <section class="section" id="thunderstorms">
+          <h2>Thunderstorms</h2>
+          <p>Ingredients — you need all <span class="k-blue">three</span>:</p>
+          <ol>
+            <li><strong>Sufficient moisture</strong></li>
+            <li><strong>Lifting action</strong> (a trigger)</li>
+            <li><strong>Unstable air</strong></li>
+          </ol>
+          <figure class="diagram">
+            <svg viewBox="0 0 560 230" role="img" aria-labelledby="ts-t">
+              <title id="ts-t">The three stages of a thunderstorm: towering cumulus, mature, and dissipating</title>
+              <g style="fill: var(--text-muted)" opacity="0.55">
+                <path d="M50 150 q-5 -45 35 -45 q10 -30 45 -20 q25 -25 45 10 q30 -5 25 30 q15 5 5 25 Z" />
+                <ellipse cx="290" cy="60" rx="55" ry="22" />
+                <path d="M235 150 q-5 -55 40 -60 q5 -30 40 -25 q35 -5 35 35 q20 10 5 50 Z" />
+                <ellipse cx="470" cy="55" rx="70" ry="20" />
+                <path d="M420 150 q-8 -50 35 -60 q10 -25 45 -20 q30 0 25 40 q15 15 0 40 Z" opacity="0.7" />
+              </g>
+              <!-- updrafts / downdrafts -->
+              <g stroke-width="2.5" fill="none">
+                <line x1="90" y1="150" x2="90" y2="100" style="stroke: var(--tip-border)" /><polygon points="90,95 84,108 96,108" style="fill: var(--tip-border)" stroke="none"/>
+                <line x1="268" y1="150" x2="268" y2="100" style="stroke: var(--tip-border)" /><polygon points="268,95 262,108 274,108" style="fill: var(--tip-border)" stroke="none"/>
+                <line x1="312" y1="100" x2="312" y2="150" style="stroke: var(--accent)" /><polygon points="312,155 306,142 318,142" style="fill: var(--accent)" stroke="none"/>
+                <line x1="470" y1="100" x2="470" y2="150" style="stroke: var(--accent)" /><polygon points="470,155 464,142 476,142" style="fill: var(--accent)" stroke="none"/>
+              </g>
+              <!-- rain: begins at the mature stage, tapers off while dissipating -->
+              <g style="stroke: var(--accent)" stroke-width="1.6" stroke-dasharray="2 4" opacity="0.6">
+                <line x1="288" y1="124" x2="288" y2="149" /><line x1="298" y1="124" x2="298" y2="149" /><line x1="308" y1="124" x2="308" y2="149" />
+                <line x1="452" y1="128" x2="452" y2="149" /><line x1="486" y1="128" x2="486" y2="149" />
+              </g>
+              <line x1="20" y1="150" x2="540" y2="150" style="stroke: var(--text)" stroke-width="2" />
+              <g font-size="12" font-weight="600" text-anchor="middle" style="fill: var(--text)">
+                <text x="95" y="185">1 · Towering cumulus</text>
+                <text x="290" y="185">2 · Mature</text>
+                <text x="470" y="185">3 · Dissipating</text>
+              </g>
+              <g font-size="11" text-anchor="middle">
+                <text x="95" y="203" style="fill: var(--tip-border)">updrafts only</text>
+                <text x="290" y="203" style="fill: var(--warn-border)" font-weight="700">rain begins · most dangerous</text>
+                <text x="470" y="203" style="fill: var(--accent)">rains itself out</text>
+              </g>
+            </svg>
+          </figure>
+        </section>
+
+        <!-- FRONTS -->
+        <section class="section" id="fronts">
+          <h2>Fronts</h2>
+          <p>A front is a boundary between two air masses. The four types — and the big clue: <strong>flying across a front, you'll notice a change in wind direction</strong> (plus temperature and pressure).</p>
+          <figure class="diagram">
+            <svg viewBox="0 0 560 250" role="img" aria-labelledby="fronts-t">
+              <title id="fronts-t">Front symbols: cold (blue triangles), warm (red semicircles), stationary (alternating), occluded (purple)</title>
+              <!-- cold -->
+              <line x1="60" y1="40" x2="320" y2="40" stroke="#2f6fed" stroke-width="3" />
+              <g fill="#2f6fed"><polygon points="100,40 112,40 106,28"/><polygon points="160,40 172,40 166,28"/><polygon points="220,40 232,40 226,28"/><polygon points="280,40 292,40 286,28"/></g>
+              <text x="350" y="45" style="fill: var(--text)" font-size="13" font-weight="600">Cold front</text>
+              <!-- warm -->
+              <line x1="60" y1="95" x2="320" y2="95" stroke="#d6202a" stroke-width="3" />
+              <g fill="#d6202a"><path d="M100 95 a6 6 0 0 1 12 0z"/><path d="M160 95 a6 6 0 0 1 12 0z"/><path d="M220 95 a6 6 0 0 1 12 0z"/><path d="M280 95 a6 6 0 0 1 12 0z"/></g>
+              <text x="350" y="100" style="fill: var(--text)" font-size="13" font-weight="600">Warm front</text>
+              <!-- stationary -->
+              <line x1="60" y1="150" x2="320" y2="150" stroke="#7a4fd0" stroke-width="3" />
+              <g><polygon points="100,150 112,150 106,138" fill="#2f6fed"/><path d="M160 150 a6 6 0 0 0 12 0z" fill="#d6202a"/><polygon points="220,150 232,150 226,138" fill="#2f6fed"/><path d="M280 150 a6 6 0 0 0 12 0z" fill="#d6202a"/></g>
+              <text x="350" y="155" style="fill: var(--text)" font-size="13" font-weight="600">Stationary front</text>
+              <!-- occluded -->
+              <line x1="60" y1="205" x2="320" y2="205" stroke="#7a4fd0" stroke-width="3" />
+              <g fill="#7a4fd0"><polygon points="100,205 112,205 106,193"/><path d="M160 205 a6 6 0 0 1 12 0z"/><polygon points="220,205 232,205 226,193"/><path d="M280 205 a6 6 0 0 1 12 0z"/></g>
+              <text x="350" y="210" style="fill: var(--text)" font-size="13" font-weight="600">Occluded front</text>
+            </svg>
+            <figcaption>Cold = pointed triangles; warm = rounded bumps; stationary = both, opposite sides; occluded = both, same side (purple).</figcaption>
+          </figure>
+        </section>
+
+        <!-- FOG -->
+        <section class="section" id="fog">
+          <h2>Fog &amp; temperature inversions</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Fog type</th><th>How it forms</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Radiation fog</strong></td><td>Ground cools below the air above it (clear, calm nights — usually after sunset).</td></tr>
+                <tr><td><strong>Advection fog</strong></td><td>Wind carries moist air over a cooler surface (e.g. cool water).</td></tr>
+                <tr><td><strong>Upslope fog</strong></td><td>Moist air is forced up rising terrain (mountain fog).</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout callout--note">
+            <div class="callout__label">Temperature inversion</div>
+            <p class="mb-0">Warm air sitting on top of cold air → <strong>stable air, poor visibility, fog</strong> — pollutants and moisture get trapped underneath. A high-pressure system keeps that air pressed down.</p>
+          </div>
+        </section>
+
+        <!-- JET STREAM -->
+        <section class="section" id="jet-stream">
+          <h2>Jet stream</h2>
+          <ul>
+            <li>A narrow band of <span class="k-blue">very strong winds</span> near the <strong>tropopause</strong> — the top of the troposphere, where temperature <em>stops</em> decreasing (≈ <strong>20,000–45,000 ft</strong>).</li>
+            <li>Flows generally <span class="k-blue">west → east</span>.</li>
+            <li>By definition the winds are <strong>50 kt or more</strong> (often 100+); the fastest core sits just below the tropopause.</li>
+            <li>Forms along strong <strong>temperature boundaries</strong> between air masses — so it's <span class="k-amber">stronger and dips farther south in winter</span>.</li>
+            <li>Often marked by <strong>long streaks of cirrus</strong> clouds.</li>
+            <li>Brings <span class="k-purple">clear-air turbulence (CAT)</span> — worst on the <strong>cold (polar) side</strong>, near the trough.</li>
+          </ul>
+        </section>
+
+        <!-- HAZARDS -->
+        <section class="section" id="hazards">
+          <h2>Other hazards</h2>
+          <ul>
+            <li><span class="k-blue">Wind shear</span> = a sudden change in wind speed/direction. It can occur at <strong>all altitudes</strong>, is associated with <strong>temperature inversions</strong>, and is likely if winds at 2,000–4,000 ft are <strong>25 kts or more</strong>.</li>
+            <li><span class="k-blue">Icing</span> needs <strong>visible moisture</strong> and temperatures at/below freezing.</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

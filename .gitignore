@@ -1,0 +1,62 @@
+# .gitignore — PPL Study Guide (static site published to GitHub Pages)
+# This is a dependency-free static site, so most of this is preventative:
+# it keeps secrets, OS junk, editor files, and local tooling out of the repo.
+#
+# NOTE: .nojekyll is intentionally NOT ignored — GitHub Pages needs it committed.
+
+# ---- Secrets / environment / credentials (never commit) ----
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.pfx
+*.p12
+*.crt
+*.cer
+secrets.*
+*secret*
+credentials*.json
+service-account*.json
+*.keystore
+.netrc
+
+# ---- OS-generated files ----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ---- Editor / IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+.*.swp
+*.sublime-project
+*.sublime-workspace
+
+# ---- Node (only if you run `npx serve` or add tooling) ----
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+
+# ---- Python (the README's `python3 -m http.server` dev server) ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---- Logs / temp / caches ----
+*.log
+*.tmp
+*.bak
+.cache/

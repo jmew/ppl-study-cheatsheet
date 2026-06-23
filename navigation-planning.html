@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Navigation Planning — PPL Study Guide</title>
+    <meta name="description" content="PPL navigation planning (E6-B): magnetic variation with 'east is least, west is best', the speed-distance-time triangle, and the knot defined as 1 NM per hour." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
+    <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
+  </head>
+  <body>
+    <main id="main" class="layout">
+      <aside><nav class="toc" data-toc aria-label="On this page"></nav></aside>
+      <div class="content">
+        <div class="page-head">
+          <p class="breadcrumbs"><a href="index.html">Home</a> › Navigation Planning</p>
+          <span class="eyebrow">Lecture 11 · E6-B</span>
+          <h1>Navigation Planning</h1>
+          <p class="lead">Flight-computer fundamentals: applying magnetic variation, and the speed–distance–time relationship. (More to come.)</p>
+        </div>
+
+        <!-- VARIATION -->
+        <section class="section" id="variation">
+          <h2>Magnetic variation</h2>
+          <p>
+            <strong>Variation</strong> is the angle between <strong>true north</strong> and
+            <strong>magnetic north</strong> at your location. Lines of equal variation on a chart
+            are <strong>isogonic lines</strong> (the line of <em>zero</em> variation is the
+            <strong>agonic line</strong>).
+          </p>
+
+          <div class="mnemonic">
+            <div class="mnemonic__word">"<span>East is least, West is best</span>"</div>
+            <p class="muted mt-0" style="font-size:.9rem">Converting a <strong>true</strong> heading to a <strong>magnetic</strong> heading:</p>
+            <ul>
+              <li><b>W</b> — <strong>West</strong> variation → <strong>add</strong> it to the heading ("best" = bigger)</li>
+              <li><b>E</b> — <strong>East</strong> variation → <strong>subtract</strong> it from the heading ("least" = smaller)</li>
+            </ul>
+          </div>
+
+          <figure class="diagram">
+            <svg viewBox="0 0 420 230" role="img" aria-labelledby="var-t">
+              <title id="var-t">Variation is the angle between true north and magnetic north</title>
+              <!-- station point -->
+              <circle cx="210" cy="200" r="5" style="fill: var(--text)" />
+              <!-- true north -->
+              <line x1="210" y1="200" x2="210" y2="30" style="stroke: var(--text)" stroke-width="2.5" />
+              <polygon points="210,22 204,38 216,38" style="fill: var(--text)" />
+              <text x="210" y="16" text-anchor="middle" style="fill: var(--text)" font-size="13" font-weight="700">TN</text>
+              <!-- magnetic north (west of true => tilted left) -->
+              <line x1="210" y1="200" x2="150" y2="42" style="stroke: var(--accent)" stroke-width="2.5" />
+              <polygon points="148,34 148,52 160,44" style="fill: var(--accent)" />
+              <text x="135" y="34" text-anchor="middle" style="fill: var(--accent)" font-size="13" font-weight="700">MN</text>
+              <!-- variation arc -->
+              <path d="M210 70 A130 130 0 0 0 168 78" fill="none" style="stroke: var(--text-muted)" stroke-width="2" />
+              <text x="150" y="100" style="fill: var(--text-muted)" font-size="12">variation</text>
+              <text x="240" y="150" style="fill: var(--text-muted)" font-size="12">(westerly shown)</text>
+            </svg>
+          </figure>
+
+          <div class="callout callout--tip">
+            <div class="callout__label">Example</div>
+            <p class="mb-0">True heading 090° with 10° <strong>W</strong> variation → magnetic heading <strong>100°</strong> (add). With 10° <strong>E</strong> variation → <strong>080°</strong> (subtract).</p>
+          </div>
+          <div class="callout callout--note">
+            <div class="callout__label">Note</div>
+            <p class="mb-0">This is the <strong>true → magnetic</strong> direction (reverse the signs going magnetic → true). Variation comes from the chart; <strong>deviation</strong> (from the airplane's own metal/electrics) is applied last — see variation vs. deviation under <a href="systems.html#compass">Systems</a>.</p>
+          </div>
+        </section>
+
+        <!-- SPEED DISTANCE TIME -->
+        <section class="section" id="speed-distance-time">
+          <h2>Speed, distance &amp; time</h2>
+          <p>The core dead-reckoning relationship. Cover the value you want in the triangle to see the equation:</p>
+
+          <figure class="diagram">
+            <svg viewBox="0 0 320 300" role="img" aria-labelledby="sdt-t" style="max-width:264px;margin-inline:auto">
+              <title id="sdt-t">Speed-distance-time triangle: distance on top, speed and time on the bottom</title>
+              <!-- triangle outline -->
+              <polygon points="160,30 280,250 40,250" fill="none" style="stroke: var(--text)" stroke-width="3" stroke-linejoin="round" />
+              <!-- horizontal divider -->
+              <line x1="100" y1="140" x2="220" y2="140" style="stroke: var(--text)" stroke-width="3" />
+              <!-- vertical divider (lower half) -->
+              <line x1="160" y1="140" x2="160" y2="250" style="stroke: var(--text)" stroke-width="3" />
+              <!-- labels -->
+              <text x="160" y="108" text-anchor="middle" style="fill: var(--accent)" font-size="40" font-weight="800">D</text>
+              <text x="160" y="131" text-anchor="middle" style="fill: var(--text-muted)" font-size="14">distance</text>
+              <text x="110" y="212" text-anchor="middle" style="fill: var(--tip-border)" font-size="38" font-weight="800">S</text>
+              <text x="110" y="235" text-anchor="middle" style="fill: var(--text-muted)" font-size="13">speed</text>
+              <text x="210" y="212" text-anchor="middle" style="fill: var(--warn-border)" font-size="38" font-weight="800">T</text>
+              <text x="210" y="235" text-anchor="middle" style="fill: var(--text-muted)" font-size="13">time</text>
+            </svg>
+            <figcaption>Distance on top; speed and time on the bottom. Side-by-side = multiply; one over the other = divide.</figcaption>
+          </figure>
+
+          <div class="callout callout--note">
+            <div class="callout__label">Units: the knot</div>
+            <p class="mb-0"><strong>1 knot = 1 nautical mile per hour.</strong> So groundspeed in knots is just NM per hour — keep <em>time in hours</em> in the formulas (30 min = 0.5 hr).</p>
+          </div>
+
+          <div class="callout callout--tip">
+            <div class="callout__label">Example</div>
+            <p class="mb-0">At a groundspeed of <strong>120 kts</strong>, a <strong>60 NM</strong> leg takes T = 60 ÷ 120 = <strong>0.5 hr (30 minutes)</strong>.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

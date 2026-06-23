@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Systems &amp; Instruments — PPL Study Guide</title>
+    <meta name="description" content="PPL aircraft systems & instruments: propeller and engine, carb heat, magnetic compass errors (ANDS/UNOS), the pitot-static system, and altitude types." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
+    <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
+  </head>
+  <body>
+    <main id="main" class="layout">
+      <aside><nav class="toc" data-toc aria-label="On this page"></nav></aside>
+      <div class="content">
+        <div class="page-head">
+          <p class="breadcrumbs"><a href="index.html">Home</a> › Systems &amp; Instruments</p>
+          <span class="eyebrow">Lecture 2 · PHAK 6–8</span>
+          <h1>Airplane Systems &amp; Instruments</h1>
+          <p class="lead">The engine and propeller, the quirks of the magnetic compass, the pitot-static instruments, and the different kinds of altitude.</p>
+        </div>
+
+        <!-- ENGINE -->
+        <section class="section" id="engine">
+          <h2>Propeller &amp; engine</h2>
+          <ul>
+            <li><strong>Constant-speed propeller</strong> = a prop whose <strong>blade angle (pitch) can be adjusted</strong> to hold a chosen RPM, keeping the engine efficient across speeds. (A fixed-pitch prop cannot.)</li>
+            <li><strong>Carb heat enriches the mixture.</strong> Warm air is less dense, so the fuel-to-air ratio goes up (richer). You use carb heat to prevent or melt <strong>carburetor ice</strong>; expect a small RPM/power drop when it's on.</li>
+          </ul>
+
+          <div class="grid grid--2">
+            <div class="card">
+              <h3 class="mt-0"><span class="k-amber">Detonation</span></h3>
+              <p class="mb-0">The fuel/air mixture <strong>explodes instead of burning smoothly</strong> — from fuel grade too low, an over-lean mixture, or excessive engine temps. Fix: richen mixture, reduce power, open cowl flaps, lower the nose to cool.</p>
+            </div>
+            <div class="card">
+              <h3 class="mt-0"><span class="k-purple">Pre-ignition</span></h3>
+              <p class="mb-0">The mixture ignites <strong>too early</strong> — before the spark plug fires — usually from a glowing hot spot (carbon/deposit) in the cylinder.</p>
+            </div>
+          </div>
+
+          <div class="callout callout--warn">
+            <div class="callout__label">Carb ice watch-out</div>
+            <p class="mb-0">Carburetor icing is most likely in <strong>high humidity</strong> with outside temps roughly <strong>20–70 °F (−7 to +21 °C)</strong> — and can occur even on warm days. First sign with a fixed-pitch prop: a gradual <strong>RPM drop</strong>.</p>
+          </div>
+        </section>
+
+        <!-- COMPASS -->
+        <section class="section" id="compass">
+          <h2>Magnetic compass errors</h2>
+          <p>The compass only reads correctly in straight, level, unaccelerated flight. Two mnemonics cover the dynamic errors (Northern Hemisphere):</p>
+
+          <div class="grid grid--2">
+            <div class="mnemonic">
+              <div class="mnemonic__word"><span>ANDS</span></div>
+              <p class="muted mt-0" style="font-size:.9rem">Acceleration error, on <strong>E/W</strong> headings:</p>
+              <p class="mb-0" style="font-size:1.05rem"><span class="k-blue">A</span>ccelerate → <span class="k-blue">N</span>orth · <span class="k-blue">D</span>ecelerate → <span class="k-blue">S</span>outh</p>
+            </div>
+            <div class="mnemonic">
+              <div class="mnemonic__word"><span>UNOS</span></div>
+              <p class="muted mt-0" style="font-size:.9rem">Turning error, rolling out onto <strong>N/S</strong>:</p>
+              <p class="mb-0" style="font-size:1.05rem"><span class="k-blue">U</span>ndershoot → <span class="k-blue">N</span>orth (lead) · <span class="k-blue">O</span>vershoot → <span class="k-blue">S</span>outh (lag)</p>
+            </div>
+          </div>
+
+          <div class="callout callout--note">
+            <div class="callout__label">Why it happens</div>
+            <p class="mb-0">A small weight offsets <strong>magnetic dip</strong>, leaving the card's <strong>N (south-seeking) end slightly heavy</strong>. In a bank the card tilts and Earth's <span class="k-blue">vertical magnetic pull</span> swings it — <strong>turning error</strong>; speeding up or slowing down throws the weighted end by inertia — <strong>acceleration error</strong>.</p>
+          </div>
+
+          <figure class="diagram">
+            <img src="images/compass-turning-error.png" alt="Turning error: near Magnetic North the compass lags the turn (lead the rollout); near Magnetic South the compass leads the turn (lag the rollout)." loading="lazy" />
+            <figcaption>Turning toward the poles: the compass <strong>lags</strong> near North (so you <em>lead</em> the rollout) and <strong>leads</strong> near South — that's <strong>UNOS</strong>. <span class="diagram__source">From the lecture slides.</span></figcaption>
+          </figure>
+
+          <div class="callout callout--note">
+            <div class="callout__label">Variation vs. deviation</div>
+            <p class="mb-0"><span class="k-blue">Variation</span> = the angle between <strong>true north and magnetic north</strong> (depends on location). <span class="k-amber">Deviation</span> = compass error from <strong>metal and electrics in the airplane itself</strong>.</p>
+          </div>
+        </section>
+
+        <!-- PITOT STATIC -->
+        <section class="section" id="pitot-static">
+          <h2>Pitot-static system</h2>
+          <p>Three instruments run off air pressure. The <strong>pitot tube</strong> senses <em>ram</em> (dynamic) pressure; the <strong>static port</strong> senses ambient (still) pressure.</p>
+
+          <figure class="diagram">
+            <img src="images/pitot-static.png" loading="lazy" width="932" height="652"
+                 alt="Pitot-static plumbing: the pitot tube feeds only the airspeed indicator; the static port feeds the airspeed indicator, altimeter and vertical speed indicator." />
+            <figcaption><span class="pill" style="color:var(--accent);border-color:var(--accent)">Pitot</span> → ASI only. <span class="pill" style="color:var(--tip-border);border-color:var(--tip-border)">Static</span> → ASI + Altimeter + VSI.</figcaption>
+          </figure>
+
+          <h3>Blockages &amp; altitude effects</h3>
+          <ul>
+            <li><strong>Static port blocked:</strong> no effect at first — but the moment you <strong>change altitude</strong> the <span class="k-blue">altimeter freezes</span> at the last reading and the <span class="k-blue">VSI sticks at 0</span> (airspeed also reads off). Use the <strong>alternate static source</strong>.</li>
+            <li><strong>Pitot tube blocked:</strong> affects <span class="k-amber">only the airspeed indicator</span>.</li>
+            <li>At <strong>higher altitude the airspeed indicator reads slower</strong> than your true airspeed — fewer air molecules ram into the tube. (Indicated airspeed &lt; true airspeed up high.)</li>
+          </ul>
+        </section>
+
+        <!-- ALTITUDE TYPES -->
+        <section class="section" id="altitudes">
+          <h2>Types of altitude</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Altitude</th><th>What it means</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Indicated</strong></td><td>What the altimeter shows with the current setting in the Kollsman window.</td></tr>
+                <tr><td><strong>True</strong></td><td>Actual height above <strong>mean sea level (MSL)</strong>.</td></tr>
+                <tr><td><strong>Absolute</strong></td><td>Height <strong>above ground level (AGL)</strong>.</td></tr>
+                <tr><td><strong>Pressure</strong></td><td>Altitude shown when the altimeter is set to <strong>29.92</strong> "Hg (the standard datum).</td></tr>
+                <tr><td><strong>Density</strong></td><td>Pressure altitude <strong>corrected for non-standard temperature</strong> — the altitude the airplane "feels." See <a href="performance.html#density-altitude">Performance</a>.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout callout--note">
+            <div class="callout__label">Handy conversion</div>
+            <p class="mb-0"><strong>1 inch of Hg ≈ 1,000 ft</strong> of altitude. Mnemonic for the basics: <em>True = MSL, Absolute = AGL.</em></p>
+          </div>
+
+          <div class="callout callout--tip">
+            <div class="callout__label">Also worth knowing</div>
+            <p class="mb-0">On a <strong>colder-than-standard day your true altitude is lower</strong> than the altimeter shows — <em>"from hot to cold, look out below."</em></p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

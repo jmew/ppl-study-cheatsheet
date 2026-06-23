@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Performance &amp; Weight/Balance — PPL Study Guide</title>
+    <meta name="description" content="PPL performance: V-speeds, the four factors affecting density altitude, pressure & density altitude formulas, true airspeed, fuel weight, and weight & balance." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
+    <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
+  </head>
+  <body>
+    <main id="main" class="layout">
+      <aside><nav class="toc" data-toc aria-label="On this page"></nav></aside>
+      <div class="content">
+        <div class="page-head">
+          <p class="breadcrumbs"><a href="index.html">Home</a> › Performance &amp; W&amp;B</p>
+          <span class="eyebrow">Lecture 5 · PHAK 10–11</span>
+          <h1>Airplane Performance &amp; Weight/Balance</h1>
+          <p class="lead">What thins out the air and hurts performance, the density-altitude math, and keeping the airplane in balance.</p>
+        </div>
+
+        <!-- V-SPEEDS -->
+        <section class="section" id="v-speeds">
+          <h2>V-speeds</h2>
+          <p><strong>V<sub>A</sub> (maneuvering speed) depends on weight:</strong> <strong>heavier → higher V<sub>A</sub></strong>, lighter → lower V<sub>A</sub>. (A heavier airplane absorbs gusts before reaching a damaging load factor.)</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Speed</th><th>Meaning</th><th>ASI marking</th></tr></thead>
+              <tbody>
+                <tr><td><strong>V<sub>SO</sub></strong></td><td>Stall, landing configuration</td><td>Bottom of white arc</td></tr>
+                <tr><td><strong>V<sub>S1</sub></strong></td><td>Stall, clean configuration</td><td>Bottom of green arc</td></tr>
+                <tr><td><strong>V<sub>FE</sub></strong></td><td>Max flaps-extended speed</td><td>Top of white arc</td></tr>
+                <tr><td><strong>V<sub>NO</sub></strong></td><td>Max structural cruising</td><td>Top of green / start of yellow</td></tr>
+                <tr><td><strong>V<sub>NE</sub></strong></td><td>Never exceed</td><td>Red line</td></tr>
+                <tr><td><strong>V<sub>A</sub></strong></td><td>Maneuvering (varies with weight)</td><td>Not marked</td></tr>
+                <tr><td><strong>V<sub>X</sub> / V<sub>Y</sub></strong></td><td>Best <em>angle</em> / best <em>rate</em> of climb</td><td>Not marked</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="muted">ASI color arcs: <strong>white</strong> = flap operating range, <strong>green</strong> = normal operating range, <strong>yellow</strong> = caution (smooth air only), <strong>red line</strong> = never exceed.</p>
+
+          <figure class="diagram">
+            <img src="images/v-speeds.png" alt="Airspeed indicator with V-speed markings: white arc (flap range) from Vso (stall, flaps down) to Vfe (flaps-extended speed); green arc (normal operating range) from Vs1 (stall, clean) to Vno (max structural cruising); yellow caution arc up to the red Vne (never exceed) line." loading="lazy" />
+          </figure>
+        </section>
+
+        <!-- FACTORS -->
+        <section class="section" id="factors">
+          <h2>The four factors affecting performance</h2>
+          <p>All four work by changing <strong>air density</strong>. Thinner air = worse performance.</p>
+          <div class="grid grid--2">
+            <div class="card"><h3 class="mt-0">1 · Altitude</h3><p class="mb-0">Lower = better, higher = worse.</p></div>
+            <div class="card"><h3 class="mt-0">2 · Temperature</h3><p class="mb-0">Lower = better, higher = worse <span class="muted">(heat spreads the air out).</span></p></div>
+            <div class="card"><h3 class="mt-0">3 · Pressure</h3><p class="mb-0"><strong>Higher = better</strong>, lower = worse.</p></div>
+            <div class="card"><h3 class="mt-0">4 · Humidity</h3><p class="mb-0">Lower = better, higher = worse <span class="muted">(water molecules are lighter → less dense air).</span></p></div>
+          </div>
+          <div class="callout callout--note">
+            <div class="callout__label">Pressure systems</div>
+            <p class="mb-0"><strong>High pressure = cool, sinking air</strong> (better performance). <strong>Low pressure = warm, rising air.</strong> Performance is worse on low-pressure and high-humidity days.</p>
+          </div>
+        </section>
+
+        <!-- DENSITY ALTITUDE -->
+        <section class="section" id="density-altitude">
+          <h2>Pressure &amp; density altitude</h2>
+
+          <div class="callout callout--formula">
+            <div class="callout__label">Pressure altitude</div>
+            <div class="formula"><span class="k-blue">Pressure Alt</span> = <span class="k-green">Indicated Alt</span> + (29.92 − <span class="k-amber">altimeter setting</span>) × 1,000</div>
+            <p class="mb-0 muted">Or simply set the altimeter to <strong>29.92</strong> and read it.</p>
+          </div>
+
+          <div class="callout callout--formula">
+            <div class="callout__label">Density altitude</div>
+            <div class="formula"><span class="k-blue">Density Alt</span> = <span class="k-green">Pressure Alt</span> + 120 × (<span class="k-amber">OAT</span> − 15 °C)</div>
+            <p class="mb-0 muted">Density altitude = <strong>pressure altitude corrected for non-standard temperature</strong> — the altitude the airplane actually "feels."</p>
+          </div>
+
+          <h3>How density altitude moves</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:14px;margin:1.2rem 0">
+            <span class="pill pill--lg">↑ Altitude → ↑ density altitude</span>
+            <span class="pill pill--lg">↓ Pressure (Hg) → ↑ density altitude</span>
+            <span class="pill pill--lg">↑ Temperature → ↑ density altitude</span>
+          </div>
+
+          <div class="callout callout--warn">
+            <div class="callout__label">High density altitude = worse performance</div>
+            <ul class="mb-0">
+              <li><strong>Longer takeoff roll</strong> and a <strong>slower, shallower climb angle</strong>.</li>
+              <li>You lift off at the <strong>same indicated airspeed</strong> but a <strong>higher true airspeed</strong>, while the engine and prop make <strong>less thrust</strong> in thin air.</li>
+            </ul>
+          </div>
+
+          <div class="callout callout--note">
+            <div class="callout__label">Rules of thumb</div>
+            <ul class="mb-0">
+              <li><strong>~15 °F above standard ≈ +1,000 ft</strong> density altitude (≈ 120 ft per °C).</li>
+              <li><strong>True airspeed increases when it's hot</strong> — thinner air means a lower <em>indicated</em> airspeed, so you fly faster (higher TAS) for the same IAS. (Same reason the ASI reads slow up high — see <a href="systems.html#pitot-static">Systems</a>.)</li>
+            </ul>
+          </div>
+
+          <figure class="diagram">
+            <img src="images/takeoff-performance-chart.png" alt="Takeoff/landing performance chart: start at outside air temperature, go up to pressure altitude, across to weight, to the wind component, then to obstacle height to read the required distance." loading="lazy" />
+            <figcaption>A POH takeoff/landing chart. <span class="diagram__source">From the lecture slides.</span></figcaption>
+          </figure>
+
+          <div class="callout callout--note">
+            <div class="callout__label">How to read it</div>
+            <ol class="mb-0">
+              <li>Start at the <strong>outside air temperature</strong> on the bottom scale.</li>
+              <li>Go <strong>up</strong> to your <strong>pressure-altitude</strong> line.</li>
+              <li>Go <strong>right</strong> to the first reference line, then follow the guide lines to your <strong>weight</strong>.</li>
+              <li>Continue to the next reference line, then parallel the guide lines for the <strong>wind component</strong> (headwind shortens, tailwind lengthens).</li>
+              <li>To the last reference line, then up the guide lines for the <strong>obstacle height</strong>.</li>
+              <li>Read the <strong>required distance</strong> off the right-hand scale.</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- WEIGHT & BALANCE -->
+        <section class="section" id="weight-balance">
+          <h2>Weight &amp; balance</h2>
+          <p>The <strong>center of gravity (CG) should be ahead of the center of pressure (CP)</strong> and ahead of the main wheels. A forward CG is more stable; an aft CG is less stable (and can make recovery from stalls/spins difficult).</p>
+
+          <figure class="diagram">
+            <svg viewBox="0 0 560 250" role="img" aria-labelledby="wb-t">
+              <title id="wb-t">Center of gravity sits ahead of the center of pressure and the main wheels</title>
+              <!-- reference datum -->
+              <line x1="80" y1="40" x2="80" y2="210" style="stroke: var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 4" />
+              <text x="60" y="30" style="fill: var(--text-muted)" font-size="11">datum</text>
+              <!-- airplane (nose / spinner at the datum on the left) -->
+              <g style="fill: var(--text-muted)" opacity="0.55">
+                <rect x="102" y="112" width="330" height="24" rx="12" />
+                <polygon points="80,124 104,112 104,136" />
+                <polygon points="122,112 146,96 184,112" />
+                <polygon points="402,112 440,84 446,112" />
+                <rect x="296" y="135" width="8" height="14" />
+              </g>
+              <!-- main wheels -->
+              <circle cx="300" cy="158" r="13" style="fill:none;stroke:var(--text)" stroke-width="3" />
+              <text x="300" y="195" text-anchor="middle" style="fill: var(--text-muted)" font-size="11">main wheels</text>
+              <!-- CG (weight down) -->
+              <line x1="250" y1="123" x2="250" y2="190" style="stroke: var(--text)" stroke-width="3" />
+              <polygon points="250,200 244,186 256,186" style="fill: var(--text)" />
+              <text x="250" y="218" text-anchor="middle" style="fill: var(--text)" font-size="12" font-weight="700">CG (weight)</text>
+              <!-- CP (lift up) -->
+              <line x1="330" y1="123" x2="330" y2="55" style="stroke: var(--accent)" stroke-width="3" />
+              <polygon points="330,45 324,59 336,59" style="fill: var(--accent)" />
+              <text x="330" y="40" text-anchor="middle" style="fill: var(--accent)" font-size="12" font-weight="700">CP (lift)</text>
+              <!-- arm bracket -->
+              <line x1="80" y1="235" x2="250" y2="235" style="stroke: var(--text-muted)" stroke-width="1.2" />
+              <text x="150" y="248" text-anchor="middle" style="fill: var(--text-muted)" font-size="11">arm</text>
+            </svg>
+          </figure>
+
+          <div class="callout callout--formula">
+            <div class="callout__label">The W&amp;B math</div>
+            <div class="formula"><span class="k-blue">Moment</span> = <span class="k-green">Weight</span> × <span class="k-amber">Arm</span>     ·     <span class="k-blue">CG</span> = <span class="k-green">Total Moment</span> ÷ <span class="k-amber">Total Weight</span></div>
+          </div>
+          <div class="callout callout--note">
+            <div class="callout__label">Fuel weight</div>
+            <p class="mb-0"><strong>1 gal = 6 lbs.</strong></p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

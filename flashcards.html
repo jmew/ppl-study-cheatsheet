@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flashcards — PPL Study Guide</title>
+    <meta name="description" content="Self-quiz flashcard deck for the PPL written exam, built from every key number and mnemonic in the study guide. Filter by topic, shuffle, and flip." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
+    <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
+  </head>
+  <body>
+    <main id="main" class="layout layout--single">
+      <div class="content">
+        <div class="page-head">
+          <p class="breadcrumbs"><a href="index.html">Home</a> › Flashcards</p>
+          <span class="eyebrow">Quiz yourself</span>
+          <h1>Flashcards</h1>
+          <p class="lead">Click a card (or press <kbd>Space</kbd>) to flip. Use <kbd>←</kbd>/<kbd>→</kbd> to move through the deck. Filter by topic and shuffle to drill.</p>
+        </div>
+
+        <div class="fc-toolbar">
+          <label>Topic
+            <select id="fc-topic" aria-label="Filter flashcards by topic"></select>
+          </label>
+          <button class="btn" id="fc-shuffle" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+            Shuffle
+          </button>
+          <button class="btn" id="fc-reset" type="button">Reset order</button>
+          <span class="fc-counter muted" id="fc-counter"></span>
+        </div>
+
+        <div class="fc-stage">
+          <div class="flashcard" id="fc-card" tabindex="0" role="button" aria-label="Flashcard. Activate to flip between question and answer.">
+            <div class="flashcard__face flashcard__face--front">
+              <span class="flashcard__tag" id="fc-tag">Topic</span>
+              <div class="flashcard__q" id="fc-q">Loading…</div>
+              <span class="flashcard__hint">click / Space to flip</span>
+            </div>
+            <div class="flashcard__face flashcard__face--back">
+              <span class="flashcard__tag">Answer</span>
+              <div class="flashcard__a" id="fc-a"></div>
+              <span class="flashcard__hint">click / Space to flip</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fc-controls">
+          <button class="btn" id="fc-prev" type="button" aria-label="Previous card">← Prev</button>
+          <div class="fc-progress" id="fc-progress" aria-live="polite">0 / 0</div>
+          <button class="btn" id="fc-next" type="button" aria-label="Next card">Next →</button>
+        </div>
+
+        <div class="callout callout--note" style="margin-top:2rem">
+          <div class="callout__label">Tip</div>
+          <p class="mb-0">Shuffle, then go through the whole deck for a topic until you can answer every card before flipping. Numbers and mnemonics are where most points are won or lost.</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/flashcards.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

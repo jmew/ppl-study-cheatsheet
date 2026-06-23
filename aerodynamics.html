@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aerodynamics — PPL Study Guide</title>
+    <meta
+      name="description"
+      content="PPL aerodynamics: the four forces, parasite vs induced drag, left-turning tendencies, axes & controls, stability, stalls, spins, load factor and ground effect."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
+    <script>
+      (function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
+    </script>
+  </head>
+  <body>
+    <main id="main" class="layout">
+      <aside>
+        <nav class="toc" data-toc aria-label="On this page"></nav>
+      </aside>
+
+      <div class="content">
+        <div class="page-head">
+          <p class="breadcrumbs"><a href="index.html">Home</a> › Aerodynamics</p>
+          <span class="eyebrow">Lecture 1 · PHAK 5</span>
+          <h1>Aerodynamics &amp; Forces of Flight</h1>
+          <p class="lead">
+            How the airplane stays up, what slows it down, why it wants to turn
+            left, and how it behaves at the edges of the envelope.
+          </p>
+        </div>
+
+        <!-- FOUR FORCES -->
+        <section class="section" id="four-forces">
+          <h2>The four forces</h2>
+          <p>
+            In steady, unaccelerated flight the four forces are in balance:
+            <strong>lift = weight</strong> and <strong>thrust = drag</strong>.
+            When any pair is unequal, the airplane accelerates in that direction
+            (climbs, descends, speeds up or slows down).
+          </p>
+
+          <figure class="diagram">
+            <img src="images/four-forces.png" alt="The four forces on an airplane: lift acts upward, weight downward, thrust forward, and drag aft." loading="lazy" />
+          </figure>
+        </section>
+
+        <!-- DRAG -->
+        <section class="section" id="drag">
+          <h2>Drag: parasite vs. induced</h2>
+          <div class="grid grid--2">
+            <div class="card">
+              <h3 class="mt-0">Parasite drag</h3>
+              <p class="mb-0">
+                Everything sticking out of the airplane hitting the air —
+                antennas, gear, rivets, the airframe itself. It
+                <strong>increases with airspeed</strong> (with the square of
+                speed, in fact — <em>"air is soup at higher speeds"</em>).
+              </p>
+            </div>
+            <div class="card">
+              <h3 class="mt-0">Induced drag</h3>
+              <p class="mb-0">
+                The unavoidable by-product of making lift — the rearward,
+                horizontal component of the lift vector, plus
+                <strong>wingtip vortices</strong>. It
+                <strong>increases at high angle of attack / low airspeed</strong>.
+              </p>
+            </div>
+          </div>
+
+          <figure class="diagram">
+            <img src="images/wingtip-vortices.png" alt="Front view of an airplane: higher-pressure air under the wing curls up and around the wingtip toward the lower-pressure air on top, forming a wingtip vortex." loading="lazy" />
+            <figcaption>High pressure under the wing spills around the tip into the low-pressure air above — a <span class="k-amber">wingtip vortex</span>, the source of induced drag.</figcaption>
+          </figure>
+
+          <figure class="diagram">
+            <svg viewBox="0 0 560 300" role="img" aria-labelledby="airfoil-t">
+              <title id="airfoil-t">Total lift tilts aft at high angle of attack; its horizontal component is induced drag</title>
+              <!-- airfoil: leading edge at left, slight nose-up angle of attack -->
+              <path d="M150 178 C205 150 330 156 405 184 C330 192 210 192 150 178 Z" style="fill: var(--text-muted); color: var(--text-muted)" opacity="0.5" />
+              <!-- relative wind: flows toward the leading edge (left → right) -->
+              <g style="stroke: var(--text-muted); fill: var(--text-muted)" stroke-width="2">
+                <line x1="55" y1="238" x2="205" y2="238" stroke-dasharray="6 5" />
+                <polygon points="212,238 198,232 198,244" stroke="none" />
+              </g>
+              <text x="80" y="260" style="fill: var(--text-muted)" font-size="13">relative wind</text>
+              <!-- total lift (perpendicular to relative wind, tilted aft = right) -->
+              <g style="stroke: var(--accent); fill: var(--accent)" stroke-width="4">
+                <line x1="285" y1="168" x2="316" y2="62" />
+                <polygon points="319,50 305,58 314,72" stroke="none" />
+              </g>
+              <text x="250" y="46" style="fill: var(--accent)" font-weight="700" font-size="15">total lift</text>
+              <!-- vertical (effective) lift -->
+              <g style="stroke: var(--tip-border); fill: var(--tip-border)" stroke-width="3">
+                <line x1="285" y1="168" x2="285" y2="74" stroke-dasharray="5 4" />
+                <polygon points="285,64 278,80 292,80" stroke="none" />
+              </g>
+              <text x="222" y="100" style="fill: var(--tip-border)" font-size="13">vertical lift</text>
+              <!-- induced drag (horizontal component, pointing aft = right) -->
+              <g style="stroke: var(--warn-border); fill: var(--warn-border)" stroke-width="3">
+                <line x1="285" y1="66" x2="314" y2="66" />
+                <polygon points="320,66 306,60 306,72" stroke="none" />
+              </g>
+              <text x="326" y="70" style="fill: var(--warn-border)" font-size="13">induced drag</text>
+            </svg>
+          </figure>
+
+          <p>
+            Because parasite drag rises with speed and induced drag falls with
+            speed, <strong>total drag is a U-shaped curve</strong>. Its lowest
+            point is where total drag is least and the lift-to-drag ratio is best
+            (L/D<sub>MAX</sub>) — the <strong>best-glide speed</strong> (maximum
+            gliding distance).
+          </p>
+
+          <figure class="diagram">
+            <svg viewBox="0 0 560 320" role="img" aria-labelledby="dragcurve-t">
+              <title id="dragcurve-t">Total drag is the sum of parasite drag (rising with speed) and induced drag (falling with speed)</title>
+              <!-- axes -->
+              <g style="stroke: var(--text)" stroke-width="2">
+                <line x1="70" y1="40" x2="70" y2="260" />
+                <line x1="70" y1="260" x2="520" y2="260" />
+              </g>
+              <text x="20" y="150" style="fill: var(--text-muted)" font-size="13" transform="rotate(-90 20 150)">Drag →</text>
+              <text x="430" y="285" style="fill: var(--text-muted)" font-size="13">Airspeed →</text>
+              <!-- induced drag (falling) -->
+              <path d="M90 70 C140 180, 200 240, 500 255" fill="none" style="stroke: var(--warn-border)" stroke-width="3" />
+              <text x="120" y="95" style="fill: var(--warn-border)" font-size="13">induced</text>
+              <!-- parasite drag (rising) -->
+              <path d="M90 258 C260 250, 360 200, 470 70" fill="none" style="stroke: var(--tip-border)" stroke-width="3" />
+              <text x="430" y="100" style="fill: var(--tip-border)" font-size="13">parasite</text>
+              <!-- total drag (U) -->
+              <path d="M90 110 C200 235, 250 215, 300 205 C380 190, 440 130, 480 70" fill="none" style="stroke: var(--accent)" stroke-width="3.5" />
+              <text x="150" y="150" style="fill: var(--accent)" font-weight="700" font-size="14">total</text>
+              <!-- L/Dmax marker -->
+              <line x1="300" y1="205" x2="300" y2="260" style="stroke: var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 4" />
+              <circle cx="300" cy="205" r="5" style="fill: var(--accent)" />
+              <text x="306" y="200" style="fill: var(--text-muted)" font-size="12">L/D max</text>
+            </svg>
+          </figure>
+        </section>
+
+        <!-- LEFT TURNING -->
+        <section class="section" id="left-turning">
+          <h2>Left-turning tendencies</h2>
+          <p>
+            A single-engine prop plane (prop turning clockwise from the pilot's
+            seat) naturally yaws/rolls <strong>left</strong>. Your notes list
+            three causes:
+          </p>
+          <ol>
+            <li>
+              <strong>P-factor</strong> — when climbing (high AoA), the
+              descending blade on the <em>right</em> takes a bigger bite of air
+              and makes more thrust than the left blade → nose yaws left.
+            </li>
+            <li>
+              <strong>Spiraling slipstream</strong> — the propwash corkscrews
+              clockwise around the fuselage and strikes the
+              <strong>left</strong> side of the vertical tail/rudder → yaws left.
+            </li>
+            <li>
+              <strong>Torque (Newton's 3rd law)</strong> — the prop spins right,
+              so the airframe is pushed to roll <strong>left</strong>.
+            </li>
+          </ol>
+          <div class="callout callout--note">
+            <div class="callout__label">Note</div>
+            <p class="mb-0">
+              A fourth cause is often tested: <strong>gyroscopic precession</strong>
+              (felt mainly in tailwheel airplanes when the tail comes up).
+              <strong>Torque and P-factor are strongest at low airspeed, high
+              power, and high angle of attack</strong> — i.e. the climb. That's
+              why you feed in right rudder on takeoff.
+            </p>
+          </div>
+
+          <figure class="diagram">
+            <svg viewBox="0 0 560 250" role="img" aria-labelledby="lts-t">
+              <title id="lts-t">The spiraling slipstream wraps clockwise and hits the left side of the tail</title>
+              <!-- fuselage -->
+              <g style="color: var(--text-muted)" opacity="0.6" fill="currentColor">
+                <rect x="120" y="115" width="300" height="22" rx="11" />
+                <polygon points="420,115 460,126 420,137" />
+                <polygon points="120,126 95,108 110,126 95,144" />
+              </g>
+              <!-- prop -->
+              <line x1="95" y1="96" x2="95" y2="156" style="stroke: var(--text)" stroke-width="4" stroke-linecap="round" />
+              <!-- spiral -->
+              <path d="M110 126 C160 90, 210 162, 260 126 C310 90, 360 162, 410 126" fill="none" style="stroke: var(--accent)" stroke-width="2.5" stroke-dasharray="5 4" />
+              <text x="170" y="80" style="fill: var(--accent)" font-size="13">spiraling slipstream →</text>
+              <!-- tail hit -->
+              <circle cx="410" cy="126" r="6" style="fill: var(--warn-border)" />
+              <text x="360" y="170" style="fill: var(--warn-border)" font-size="12">strikes left of tail</text>
+              <!-- yaw arrow -->
+              <path d="M250 200 q60 25 120 0" fill="none" style="stroke: var(--text-muted)" stroke-width="2" />
+              <polygon points="248,200 262,194 260,208" style="fill: var(--text-muted)" />
+              <text x="280" y="232" style="fill: var(--text-muted)" font-size="12">nose yaws left</text>
+            </svg>
+          </figure>
+        </section>
+
+        <!-- AXES & CONTROLS -->
+        <section class="section" id="axes">
+          <h2>Axes &amp; flight controls</h2>
+          <p>The airplane rotates about three axes, each driven by one primary control:</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Motion</th><th>Axis</th><th>Control surface</th><th>Cockpit input</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Roll / Bank</strong></td><td>Longitudinal (nose↔tail)</td><td>Ailerons</td><td>Yoke left/right</td></tr>
+                <tr><td><strong>Pitch</strong></td><td>Lateral (wingtip↔wingtip)</td><td>Elevator</td><td>Yoke fore/aft</td></tr>
+                <tr><td><strong>Yaw</strong></td><td>Vertical (top↔bottom)</td><td>Rudder</td><td>Rudder pedals</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <figure class="diagram">
+            <svg viewBox="0 0 600 200" role="img" aria-labelledby="axes-t">
+              <title id="axes-t">The three axes of rotation: roll about the longitudinal axis, pitch about the lateral axis, yaw about the vertical axis</title>
+              <!-- ROLL: front view -->
+              <g style="stroke: var(--text-muted); fill: var(--text-muted)">
+                <line x1="54" y1="80" x2="146" y2="80" stroke-width="7" stroke-linecap="round" />
+                <circle cx="100" cy="80" r="10" stroke="none" />
+                <line x1="100" y1="71" x2="100" y2="56" stroke-width="5" />
+              </g>
+              <path d="M152 80 A52 52 0 1 1 100 28" fill="none" style="stroke: var(--accent)" stroke-width="3" />
+              <polygon points="94,28 108,22 108,34" style="fill: var(--accent)" />
+              <text x="100" y="160" text-anchor="middle" style="fill: var(--text)" font-size="15" font-weight="800">ROLL</text>
+              <text x="100" y="180" text-anchor="middle" style="fill: var(--text-muted)" font-size="12">Ailerons · longitudinal</text>
+
+              <!-- PITCH: side view -->
+              <g style="stroke: var(--text-muted); fill: var(--text-muted)">
+                <ellipse cx="300" cy="80" rx="40" ry="11" stroke="none" />
+                <polygon points="340,80 356,74 340,68" stroke="none" />
+                <polygon points="268,80 268,60 282,80" stroke="none" />
+              </g>
+              <path d="M352 80 A52 52 0 1 1 300 28" fill="none" style="stroke: var(--accent)" stroke-width="3" />
+              <polygon points="294,28 308,22 308,34" style="fill: var(--accent)" />
+              <text x="300" y="160" text-anchor="middle" style="fill: var(--text)" font-size="15" font-weight="800">PITCH</text>
+              <text x="300" y="180" text-anchor="middle" style="fill: var(--text-muted)" font-size="12">Elevator · lateral</text>
+
+              <!-- YAW: top view -->
+              <g style="stroke: var(--text-muted); fill: var(--text-muted)">
+                <ellipse cx="500" cy="80" rx="8" ry="38" stroke="none" />
+                <line x1="460" y1="76" x2="540" y2="76" stroke-width="7" stroke-linecap="round" />
+                <line x1="484" y1="110" x2="516" y2="110" stroke-width="6" stroke-linecap="round" />
+              </g>
+              <path d="M556 80 A56 56 0 1 1 500 24" fill="none" style="stroke: var(--accent)" stroke-width="3" />
+              <polygon points="494,24 508,18 508,30" style="fill: var(--accent)" />
+              <text x="500" y="160" text-anchor="middle" style="fill: var(--text)" font-size="15" font-weight="800">YAW</text>
+              <text x="500" y="180" text-anchor="middle" style="fill: var(--text-muted)" font-size="12">Rudder · vertical</text>
+            </svg>
+            <figcaption>Each view looks straight down its axis of rotation (front = roll, side = pitch, top = yaw). <strong>Longitudinal = length</strong> (nose to tail).</figcaption>
+          </figure>
+        </section>
+
+        <!-- STABILITY -->
+        <section class="section" id="stability">
+          <h2>Stability &amp; the CG</h2>
+          <ul>
+            <li>
+              <strong>Stable</strong> = the airplane tends to <em>return</em> to
+              its original attitude after a disturbance.
+              <span class="muted">(Static stability = initial tendency; dynamic stability = what happens over time.)</span>
+            </li>
+            <li>
+              The <strong>center of gravity (CG) should be ahead of the center of
+              pressure (CP)</strong> — and ahead of the main wheels. A
+              forward CG is more stable (the tail provides a downward balancing
+              force).
+            </li>
+            <li>
+              <strong>CP (center of pressure)</strong> = the point where the
+              wing's lift effectively acts.
+            </li>
+            <li>
+              <strong>Dihedral</strong> (the upward V of the wings) provides
+              <em>lateral</em> (roll) stability.
+            </li>
+          </ul>
+        </section>
+
+        <!-- STALLS & SPINS -->
+        <section class="section" id="stalls-spins">
+          <h2>Stalls &amp; spins</h2>
+          <ul>
+            <li>
+              A <strong>spin</strong> happens when <strong>both wings are
+              stalled but one is more stalled than the other</strong> — the
+              less-stalled wing keeps flying, so the airplane autorotates.
+            </li>
+            <li>
+              On a <strong>rectangular wing (e.g. the Cessna 172)</strong>, the
+              <strong>wing root is at a higher angle of attack than the tip</strong>,
+              so the root stalls first. Benefits: the
+              <strong>ailerons stay effective at the start of a stall</strong>,
+              and you get aerodynamic stall warning before the whole wing lets go.
+            </li>
+          </ul>
+        </section>
+
+        <!-- LOAD FACTOR -->
+        <section class="section" id="load-factor">
+          <h2>Load factor</h2>
+          <p>
+            <strong>Load factor = G-force = the multiplier on the weight you
+            feel.</strong> It increases in <strong>turns/banks</strong> — the
+            steeper the bank, the higher the load factor — which also
+            <strong>raises stall speed</strong>.
+          </p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Bank angle</th><th class="num">Load factor</th></tr></thead>
+              <tbody>
+                <tr><td>Level</td><td class="num">1.0 G</td></tr>
+                <tr><td>30°</td><td class="num">1.15 G</td></tr>
+                <tr><td>45°</td><td class="num">1.41 G</td></tr>
+                <tr><td>60°</td><td class="num">2.0 G</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout callout--note">
+            <div class="callout__label">Note</div>
+            <p class="mb-0">Load factor matters for <strong>turns</strong> — straight-and-level pulls 1 G regardless of speed.</p>
+          </div>
+
+          <figure class="diagram">
+            <img src="images/vg-diagram.png" alt="Vg diagram (flight envelope): load factor versus indicated airspeed, showing the normal operating range, caution range, never-exceed speed, stall speed line and gust lines." loading="lazy" />
+            <figcaption>The <strong>Vg diagram</strong> (flight envelope). <span class="diagram__source">From the lecture slides.</span></figcaption>
+          </figure>
+        </section>
+
+        <!-- GROUND EFFECT -->
+        <section class="section" id="ground-effect">
+          <h2>Ground effect</h2>
+          <p>
+            Near the ground, the surface interrupts the wingtip vortices and
+            downwash, <strong>reducing induced drag</strong>. It's most
+            prominent within <strong>one wingspan's height above the runway</strong>.
+            The airplane feels like it "floats." Beware of trying to climb out of
+            ground effect before reaching a safe airspeed.
+          </p>
+          <figure class="diagram">
+            <svg viewBox="0 0 560 210" role="img" aria-labelledby="ge-t">
+              <title id="ge-t">In ground effect wingtip vortices are smaller, reducing induced drag</title>
+              <!-- ground -->
+              <line x1="30" y1="175" x2="530" y2="175" style="stroke: var(--text)" stroke-width="3" />
+              <g style="fill: var(--text-muted)" opacity="0.4" font-size="0"><rect x="30" y="175" width="500" height="10"/></g>
+              <!-- in ground effect plane -->
+              <ellipse cx="160" cy="150" rx="55" ry="9" style="fill: var(--text-muted)" opacity="0.6" />
+              <path d="M120 150 a10 10 0 1 1 -0.1 0" fill="none" style="stroke: var(--accent)" stroke-width="2" />
+              <path d="M200 150 a10 10 0 1 0 0.1 0" fill="none" style="stroke: var(--accent)" stroke-width="2" />
+              <text x="105" y="200" style="fill: var(--accent)" font-size="12">small vortices (in ground effect)</text>
+              <!-- out of ground effect plane -->
+              <ellipse cx="410" cy="70" rx="55" ry="9" style="fill: var(--text-muted)" opacity="0.6" />
+              <path d="M360 70 a22 22 0 1 1 -0.1 0" fill="none" style="stroke: var(--warn-border)" stroke-width="2" />
+              <path d="M460 70 a22 22 0 1 0 0.1 0" fill="none" style="stroke: var(--warn-border)" stroke-width="2" />
+              <text x="350" y="120" style="fill: var(--warn-border)" font-size="12">large vortices (free air)</text>
+            </svg>
+          </figure>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

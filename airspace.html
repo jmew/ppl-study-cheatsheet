@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Airspace — PPL Study Guide</title>
+    <meta name="description" content="PPL airspace: Classes A–G, VFR weather minimums and cloud clearances (152 / 111), special-use airspace, the Mode C veil, and sectional chart symbology." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
+    <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
+  </head>
+  <body>
+    <main id="main" class="layout">
+      <aside><nav class="toc" data-toc aria-label="On this page"></nav></aside>
+      <div class="content">
+        <div class="page-head">
+          <p class="breadcrumbs"><a href="index.html">Home</a> › Airspace</p>
+          <span class="eyebrow">Lecture 3 · PHAK 15</span>
+          <h1>Airspace</h1>
+          <p class="lead">The classes from A to G, what it takes to fly VFR in each, the special-use areas, and how it all looks on a sectional chart.</p>
+        </div>
+
+        <!-- OVERVIEW DIAGRAM -->
+        <section class="section" id="overview">
+          <h2>The big picture</h2>
+          <p>Controlled airspace (A, B, C, D, E) is where ATC provides services; <strong>Class G is uncontrolled</strong>. <strong>Towered airports require two-way radio communication.</strong></p>
+
+          <figure class="diagram">
+            <img src="images/airspace-overview.png" alt="Cross-section of US airspace classes A through G with a table of entry requirements, VFR visibility minimums, and VFR cloud clearance for each class." loading="lazy" />
+            <figcaption>The airspace classes in cross-section. <span class="diagram__source">From the lecture slides.</span></figcaption>
+          </figure>
+        </section>
+
+        <!-- CLASSES -->
+        <section class="section" id="classes">
+          <h2>The classes, one by one</h2>
+          <p class="muted">The chart marking for each class is shown beside it.</p>
+          <div class="deflist">
+            <div>
+              <dt>Class A</dt>
+              <dd><ul><li><span class="k-amber">IFR only</span> — no VFR</li><li>18,000′ MSL – FL600</li><li>Altitude-defined (no chart line)</li></ul></dd>
+            </div>
+            <div>
+              <dt>Class B <svg class="swatch swatch--inline" viewBox="0 0 60 16" role="img" aria-label="solid blue line"><line x1="2" y1="8" x2="58" y2="8" stroke="#2f6fed" stroke-width="4" stroke-linecap="round"/></svg></dt>
+              <dd><ul><li><span class="k-blue">Explicit ATC clearance</span> ("cleared into the Bravo")</li><li>Busiest airports</li><li>Upside-down wedding cake</li></ul></dd>
+            </div>
+            <div>
+              <dt>Class C <svg class="swatch swatch--inline" viewBox="0 0 60 16" role="img" aria-label="solid magenta line"><line x1="2" y1="8" x2="58" y2="8" stroke="#c0367a" stroke-width="4" stroke-linecap="round"/></svg></dt>
+              <dd><ul><li><span class="k-blue">Two-way radio contact</span></li><li>Semi-busy airports</li><li>Surface → 4,000′ AGL, ~10 NM radius</li></ul></dd>
+            </div>
+            <div>
+              <dt>Class D <svg class="swatch swatch--inline" viewBox="0 0 60 16" role="img" aria-label="dashed blue line"><line x1="2" y1="8" x2="58" y2="8" stroke="#2f6fed" stroke-width="3.5" stroke-dasharray="8 5"/></svg></dt>
+              <dd><ul><li><span class="k-blue">Two-way radio contact</span></li><li>Smaller towered fields</li><li>Up to ~2,500′ AGL</li></ul></dd>
+            </div>
+            <div>
+              <dt>Class E <svg class="swatch swatch--inline" viewBox="0 0 60 16" role="img" aria-label="dashed magenta line"><line x1="2" y1="8" x2="58" y2="8" stroke="#c0367a" stroke-width="3.5" stroke-dasharray="8 5"/></svg></dt>
+              <dd><ul><li>Controlled "everything else"</li><li>Floors at surface, or 700′/1,200′ AGL</li></ul></dd>
+            </div>
+            <div>
+              <dt>Class G</dt>
+              <dd><ul><li><span class="k-amber">Uncontrolled</span></li><li>Whatever's below the Class E floor</li></ul></dd>
+            </div>
+          </div>
+          <div class="callout callout--note">
+            <div class="callout__label">Reading the chart</div>
+            <p class="mb-0">A number in brackets is the Class D <strong>ceiling</strong> in hundreds of feet MSL — e.g. <code>[29]</code> = 2,900′ MSL. An altitude printed with a <strong>minus sign</strong> (e.g. <code>-29</code>) means "<strong>up to but not including</strong>" that altitude.</p>
+          </div>
+        </section>
+
+        <!-- VFR MINIMUMS -->
+        <section class="section" id="vfr-minimums">
+          <h2>VFR weather minimums &amp; cloud clearances</h2>
+
+          <div class="grid grid--2">
+            <div class="mnemonic">
+              <div class="mnemonic__word">"<span>1&nbsp;5&nbsp;2</span>"</div>
+              <p class="muted mt-0" style="font-size:.9rem">Cloud clearance for C, D, and E below 10,000′ MSL (+ G at night):</p>
+              <ul>
+                <li><b>1</b> — 1,000 ft <strong>above</strong></li>
+                <li><b>5</b> — 500 ft <strong>below</strong></li>
+                <li><b>2</b> — 2,000 ft <strong>horizontal</strong></li>
+              </ul>
+            </div>
+            <div class="mnemonic">
+              <div class="mnemonic__word">"<span>1&nbsp;1&nbsp;1</span>"</div>
+              <p class="muted mt-0" style="font-size:.9rem">Cloud clearance for E &amp; G at/above 10,000′ MSL:</p>
+              <ul>
+                <li><b>1</b> — 1,000 ft <strong>above</strong></li>
+                <li><b>1</b> — 1,000 ft <strong>below</strong></li>
+                <li><b>1</b> — 1 SM <strong>horizontal</strong></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="callout callout--note">
+            <div class="callout__label">The pattern (don't memorize every row)</div>
+            <ul class="mb-0">
+              <li>Controlled airspace <strong>below 10,000′</strong> (C/D/E): <span class="k-blue">3 SM</span> &amp; <strong>152</strong>.</li>
+              <li><strong>At/above 10,000′</strong> (E &amp; G): <span class="k-blue">5 SM</span> &amp; <strong>111</strong>.</li>
+              <li><strong>Class B</strong>: <span class="k-blue">3 SM</span>, just <strong>clear of clouds</strong>.</li>
+              <li><strong>Class G, day, low</strong> (≤1,200′ AGL): <span class="k-blue">1 SM</span>, clear of clouds.</li>
+            </ul>
+          </div>
+
+          <figure class="diagram">
+            <img src="images/airspace-cloud-clearances.png" alt="Airspace classes A through G showing the VFR cloud clearance distances and visibility for each: Class B clear of clouds 3SM; C/D/E below 10,000 is 3-152; E/G at or above 10,000 is 5-111; Class G day below 1,200 AGL is 1SM clear of clouds." loading="lazy" />
+            <figcaption>Cloud-clearance and visibility minimums by class. <span class="diagram__source">From the lecture slides.</span></figcaption>
+          </figure>
+        </section>
+
+        <!-- SPECIAL USE -->
+        <section class="section" id="special-use">
+          <h2>Special-use airspace</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Type</th><th>Rule</th><th>Why</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Prohibited</strong> (P)</td><td><span class="pill" style="color:#c0367a;border-color:#c0367a">banned</span> No flight, ever.</td><td>Security/national interest (e.g. P-56 over the White House).</td></tr>
+                <tr><td><strong>Restricted</strong> (R)</td><td><span class="pill" style="color:#d9822b;border-color:#d9822b">permission</span> Enter only when inactive / with clearance.</td><td>Hazards — artillery, missiles, aerial gunnery.</td></tr>
+                <tr><td><strong>MOA / Military</strong></td><td><span class="pill" style="color:var(--tip-border);border-color:var(--tip-border)">allowed, caution</span> VFR may enter; use caution / check if active.</td><td>Military training (separates them from IFR traffic).</td></tr>
+                <tr><td><strong>Warning Area</strong></td><td>Caution; starts 3 NM offshore.</td><td>Same hazards as restricted, over international waters.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- MODE C / EQUIPMENT -->
+        <section class="section" id="equipment">
+          <h2>Transponders &amp; the Mode C veil</h2>
+          <ul>
+            <li>The <strong>Mode C veil</strong> is a <strong>30 NM ring around Class B</strong>, surface up to 10,000′ MSL, where a <strong>Mode C transponder + ADS-B Out</strong> are required.</li>
+            <li><strong>ADS-B Out is required wherever Mode C is</strong> — Class A/B/C, above the B/C shelves, above 10,000′ MSL (except below 2,500′ AGL), and inside the Mode C veil.</li>
+            <li><strong>Anti-collision lights must be on</strong> any time the aircraft is operating (day or night), unless the PIC deems it unsafe.</li>
+          </ul>
+          <figure class="diagram">
+            <svg viewBox="0 0 560 280" role="img" aria-labelledby="veil-t">
+              <title id="veil-t">Mode C is required above 10,000 feet MSL, within the 30 NM Mode C veil around Class B, and in and above Class C</title>
+              <!-- above 10,000' zone -->
+              <rect x="30" y="46" width="500" height="48" style="fill: var(--accent)" opacity="0.12" />
+              <text x="280" y="76" text-anchor="middle" style="fill: var(--accent)" font-size="13" font-weight="700">Mode C — above 10,000′ MSL</text>
+              <!-- 10,000' line -->
+              <line x1="30" y1="94" x2="530" y2="94" style="stroke: var(--text-muted)" stroke-width="1.5" stroke-dasharray="5 5" />
+              <text x="34" y="110" style="fill: var(--text-muted)" font-size="11">10,000′ MSL</text>
+              <!-- ground -->
+              <line x1="30" y1="216" x2="530" y2="216" style="stroke: var(--text)" stroke-width="3" />
+              <!-- Class B veil column -->
+              <rect x="70" y="94" width="180" height="122" style="fill: var(--text-muted)" opacity="0.10" />
+              <path d="M150 216 V150 H120 V100 H200 V150 H170 V216 Z" style="stroke: var(--chart-blue); fill: var(--chart-blue)" fill-opacity="0.15" stroke-width="2.5" />
+              <text x="160" y="132" text-anchor="middle" font-weight="800" style="fill: var(--chart-blue)" font-size="15">B</text>
+              <line x1="70" y1="232" x2="250" y2="232" style="stroke: var(--text-muted)" stroke-width="1.5" />
+              <line x1="70" y1="227" x2="70" y2="237" style="stroke: var(--text-muted)" stroke-width="1.5" />
+              <line x1="250" y1="227" x2="250" y2="237" style="stroke: var(--text-muted)" stroke-width="1.5" />
+              <text x="160" y="252" text-anchor="middle" style="fill: var(--text-muted)" font-size="12">30 NM Mode C veil</text>
+              <!-- Class C column (in & above C up to 10,000') -->
+              <rect x="350" y="94" width="130" height="122" style="fill: var(--text-muted)" opacity="0.10" />
+              <path d="M400 216 V172 H378 V150 H452 V172 H430 V216 Z" style="stroke: var(--chart-magenta); fill: var(--chart-magenta)" fill-opacity="0.15" stroke-width="2.5" />
+              <text x="415" y="197" text-anchor="middle" font-weight="800" style="fill: var(--chart-magenta)" font-size="15">C</text>
+              <text x="415" y="252" text-anchor="middle" style="fill: var(--text-muted)" font-size="12">in &amp; above Class C</text>
+            </svg>
+          </figure>
+        </section>
+
+        <!-- OTHER CHART SYMBOLS -->
+        <section class="section" id="chart-symbology">
+          <h2>Other chart symbols</h2>
+          <p>Beyond the class boundaries shown above, these features also appear on a VFR sectional:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Marking</th><th>What it means</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><svg class="swatch" viewBox="0 0 104 26" aria-hidden="true"><defs><linearGradient id="fmag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c0367a" stop-opacity="0.9"/><stop offset="1" stop-color="#c0367a" stop-opacity="0"/></linearGradient></defs><rect x="2" y="5" width="100" height="17" fill="url(#fmag)"/></svg></td>
+                  <td><strong>Faded magenta</strong> vignette — Class E floor at 700′ AGL</td>
+                </tr>
+                <tr>
+                  <td><svg class="swatch" viewBox="0 0 104 26" aria-hidden="true"><defs><linearGradient id="fblu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f6fed" stop-opacity="0.9"/><stop offset="1" stop-color="#2f6fed" stop-opacity="0"/></linearGradient></defs><rect x="2" y="5" width="100" height="17" fill="url(#fblu)"/></svg></td>
+                  <td><strong>Faded blue</strong> vignette — Class E floor at 1,200′ AGL (Class G below it)</td>
+                </tr>
+                <tr>
+                  <td><svg class="swatch" viewBox="0 0 104 26" aria-hidden="true"><line x1="2" y1="8" x2="102" y2="8" stroke="#2f6fed" stroke-width="3"/><g stroke="#2f6fed" stroke-width="2.5"><line x1="12" y1="8" x2="6" y2="23"/><line x1="29" y1="8" x2="23" y2="23"/><line x1="46" y1="8" x2="40" y2="23"/><line x1="63" y1="8" x2="57" y2="23"/><line x1="80" y1="8" x2="74" y2="23"/><line x1="97" y1="8" x2="91" y2="23"/></g></svg></td>
+                  <td><strong>Blue hatched</strong> — Prohibited / Restricted / Warning</td>
+                </tr>
+                <tr>
+                  <td><svg class="swatch" viewBox="0 0 104 26" aria-hidden="true"><line x1="2" y1="8" x2="102" y2="8" stroke="#c0367a" stroke-width="3"/><g stroke="#c0367a" stroke-width="2.5"><line x1="12" y1="8" x2="6" y2="23"/><line x1="29" y1="8" x2="23" y2="23"/><line x1="46" y1="8" x2="40" y2="23"/><line x1="63" y1="8" x2="57" y2="23"/><line x1="80" y1="8" x2="74" y2="23"/><line x1="97" y1="8" x2="91" y2="23"/></g></svg></td>
+                  <td><strong>Magenta hatched</strong> — MOA (Military Operations Area) &amp; Alert area</td>
+                </tr>
+                <tr>
+                  <td><svg class="swatch" viewBox="0 0 104 26" aria-hidden="true"><g stroke="#2f6fed" stroke-width="2.5" fill="none"><circle cx="52" cy="13" r="7"/><line x1="52" y1="1" x2="52" y2="4"/><line x1="52" y1="22" x2="52" y2="25"/><line x1="39" y1="13" x2="42" y2="13"/><line x1="62" y1="13" x2="65" y2="13"/></g></svg></td>
+                  <td><strong>Blue airport</strong> — towered / controlled field</td>
+                </tr>
+                <tr>
+                  <td><svg class="swatch" viewBox="0 0 104 26" aria-hidden="true"><g stroke="#c0367a" stroke-width="2.5" fill="none"><circle cx="52" cy="13" r="7"/><line x1="52" y1="1" x2="52" y2="4"/><line x1="52" y1="22" x2="52" y2="25"/><line x1="39" y1="13" x2="42" y2="13"/><line x1="62" y1="13" x2="65" y2="13"/></g></svg></td>
+                  <td><strong>Magenta airport</strong> — non-towered field</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout callout--note">
+            <div class="callout__label">Wildlife refuges &amp; noise-sensitive areas</div>
+            <p class="mb-0">These are charted on the sectional — pilots are asked to fly <strong>at or above 2,000′ AGL</strong> over them.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

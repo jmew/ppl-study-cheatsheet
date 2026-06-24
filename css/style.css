@@ -782,14 +782,12 @@ mark {
   gap: 4px;
 }
 .mnemonic li {
-  display: flex;
-  gap: 8px;
-  align-items: baseline;
+  padding-left: 2.1em;
+  text-indent: -2.1em;
 }
 .mnemonic li b {
   font-family: var(--mono);
   color: var(--mnemonic-border);
-  min-width: 1.4em;
   font-size: 1.05em;
 }
 
@@ -915,6 +913,11 @@ figure.diagram svg {
   display: block;
   width: 100%;
   height: auto;
+  /* Inline SVG diagrams are sized for legibility on mobile (full width);
+     cap + center them on desktop so the labels don't render oversized.
+     The max-width:760px mobile rule overrides this back to 100%. */
+  max-width: 520px;
+  margin-inline: auto;
 }
 figure.diagram img {
   display: block;

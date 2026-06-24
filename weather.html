@@ -65,7 +65,7 @@
         <section class="section" id="pressure-systems">
           <h2>Pressure systems</h2>
           <figure class="diagram">
-            <svg viewBox="0 0 560 270" role="img" aria-labelledby="press-t">
+            <svg viewBox="0 0 560 282" role="img" aria-labelledby="press-t">
               <title id="press-t">Low pressure rotates counter-clockwise with rising air; high pressure rotates clockwise with sinking air</title>
               <!-- LOW -->
               <g style="stroke: var(--accent)" fill="none" stroke-width="2.5">
@@ -75,8 +75,9 @@
               <!-- CCW arrow -->
               <path d="M160 38 A82 82 0 0 0 78 120" fill="none" style="stroke: var(--accent)" stroke-width="2.5" />
               <polygon points="78,120 86,106 70,108" style="fill: var(--accent)" />
-              <text x="160" y="225" text-anchor="middle" style="fill: var(--text)" font-size="12" font-weight="600">Counter-clockwise · inflow · rising</text>
-              <text x="160" y="243" text-anchor="middle" style="fill: var(--text-muted)" font-size="11">clouds &amp; bad weather</text>
+              <text x="160" y="215" text-anchor="middle" style="fill: var(--text)" font-size="19" font-weight="600">Counter-clockwise</text>
+              <text x="160" y="237" text-anchor="middle" style="fill: var(--text)" font-size="19" font-weight="600">inflow · rising</text>
+              <text x="160" y="258" text-anchor="middle" style="fill: var(--text-muted)" font-size="17">clouds &amp; bad weather</text>
               <!-- HIGH -->
               <g style="stroke: var(--warn-border)" fill="none" stroke-width="2.5">
                 <circle cx="400" cy="120" r="70" /><circle cx="400" cy="120" r="45" /><circle cx="400" cy="120" r="22" />
@@ -85,12 +86,13 @@
               <!-- CW arrow -->
               <path d="M400 38 A82 82 0 0 1 482 120" fill="none" style="stroke: var(--warn-border)" stroke-width="2.5" />
               <polygon points="482,120 490,108 474,106" style="fill: var(--warn-border)" />
-              <text x="400" y="225" text-anchor="middle" style="fill: var(--text)" font-size="12" font-weight="600">Clockwise · outflow · sinking</text>
-              <text x="400" y="243" text-anchor="middle" style="fill: var(--text-muted)" font-size="11">fair weather</text>
+              <text x="400" y="215" text-anchor="middle" style="fill: var(--text)" font-size="19" font-weight="600">Clockwise</text>
+              <text x="400" y="237" text-anchor="middle" style="fill: var(--text)" font-size="19" font-weight="600">outflow · sinking</text>
+              <text x="400" y="258" text-anchor="middle" style="fill: var(--text-muted)" font-size="17">fair weather</text>
               <!-- rising air between the systems -->
               <line x1="280" y1="180" x2="280" y2="76" style="stroke: var(--formula-border)" stroke-width="2.5" />
               <polygon points="280,70 272,88 288,88" style="fill: var(--formula-border)" />
-              <text x="280" y="205" text-anchor="middle" style="fill: var(--formula-border)" font-size="11" font-weight="700">rising air</text>
+              <text x="280" y="205" text-anchor="middle" style="fill: var(--formula-border)" font-size="18" font-weight="700">rising air</text>
               <!-- LOW: converging inflow (dotted, pointing toward the centre) -->
               <g style="stroke: var(--accent)" stroke-width="2.5" stroke-dasharray="3 4" stroke-linecap="round" fill="none">
                 <line x1="160" y1="50" x2="160" y2="88" />
@@ -158,12 +160,12 @@
                 <line x1="452" y1="128" x2="452" y2="149" /><line x1="486" y1="128" x2="486" y2="149" />
               </g>
               <line x1="20" y1="150" x2="540" y2="150" style="stroke: var(--text)" stroke-width="2" />
-              <g font-size="12" font-weight="600" text-anchor="middle" style="fill: var(--text)">
+              <g font-size="19" font-weight="600" text-anchor="middle" style="fill: var(--text)">
                 <text x="95" y="185">1 · Towering cumulus</text>
                 <text x="290" y="185">2 · Mature</text>
                 <text x="470" y="185">3 · Dissipating</text>
               </g>
-              <g font-size="11" text-anchor="middle">
+              <g font-size="18" text-anchor="middle">
                 <text x="95" y="203" style="fill: var(--tip-border)">updrafts only</text>
                 <text x="290" y="203" style="fill: var(--warn-border)" font-weight="700">rain begins · most dangerous</text>
                 <text x="470" y="203" style="fill: var(--accent)">rains itself out</text>
@@ -182,19 +184,19 @@
               <!-- cold -->
               <line x1="60" y1="40" x2="320" y2="40" stroke="#2f6fed" stroke-width="3" />
               <g fill="#2f6fed"><polygon points="100,40 112,40 106,28"/><polygon points="160,40 172,40 166,28"/><polygon points="220,40 232,40 226,28"/><polygon points="280,40 292,40 286,28"/></g>
-              <text x="350" y="45" style="fill: var(--text)" font-size="13" font-weight="600">Cold front</text>
+              <text x="350" y="45" style="fill: var(--text)" font-size="21" font-weight="600">Cold front</text>
               <!-- warm -->
               <line x1="60" y1="95" x2="320" y2="95" stroke="#d6202a" stroke-width="3" />
               <g fill="#d6202a"><path d="M100 95 a6 6 0 0 1 12 0z"/><path d="M160 95 a6 6 0 0 1 12 0z"/><path d="M220 95 a6 6 0 0 1 12 0z"/><path d="M280 95 a6 6 0 0 1 12 0z"/></g>
-              <text x="350" y="100" style="fill: var(--text)" font-size="13" font-weight="600">Warm front</text>
+              <text x="350" y="100" style="fill: var(--text)" font-size="21" font-weight="600">Warm front</text>
               <!-- stationary -->
               <line x1="60" y1="150" x2="320" y2="150" stroke="#7a4fd0" stroke-width="3" />
               <g><polygon points="100,150 112,150 106,138" fill="#2f6fed"/><path d="M160 150 a6 6 0 0 0 12 0z" fill="#d6202a"/><polygon points="220,150 232,150 226,138" fill="#2f6fed"/><path d="M280 150 a6 6 0 0 0 12 0z" fill="#d6202a"/></g>
-              <text x="350" y="155" style="fill: var(--text)" font-size="13" font-weight="600">Stationary front</text>
+              <text x="350" y="155" style="fill: var(--text)" font-size="21" font-weight="600">Stationary front</text>
               <!-- occluded -->
               <line x1="60" y1="205" x2="320" y2="205" stroke="#7a4fd0" stroke-width="3" />
               <g fill="#7a4fd0"><polygon points="100,205 112,205 106,193"/><path d="M160 205 a6 6 0 0 1 12 0z"/><polygon points="220,205 232,205 226,193"/><path d="M280 205 a6 6 0 0 1 12 0z"/></g>
-              <text x="350" y="210" style="fill: var(--text)" font-size="13" font-weight="600">Occluded front</text>
+              <text x="350" y="210" style="fill: var(--text)" font-size="21" font-weight="600">Occluded front</text>
             </svg>
             <figcaption><span class="k-blue">Cold</span> = pointed triangles; <span class="k-red">warm</span> = rounded bumps; <span class="k-green">stationary</span> = both, opposite sides; <span class="k-purple">occluded</span> = both, same side (purple).</figcaption>
           </figure>

@@ -33,9 +33,8 @@ window.PPL_DATA = {
     { t: "Runway numbers & signs", p: "airports.html#runways", topic: "Airports", k: "runway number magnetic heading red sign yellow sign hold short LAHSO wildlife refuge", s: "Runway numbers come from the magnetic heading; red = on runway, yellow = direction." },
     { t: "PAPI vs VASI glidepath", p: "airports.html#glidepath", topic: "Airports", k: "PAPI VASI red white glidepath 3 degree stabilized approach", s: "Red over white, you're alright; 3 degree stabilized approach." },
     // ATC
-    { t: "Controller flow", p: "atc.html#flow", topic: "ATC", k: "ground tower departure center approach handoff", s: "Ground to Tower to Departure to Center to Approach to Ground." },
+    { t: "Controller flow", p: "atc.html#flow", topic: "ATC", k: "ground tower departure center approach handoff magnetic winds headings", s: "Ground to Tower to Departure to Center to Approach to Ground." },
     { t: "Departure & arrival sequence", p: "atc.html#sequences", topic: "ATC", k: "ATIS ground control tower approach taxi clearance", s: "ATIS first, then Ground, then Tower." },
-    { t: "Radio call structure", p: "atc.html#call-structure", topic: "ATC", k: "who where what information phraseology one zero thousand magnetic", s: "Who you call, where you are, what you want, with info." },
     { t: "Transponder & squawk codes", p: "atc.html#transponder", topic: "ATC", k: "squawk 1200 7500 7600 7700 mode c ADS-B VFR 121.5 122.2", s: "1200 VFR, 7500 hijack, 7600 lost comms, 7700 emergency." },
     { t: "Light-gun signals", p: "atc.html#light-gun", topic: "ATC", k: "light gun signal green red white steady flashing lost comms", s: "Tower light-gun signals when the radio fails." },
     // Performance
@@ -145,7 +144,6 @@ window.PPL_DATA = {
     { topic: "ATC", q: "Squawk 7600?", a: "Lost communications (no radio)." },
     { topic: "ATC", q: "Squawk 7700?", a: "Emergency." },
     { topic: "ATC", q: "What is Mode C?", a: "The transponder's ability to send altitude information to ATC." },
-    { topic: "ATC", q: "The four parts of a radio call?", a: "Who (you're calling + callsign), Where you are, What you want, with info (ATIS)." },
     { topic: "ATC", q: "Emergency / guard frequency?", a: "121.5 MHz (also used to check an ELT)." },
     { topic: "ATC", q: "Departure controller sequence?", a: "ATIS → Ground (taxi) → Tower (takeoff)." },
     // Performance

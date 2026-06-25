@@ -1233,8 +1233,22 @@ select {
   body {
     font-size: 16px;
   }
-  /* On mobile, let every figure/diagram use the full content width
-     (overrides the per-figure desktop max-width caps). */
+  /* On mobile, top-level figures go full-bleed (edge to edge) so diagrams/
+     images get the maximum possible width. The 100vw + translateX trick
+     widens the figure past the .layout side padding without affecting body
+     text. Scoped to direct children of .section so figures inside grids
+     (e.g. side-by-side icon diagrams) keep their normal column layout. */
+  .section > figure.diagram {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  /* Images/SVGs then fill that full-bleed figure (overrides desktop caps). */
   figure.diagram img,
   figure.diagram svg {
     max-width: 100% !important;

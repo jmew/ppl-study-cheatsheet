@@ -84,6 +84,15 @@ window.PPL_DATA = {
     { t: "Night vision", p: "human-factors.html#night-vision", topic: "Human Factors", k: "night vision off-center peripheral scan dark adapt rods", s: "Use off-center viewing at night; the center of vision is weak." },
     { t: "Illusions & disorientation", p: "human-factors.html#illusions", topic: "Human Factors", k: "haze illusion farther IMC spatial disorientation acceleration climb runway slope", s: "Haze = farther; accel/decel feel like climb/descent in IMC." },
     { t: "Fitness to fly (IMSAFE)", p: "human-factors.html#fitness", topic: "Human Factors", k: "IMSAFE illness medication stress alcohol fatigue emotion eating checklist", s: "IMSAFE personal go/no-go checklist." },
+    // FAR/AIM
+    { t: "FAR/AIM: what to read", p: "far-aim.html#roadmap", topic: "FAR/AIM", k: "far aim part 1 43 61 91 830 chapter roadmap what to read sections study", s: "Roadmap of the key FAR parts and AIM chapters — and where each is taught." },
+    { t: "Definitions: the three 'nights'", p: "far-aim.html#definitions", topic: "FAR/AIM", k: "night definition civil twilight calendar month logging position lights sunset sunrise part 1", s: "Logging vs. passenger-currency vs. position-lights night; calendar month." },
+    { t: "Preventive maintenance you may do", p: "far-aim.html#preventive-maintenance", topic: "FAR/AIM", k: "preventive maintenance part 43 appendix A oil tires spark plugs safety belts bulbs battery owner logbook entry", s: "Oil, tires, belts, bulbs, plugs — owner-allowed jobs; must log them." },
+    { t: "Private-pilot privileges & cost-sharing", p: "far-aim.html#privileges", topic: "FAR/AIM", k: "private pilot privileges limitations pro rata share compensation hire fuel oil airport rental common purpose change of address 30 days part 61", s: "Pro-rata cost sharing (fuel/oil/airport/rental); no hire; 30-day address." },
+    { t: "Operating rule extras (PIC, INOP, SVFR)", p: "far-aim.html#operating-extras", topic: "FAR/AIM", k: "PIC pilot in command authority airworthy inoperative equipment INOP placard altimeter 100 nm special VFR clear of clouds 1 sm part 91", s: "PIC authority/airworthiness, inop equipment, altimeter 100 NM, special VFR." },
+    { t: "NTSB accident & incident reporting", p: "far-aim.html#accident-reporting", topic: "FAR/AIM", k: "NTSB 830 accident incident substantial damage immediate notification nose landing gear 10 days 7 days overdue 25000 report", s: "Accident vs incident; what is NOT substantial damage; 10/7-day reports." },
+    { t: "Airport beacons", p: "far-aim.html#airport-lighting", topic: "FAR/AIM", k: "airport beacon colors white green land water yellow heliport military daytime beacon IFR rotating aim chapter 2", s: "White+green = land airport; daytime beacon = poor weather." },
+    { t: "Scuba waits & hyperventilation", p: "far-aim.html#medical-extras", topic: "FAR/AIM", k: "scuba diving wait 12 24 hours 8000 feet decompression nitrogen hyperventilation carbon dioxide aim chapter 8", s: "Scuba-to-fly waits (12/24 h); hyperventilation mimics hypoxia." },
   ],
 
   /* ---- Flashcards ---- */

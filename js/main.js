@@ -94,6 +94,12 @@
       lecture: "12",
       nav: true,
     },
+    {
+      file: "far-aim.html",
+      label: "FAR/AIM",
+      desc: "High-yield rules & AIM by part/chapter",
+      nav: true,
+    },
     { file: "flashcards.html", label: "Flashcards", nav: false },
   ];
 

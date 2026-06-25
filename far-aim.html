@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAR/AIM Reference — PPL Study Guide</title>
+    <meta name="description" content="High-yield FAR/AIM for the PPL written: preventive maintenance you may do, private-pilot privileges & cost-sharing, NTSB reporting, airport beacons, special VFR, and scuba waits — organized by part & chapter." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
+    <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
+  </head>
+  <body>
+    <main id="main" class="layout">
+      <aside><nav class="toc" data-toc aria-label="On this page"></nav></aside>
+      <div class="content">
+        <div class="page-head">
+          <p class="breadcrumbs"><a href="index.html">Home</a> › FAR/AIM</p>
+          <span class="eyebrow">Reference · FAR/AIM</span>
+          <h1>FAR/AIM Reference</h1>
+          <p class="lead">The rules (FARs) and procedures (AIM) most likely to show up on the written — the non-obvious, testable bits. The part/chapter tags are only for looking things up; learn the plain-English facts.</p>
+        </div>
+
+        <!-- ROADMAP -->
+        <section class="section" id="roadmap">
+          <h2>What to read — and where</h2>
+          <p>Start here. The <span class="muted">grey tags</span> are just where to find each topic in the FAR/AIM; the right column links to where it's taught in depth.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Topic</th><th>Reference</th><th>Study in</th></tr></thead>
+              <tbody>
+                <tr><td>Definitions (night, calendar month)</td><td class="muted">FAR Part 1</td><td><a href="#definitions">below</a></td></tr>
+                <tr><td>Maintenance you may do yourself</td><td class="muted">FAR Part 43, App A</td><td><a href="#preventive-maintenance">below</a></td></tr>
+                <tr><td>Certificates, medical, currency, privileges</td><td class="muted">FAR Part 61</td><td><a href="regulations.html#currency-medical">Regulations</a> · <a href="#privileges">below</a></td></tr>
+                <tr><td>Operating &amp; flight rules</td><td class="muted">FAR Part 91</td><td><a href="regulations.html">Regulations</a> · <a href="airspace.html">Airspace</a> · <a href="#operating-extras">below</a></td></tr>
+                <tr><td>Accident &amp; incident reporting</td><td class="muted">NTSB Part 830</td><td><a href="#accident-reporting">below</a></td></tr>
+                <tr><td>Lighting &amp; airport visual aids</td><td class="muted">AIM Ch 2</td><td><a href="airports.html">Airports</a> · <a href="#airport-lighting">below</a></td></tr>
+                <tr><td>Airspace classes &amp; dimensions</td><td class="muted">AIM Ch 3</td><td><a href="airspace.html">Airspace</a></td></tr>
+                <tr><td>ATC, comms &amp; light signals</td><td class="muted">AIM Ch 4</td><td><a href="atc.html">ATC</a></td></tr>
+                <tr><td>Emergencies (squawks, lost comms)</td><td class="muted">AIM Ch 6</td><td><a href="atc.html#transponder">ATC</a></td></tr>
+                <tr><td>Safety of flight (wake turbulence, weather)</td><td class="muted">AIM Ch 7</td><td><a href="aerodynamics.html#ground-effect">Aerodynamics</a> · <a href="weather.html">Weather</a></td></tr>
+                <tr><td>Medical / human factors</td><td class="muted">AIM Ch 8</td><td><a href="human-factors.html">Human Factors</a> · <a href="#medical-extras">below</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- PART 1 -->
+        <section class="section" id="definitions">
+          <h2>Definitions worth memorizing</h2>
+          <p class="muted mt-0" style="font-size:.85rem">Look it up: <strong>FAR Part 1</strong></p>
+          <div class="callout callout--warn">
+            <div class="callout__label">"Night" means three different things</div>
+            <p class="mb-0">A classic trap — the boundary depends on <em>why</em> you're asking.</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>When it's for…</th><th>"Night" is…</th></tr></thead>
+              <tbody>
+                <tr><td><span class="k-blue">Logging</span> night flight time</td><td>End of <strong>evening civil twilight</strong> → beginning of <strong>morning civil twilight</strong></td></tr>
+                <tr><td><span class="k-green">Carrying passengers</span> (recency)</td><td><span class="k-num">1 hr after sunset</span> → <span class="k-num">1 hr before sunrise</span></td></tr>
+                <tr><td><span class="k-amber">Position lights</span> required</td><td><strong>Sunset → sunrise</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout callout--note">
+            <div class="callout__label">"Calendar month"</div>
+            <p class="mb-0">Anything good for "<span class="k-num">X calendar months</span>" expires at the <strong>end of the last day</strong> of that month — not on the same date. (A medical done June 10 is good through June 30 of the expiry year.)</p>
+          </div>
+        </section>
+
+        <!-- PART 43 -->
+        <section class="section" id="preventive-maintenance">
+          <h2>Maintenance you may do yourself</h2>
+          <p class="muted mt-0" style="font-size:.85rem">Look it up: <strong>FAR Part 43, Appendix A</strong></p>
+          <p>As a private pilot you may perform listed <span class="k-green">preventive maintenance</span> on an aircraft you <strong>own or operate</strong> — as long as it isn't flown for hire / under air-carrier rules. Common allowed jobs:</p>
+          <ul>
+            <li>Change or replenish <strong>engine oil</strong>; replace oil &amp; fuel filter elements</li>
+            <li>Replace and service <strong>landing-gear tires</strong>; grease wheel bearings; add air/oil to struts</li>
+            <li>Replace <strong>safety belts</strong></li>
+            <li>Replace <strong>bulbs, reflectors &amp; lenses</strong> of position/landing lights</li>
+            <li>Clean, gap, or replace <strong>spark plugs</strong>; replace the <strong>battery</strong></li>
+            <li>Replenish hydraulic fluid; simple fabric patches (no rib stitching)</li>
+          </ul>
+          <div class="callout callout--note">
+            <div class="callout__label">Log it</div>
+            <p class="mb-0">Every job needs a <strong>maintenance-record entry</strong>: a description of the work, the <strong>date</strong>, your <strong>signature</strong>, and your <strong>certificate number</strong>. The <span class="k-amber">annual</span> and <span class="k-amber">100-hour</span> inspections are <strong>not</strong> preventive maintenance — those need a mechanic/IA (<a href="regulations.html#inspections">Regulations · Inspections</a>).</p>
+          </div>
+        </section>
+
+        <!-- PART 61 -->
+        <section class="section" id="privileges">
+          <h2>Private-pilot privileges &amp; limits</h2>
+          <p class="muted mt-0" style="font-size:.85rem">Look it up: <strong>FAR Part 61</strong></p>
+          <p>You can carry passengers and split costs — but you <strong>can't fly for hire</strong>.</p>
+          <div class="callout callout--tip">
+            <div class="callout__label">Sharing cost — the "pro rata" rule</div>
+            <p class="mb-0">You may split a flight's operating expenses with your passengers, but you must pay <strong>at least your proportional share</strong> (4 people aboard → you pay ≥ <span class="k-num">¼</span>). Only these expenses can be shared: <span class="k-blue">fuel, oil, airport expenditures, and rental fees</span> — and the trip needs a <strong>common purpose</strong>.</p>
+          </div>
+          <ul>
+            <li>No acting as <strong>PIC for compensation or hire</strong> carrying passengers or property.</li>
+            <li>You may be <strong>paid only if the flight is incidental</strong> to a business or job — and you carry no passengers/property for hire.</li>
+            <li><strong>Change of address:</strong> notify the FAA within <span class="k-num">30 days</span> — after that you <strong>may not exercise</strong> your certificate until you do.</li>
+          </ul>
+          <p class="muted">Medical classes, flight review, and passenger recency are on <a href="regulations.html#currency-medical">Regulations</a>.</p>
+        </section>
+
+        <!-- PART 91 -->
+        <section class="section" id="operating-extras">
+          <h2>Operating rules — the high-yield extras</h2>
+          <p class="muted mt-0" style="font-size:.85rem">Look it up: <strong>FAR Part 91</strong></p>
+          <p>Right-of-way, weather minimums, required equipment, cruising altitudes, speed and fuel live on <a href="regulations.html">Regulations</a> and <a href="airspace.html">Airspace</a>. The extras most likely to trip you up:</p>
+          <ul>
+            <li><strong>PIC authority:</strong> the pilot in command is the <span class="k-blue">final authority</span> for the flight and is <strong>responsible for determining the aircraft is airworthy</strong>. In an in-flight emergency the PIC <strong>may deviate from any rule</strong> as needed (then file a report only if ATC asks — <a href="regulations.html#alcohol-aerobatic">Regulations</a>).</li>
+            <li><strong>Inoperative equipment</strong> (no MEL): a broken item that <em>isn't</em> required by regulation, your type certificate, or an AD must be <strong>removed or deactivated and placarded "INOPERATIVE,"</strong> and you (or a mechanic) must decide it's not a hazard for the flight.</li>
+            <li><strong>Altimeter:</strong> below 18,000 ft, set it to a station <strong>within <span class="k-num">100 NM</span></strong> along your route.</li>
+            <li><strong>Special VFR:</strong> inside a surface-area (Class B/C/D/E) you can <em>request</em> an SVFR clearance from ATC and fly with <span class="k-num">1 SM</span> visibility, <strong>clear of clouds</strong>. At <span class="k-purple">night</span> it requires an instrument rating and an IFR-capable aircraft.</li>
+          </ul>
+        </section>
+
+        <!-- NTSB 830 -->
+        <section class="section" id="accident-reporting">
+          <h2>Accidents &amp; incidents — what to report</h2>
+          <p class="muted mt-0" style="font-size:.85rem">Look it up: <strong>NTSB Part 830</strong></p>
+          <p>An <span class="k-red">accident</span> (death, serious injury, or <strong>substantial damage</strong>) requires <strong>immediate</strong> notification to the NTSB. The trap: a lot of damage is specifically <strong>not</strong> "substantial."</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th><span class="k-red">Notify NTSB immediately</span></th><th><span class="k-green">NOT "substantial damage"</span></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td>An <strong>accident</strong> (death, serious injury, substantial damage)</td>
+                  <td><strong>Landing/nose gear</strong>, wheels, tires, brakes</td>
+                </tr>
+                <tr>
+                  <td><strong>Flight-control</strong> system failure or malfunction</td>
+                  <td>Failure/damage limited to a <strong>single engine</strong></td>
+                </tr>
+                <tr>
+                  <td>A crewmember <strong>can't perform duties</strong> (injury/illness)</td>
+                  <td>Bent <strong>fairings or cowling</strong>; dented skin</td>
+                </tr>
+                <tr>
+                  <td><strong>In-flight fire</strong> or <strong>mid-air collision</strong></td>
+                  <td>Ground damage to <strong>prop/rotor blades</strong></td>
+                </tr>
+                <tr>
+                  <td>Property damage (other than aircraft) <strong>&gt; <span class="k-num">$25,000</span></strong></td>
+                  <td>Damage to <strong>wingtips, flaps</strong>, engine accessories</td>
+                </tr>
+                <tr>
+                  <td>An aircraft is <strong>overdue</strong> and believed in an accident</td>
+                  <td><span class="muted">(these are reportable only if asked)</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout callout--note">
+            <div class="callout__label">Written report</div>
+            <p class="mb-0">File a written report within <span class="k-num">10 days</span> of an accident — or within <span class="k-num">7 days</span> if an <strong>overdue aircraft</strong> is still missing.</p>
+          </div>
+        </section>
+
+        <!-- AIM CH 2 -->
+        <section class="section" id="airport-lighting">
+          <h2>Lighting &amp; airport visual aids</h2>
+          <p class="muted mt-0" style="font-size:.85rem">Look it up: <strong>AIM Chapter 2</strong></p>
+          <p>Runway markings, PAPI/VASI, and <a href="airports.html#pilot-lighting">pilot-controlled lighting</a> are on the <a href="airports.html">Airports</a> page. Two more worth knowing:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Beacon</th><th>Means</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><svg viewBox="0 0 50 16" role="img" aria-label="white and green" style="width:50px;height:16px"><circle cx="13" cy="8" r="6" fill="#ffffff" stroke="#9aa4b2" stroke-width="1.2"/><circle cx="33" cy="8" r="6" fill="#2e9e4f"/></svg></td>
+                  <td>Lighted <strong>land</strong> airport (civilian)</td>
+                </tr>
+                <tr>
+                  <td><svg viewBox="0 0 50 16" role="img" aria-label="white and yellow" style="width:50px;height:16px"><circle cx="13" cy="8" r="6" fill="#ffffff" stroke="#9aa4b2" stroke-width="1.2"/><circle cx="33" cy="8" r="6" fill="#e0a800"/></svg></td>
+                  <td>Lighted <strong>water</strong> airport</td>
+                </tr>
+                <tr>
+                  <td><svg viewBox="0 0 70 16" role="img" aria-label="green yellow white" style="width:70px;height:16px"><circle cx="13" cy="8" r="6" fill="#2e9e4f"/><circle cx="33" cy="8" r="6" fill="#e0a800"/><circle cx="53" cy="8" r="6" fill="#ffffff" stroke="#9aa4b2" stroke-width="1.2"/></svg></td>
+                  <td>Lighted <strong>heliport</strong></td>
+                </tr>
+                <tr>
+                  <td><svg viewBox="0 0 64 16" role="img" aria-label="white white green, military" style="width:64px;height:16px"><circle cx="11" cy="8" r="5" fill="#ffffff" stroke="#9aa4b2" stroke-width="1.2"/><circle cx="25" cy="8" r="5" fill="#ffffff" stroke="#9aa4b2" stroke-width="1.2"/><circle cx="45" cy="8" r="6" fill="#2e9e4f"/></svg></td>
+                  <td><strong>Military</strong> field — two quick white flashes between greens</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout callout--warn">
+            <div class="callout__label">Daytime beacon = poor weather</div>
+            <p class="mb-0">In a Class B/C/D/E <strong>surface area</strong>, a beacon running in <strong>daylight</strong> usually means the field is IFR — ground visibility <span class="k-num">&lt; 3 SM</span> and/or ceiling <span class="k-num">&lt; 1,000 ft</span> — so an ATC clearance is required to operate there. Don't rely on it alone; still check weather.</p>
+          </div>
+        </section>
+
+        <!-- AIM CH 8 -->
+        <section class="section" id="medical-extras">
+          <h2>Medical extras</h2>
+          <p class="muted mt-0" style="font-size:.85rem">Look it up: <strong>AIM Chapter 8</strong></p>
+          <p>Hypoxia, carbon monoxide, the visual illusions, and IMSAFE are on <a href="human-factors.html">Human Factors</a>. Two the AIM specifically calls out:</p>
+          <h3>Wait after scuba diving before you fly</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Then flying…</th><th>Wait at least</th></tr></thead>
+              <tbody>
+                <tr><td>up to <span class="k-num">8,000 ft</span> — dive with <strong>no</strong> controlled ascent</td><td><span class="k-num">12 hours</span></td></tr>
+                <tr><td>up to <span class="k-num">8,000 ft</span> — dive needing a <strong>controlled ascent</strong></td><td><span class="k-num">24 hours</span></td></tr>
+                <tr><td><strong>above</strong> <span class="k-num">8,000 ft</span> — any dive</td><td><span class="k-num">24 hours</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="muted">Those are <strong>actual flight altitudes (MSL)</strong>, not cabin altitude — to avoid decompression sickness from trapped nitrogen.</p>
+          <div class="callout callout--note">
+            <div class="callout__label">Hyperventilation</div>
+            <p class="mb-0">Over-breathing (often from stress) blows off too much <strong>CO₂</strong> → light-headedness, tingling, drowsiness — <span class="k-amber">symptoms that mimic hypoxia</span>. Fix it by <strong>slowing your breathing</strong> (or breathing into a bag). If you're on oxygen, assume <strong>hypoxia first</strong> (go 100% O₂), then slow the breathing.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

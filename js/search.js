@@ -23,13 +23,42 @@
     return out;
   }
 
+  // Choose the snippet to show. Normally the curated summary, but if the match
+  // came from the diagram/image caption (not the summary), show an excerpt of
+  // that caption so the result makes sense.
+  function snippetFor(item, terms) {
+    var s = item.s || "";
+    var sl = s.toLowerCase();
+    if (terms.every(function (t) { return sl.indexOf(t) >= 0; })) return s;
+    var cap = item.cap || "";
+    if (!cap) return s;
+    var capl = cap.toLowerCase();
+    var pos = -1;
+    for (var i = 0; i < terms.length; i++) {
+      pos = capl.indexOf(terms[i]);
+      if (pos >= 0) break;
+    }
+    if (pos < 0) return s;
+    var start = Math.max(0, pos - 35);
+    if (start > 0) {
+      var sp = cap.indexOf(" ", start); // snap forward to a word boundary
+      if (sp >= 0 && sp < pos) start = sp + 1;
+    }
+    var end = Math.min(cap.length, start + 130);
+    if (end < cap.length) {
+      var sp2 = cap.lastIndexOf(" ", end); // snap back to a word boundary
+      if (sp2 > pos) end = sp2;
+    }
+    return (start > 0 ? "… " : "") + cap.slice(start, end).trim() + (end < cap.length ? " …" : "");
+  }
+
   function runSearch(q) {
     var data = (window.PPL_DATA && window.PPL_DATA.searchIndex) || [];
     var terms = q.toLowerCase().split(/\s+/).filter(Boolean);
     if (!terms.length) return [];
     var scored = [];
     data.forEach(function (item) {
-      var hay = (item.t + " " + item.topic + " " + item.k + " " + item.s).toLowerCase();
+      var hay = (item.t + " " + item.topic + " " + item.k + " " + item.s + " " + (item.cap || "")).toLowerCase();
       var ok = terms.every(function (t) {
         return hay.indexOf(t) >= 0;
       });
@@ -38,12 +67,14 @@
       var topic = item.topic.toLowerCase();
       var keys = item.k.toLowerCase();
       var snip = item.s.toLowerCase();
+      var cap = (item.cap || "").toLowerCase();
       var score = 0;
       terms.forEach(function (t) {
         if (title.indexOf(t) === 0) score += 6;
         if (title.indexOf(t) >= 0) score += 10;
         if (topic.indexOf(t) >= 0) score += 4;
         if (keys.indexOf(t) >= 0) score += 3;
+        if (cap.indexOf(t) >= 0) score += 2;
         if (snip.indexOf(t) >= 0) score += 1;
       });
       scored.push({ item: item, score: score });
@@ -96,7 +127,7 @@
             it.topic +
             "</div>" +
             '<div class="search__result-snippet">' +
-            it.s +
+            highlight(snippetFor(it, terms), terms) +
             "</div>" +
             "</a>"
           );

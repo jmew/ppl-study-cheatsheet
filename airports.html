@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Airports &amp; Operations — PPL Study Guide</title>
     <meta name="description" content="PPL airport operations: the traffic pattern, runway numbering and signs, hold-short/LAHSO, PAPI vs VASI glidepath lights, and stabilized approaches." />
-    <link rel="stylesheet" href="css/style.css?v=20260625" />
+    <link rel="stylesheet" href="css/style.css?v=20260625b" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
     <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
   </head>
@@ -213,23 +213,39 @@
         <!-- PILOT-CONTROLLED LIGHTING -->
         <section class="section" id="pilot-lighting">
           <h2>Pilot-controlled lighting</h2>
-          <p>At many non-towered fields you switch the runway lights on yourself by <strong>keying the mic</strong> on the published CTAF. Start with <span class="k-num">7</span> clicks to turn them on, then dial the brightness down if you want.</p>
+          <p>At many non-towered fields you switch the runway lights on yourself by <strong>keying the mic</strong> on the published CTAF. Always key <span class="k-num">7</span> times first to turn them on at full brightness, then dial down if you want.</p>
           <div class="table-wrap">
             <table>
-              <thead><tr><th>Mic clicks (within 5 s)</th><th>Result</th></tr></thead>
+              <thead><tr><th>Mic clicks <span class="muted">(within 5 s)</span></th><th>Brightness</th><th>What you get</th></tr></thead>
               <tbody>
-                <tr><td><span class="k-num">7 clicks</span></td><td>Brightest — and turns the lights on</td></tr>
-                <tr><td><span class="k-num">5 clicks</span></td><td>Medium intensity</td></tr>
-                <tr><td><span class="k-num">3 clicks</span></td><td>Lowest intensity</td></tr>
+                <tr>
+                  <td><span class="k-num">7 clicks</span></td>
+                  <td><svg viewBox="0 0 64 18" role="img" aria-label="high brightness, 3 of 3 bars" style="width:64px;height:18px"><rect x="2" y="3" width="16" height="12" rx="2" fill="#e0a800"/><rect x="24" y="3" width="16" height="12" rx="2" fill="#e0a800"/><rect x="46" y="3" width="16" height="12" rx="2" fill="#e0a800"/></svg></td>
+                  <td><strong>Brightest</strong> — and turns the lights on</td>
+                </tr>
+                <tr>
+                  <td><span class="k-num">5 clicks</span></td>
+                  <td><svg viewBox="0 0 64 18" role="img" aria-label="medium brightness, 2 of 3 bars" style="width:64px;height:18px"><rect x="2" y="3" width="16" height="12" rx="2" fill="#e0a800"/><rect x="24" y="3" width="16" height="12" rx="2" fill="#e0a800"/><rect x="46" y="3" width="16" height="12" rx="2" fill="none" stroke="var(--text-muted)" stroke-width="1.5"/></svg></td>
+                  <td>Medium intensity</td>
+                </tr>
+                <tr>
+                  <td><span class="k-num">3 clicks</span></td>
+                  <td><svg viewBox="0 0 64 18" role="img" aria-label="low brightness, 1 of 3 bars" style="width:64px;height:18px"><rect x="2" y="3" width="16" height="12" rx="2" fill="#e0a800"/><rect x="24" y="3" width="16" height="12" rx="2" fill="none" stroke="var(--text-muted)" stroke-width="1.5"/><rect x="46" y="3" width="16" height="12" rx="2" fill="none" stroke="var(--text-muted)" stroke-width="1.5"/></svg></td>
+                  <td>Lowest intensity</td>
+                </tr>
               </tbody>
             </table>
+          </div>
+          <div class="callout callout--note">
+            <div class="callout__label">Good to know</div>
+            <p class="mb-0">The lights stay on <span class="k-num">15 minutes</span> from the last keying — so re-key on approach even if they're already lit. Keying <span class="k-num">7</span> times again resets the full 15-minute timer.</p>
           </div>
         </section>
       </div>
     </main>
 
-    <script src="js/data.js?v=20260625"></script>
-    <script src="js/search.js?v=20260625"></script>
-    <script src="js/main.js?v=20260625"></script>
+    <script src="js/data.js?v=20260625b"></script>
+    <script src="js/search.js?v=20260625b"></script>
+    <script src="js/main.js?v=20260625b"></script>
   </body>
 </html>

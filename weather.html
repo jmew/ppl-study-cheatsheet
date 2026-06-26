@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Weather — PPL Study Guide</title>
     <meta name="description" content="PPL weather: air stability and lapse rate, high/low pressure systems, thunderstorm ingredients and stages, fronts, fog types, temperature inversions and hazards." />
-    <link rel="stylesheet" href="css/style.css?v=20260625f" />
+    <link rel="stylesheet" href="css/style.css?v=20260625g" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
     <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
   </head>
@@ -27,32 +27,24 @@
           <div class="grid grid--2">
             <div class="card">
               <h3 class="mt-0">Stable air → stratus</h3>
-              <ul class="mb-0">
+              <ul>
                 <li><span class="k-blue">Stratiform</span> (layered) clouds</li>
                 <li>Poor visibility</li>
                 <li>Steady, continuous precipitation</li>
                 <li>Smooth air</li>
               </ul>
+              <img class="card-img" src="images/cloud-stratiform.png" alt="Stratiform clouds form in stable air: a rising thermal cools to the surrounding air temperature and stops climbing, so the cloud spreads out flat and layered." loading="lazy" />
             </div>
             <div class="card">
               <h3 class="mt-0">Unstable air → cumulus</h3>
-              <ul class="mb-0">
+              <ul>
                 <li><span class="k-amber">Cumuliform</span> (puffy) clouds</li>
                 <li>Good visibility</li>
                 <li>Showery precipitation</li>
                 <li>Turbulence</li>
               </ul>
+              <img class="card-img" src="images/cloud-cumuliform.png" alt="Cumuliform clouds form in unstable air: a rising thermal stays warmer than the surrounding air, so it keeps climbing and the cloud builds up tall and puffy." loading="lazy" />
             </div>
-          </div>
-          <div class="grid grid--2">
-            <figure class="diagram" style="margin:0">
-              <img src="images/cloud-stratiform.png" alt="Stratiform clouds form in stable air: a rising thermal cools to the surrounding air temperature and stops climbing, so the cloud spreads out flat and layered." loading="lazy" />
-              <figcaption><span class="k-blue">Stable</span> air → flat, layered <strong>stratiform</strong> clouds.</figcaption>
-            </figure>
-            <figure class="diagram" style="margin:0">
-              <img src="images/cloud-cumuliform.png" alt="Cumuliform clouds form in unstable air: a rising thermal stays warmer than the surrounding air, so it keeps climbing and the cloud builds up tall and puffy." loading="lazy" />
-              <figcaption><span class="k-amber">Unstable</span> air → puffy, towering <strong>cumuliform</strong> clouds.</figcaption>
-            </figure>
           </div>
           <div class="callout callout--formula">
             <div class="callout__label">Condensation level (cloud base)</div>
@@ -138,37 +130,37 @@
             <li><span class="k-amber">Unstable air</span></li>
           </ol>
           <figure class="diagram">
-            <svg viewBox="0 0 560 230" role="img" aria-labelledby="ts-t">
+            <svg viewBox="0 0 640 230" role="img" aria-labelledby="ts-t">
               <title id="ts-t">The three stages of a thunderstorm: towering cumulus, mature, and dissipating</title>
               <g style="fill: var(--text-muted)" opacity="0.55">
-                <path d="M50 150 q-5 -45 35 -45 q10 -30 45 -20 q25 -25 45 10 q30 -5 25 30 q15 5 5 25 Z" />
-                <ellipse cx="290" cy="60" rx="55" ry="22" />
-                <path d="M235 150 q-5 -55 40 -60 q5 -30 40 -25 q35 -5 35 35 q20 10 5 50 Z" />
-                <ellipse cx="470" cy="55" rx="70" ry="20" />
-                <path d="M420 150 q-8 -50 35 -60 q10 -25 45 -20 q30 0 25 40 q15 15 0 40 Z" opacity="0.7" />
+                <path d="M60 150 q-5 -45 35 -45 q10 -30 45 -20 q25 -25 45 10 q30 -5 25 30 q15 5 5 25 Z" />
+                <ellipse cx="320" cy="60" rx="55" ry="22" />
+                <path d="M265 150 q-5 -55 40 -60 q5 -30 40 -25 q35 -5 35 35 q20 10 5 50 Z" />
+                <ellipse cx="535" cy="55" rx="70" ry="20" />
+                <path d="M485 150 q-8 -50 35 -60 q10 -25 45 -20 q30 0 25 40 q15 15 0 40 Z" opacity="0.7" />
               </g>
               <!-- updrafts / downdrafts -->
               <g stroke-width="2.5" fill="none">
-                <line x1="90" y1="150" x2="90" y2="100" style="stroke: var(--tip-border)" /><polygon points="90,95 84,108 96,108" style="fill: var(--tip-border)" stroke="none"/>
-                <line x1="268" y1="150" x2="268" y2="100" style="stroke: var(--tip-border)" /><polygon points="268,95 262,108 274,108" style="fill: var(--tip-border)" stroke="none"/>
-                <line x1="312" y1="100" x2="312" y2="150" style="stroke: var(--accent)" /><polygon points="312,155 306,142 318,142" style="fill: var(--accent)" stroke="none"/>
-                <line x1="470" y1="100" x2="470" y2="150" style="stroke: var(--accent)" /><polygon points="470,155 464,142 476,142" style="fill: var(--accent)" stroke="none"/>
+                <line x1="100" y1="150" x2="100" y2="100" style="stroke: var(--tip-border)" /><polygon points="100,95 94,108 106,108" style="fill: var(--tip-border)" stroke="none"/>
+                <line x1="298" y1="150" x2="298" y2="100" style="stroke: var(--tip-border)" /><polygon points="298,95 292,108 304,108" style="fill: var(--tip-border)" stroke="none"/>
+                <line x1="342" y1="100" x2="342" y2="150" style="stroke: var(--accent)" /><polygon points="342,155 336,142 348,142" style="fill: var(--accent)" stroke="none"/>
+                <line x1="535" y1="100" x2="535" y2="150" style="stroke: var(--accent)" /><polygon points="535,155 529,142 541,142" style="fill: var(--accent)" stroke="none"/>
               </g>
               <!-- rain: begins at the mature stage, tapers off while dissipating -->
               <g style="stroke: var(--accent)" stroke-width="1.6" stroke-dasharray="2 4" opacity="0.6">
-                <line x1="288" y1="124" x2="288" y2="149" /><line x1="298" y1="124" x2="298" y2="149" /><line x1="308" y1="124" x2="308" y2="149" />
-                <line x1="452" y1="128" x2="452" y2="149" /><line x1="486" y1="128" x2="486" y2="149" />
+                <line x1="318" y1="124" x2="318" y2="149" /><line x1="328" y1="124" x2="328" y2="149" /><line x1="338" y1="124" x2="338" y2="149" />
+                <line x1="517" y1="128" x2="517" y2="149" /><line x1="551" y1="128" x2="551" y2="149" />
               </g>
-              <line x1="20" y1="150" x2="540" y2="150" style="stroke: var(--text)" stroke-width="2" />
+              <line x1="20" y1="150" x2="610" y2="150" style="stroke: var(--text)" stroke-width="2" />
               <g font-size="19" font-weight="600" text-anchor="middle" style="fill: var(--text)">
-                <text x="95" y="185">1 · Towering cumulus</text>
-                <text x="290" y="185">2 · Mature</text>
-                <text x="470" y="185">3 · Dissipating</text>
+                <text x="105" y="185">1 · Towering cumulus</text>
+                <text x="320" y="185">2 · Mature</text>
+                <text x="535" y="185">3 · Dissipating</text>
               </g>
               <g font-size="18" text-anchor="middle">
-                <text x="95" y="203" style="fill: var(--tip-border)">updrafts only</text>
-                <text x="290" y="203" style="fill: var(--warn-border)" font-weight="700">rain begins · most dangerous</text>
-                <text x="470" y="203" style="fill: var(--accent)">rains itself out</text>
+                <text x="105" y="203" style="fill: var(--tip-border)">updrafts only</text>
+                <text x="320" y="203" style="fill: var(--warn-border)" font-weight="700">rain begins · most dangerous</text>
+                <text x="535" y="203" style="fill: var(--accent)">rains itself out</text>
               </g>
             </svg>
           </figure>
@@ -177,7 +169,7 @@
         <!-- FRONTS -->
         <section class="section" id="fronts">
           <h2>Fronts</h2>
-          <p>A front is a boundary between two air masses. The four types — and the big clue: <strong>flying across a front, you'll notice a change in wind direction</strong> (plus temperature and pressure).</p>
+          <p>A front is a boundary between two air masses. The four types — and the big clue: <strong>flying across a front, you'll notice a change in wind direction</strong>.</p>
           <figure class="diagram">
             <svg viewBox="0 0 560 250" role="img" aria-labelledby="fronts-t">
               <title id="fronts-t">Front symbols: cold (blue triangles), warm (red semicircles), stationary (alternating), occluded (purple)</title>
@@ -225,7 +217,7 @@
         <section class="section" id="jet-stream">
           <h2>Jet stream</h2>
           <ul>
-            <li>A narrow band of <span class="k-blue">very strong winds</span> near the <span class="k-green">tropopause</span> — the top of the troposphere, where temperature <em>stops</em> decreasing (≈ <span class="k-num">20,000–45,000 ft</span>).</li>
+            <li>A narrow band of <span class="k-blue">very strong winds</span> near the <span class="k-green">tropopause</span> — the top of the troposphere, where temperature <em>stops</em> decreasing.</li>
             <li>Flows generally <span class="k-blue">west → east</span>.</li>
             <li>Forms along strong <strong>temperature boundaries</strong> between air masses — so it's <span class="k-amber">stronger and dips farther south in winter</span>.</li>
             <li>Often marked by <strong>long streaks of cirrus</strong> clouds.</li>
@@ -244,8 +236,8 @@
       </div>
     </main>
 
-    <script src="js/data.js?v=20260625f"></script>
-    <script src="js/search.js?v=20260625f"></script>
-    <script src="js/main.js?v=20260625f"></script>
+    <script src="js/data.js?v=20260625g"></script>
+    <script src="js/search.js?v=20260625g"></script>
+    <script src="js/main.js?v=20260625g"></script>
   </body>
 </html>

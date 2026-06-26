@@ -642,6 +642,17 @@ mark {
   padding: 20px 22px;
   box-shadow: var(--shadow-sm);
 }
+/* An image tucked inside a content card (e.g. the stable/unstable air cards),
+   so the diagram and its explanation live in one card. White backing keeps
+   light-background diagrams legible on the dark theme. */
+.card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.9rem;
+  border-radius: 8px;
+  background: #fff;
+}
 
 .grid {
   display: grid;

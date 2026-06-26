@@ -72,10 +72,10 @@ window.PPL_DATA = {
     { t: "Flight categories", p: "weather-reports.html#flight-categories", topic: "Weather Reports", k: "VFR MVFR IFR LIFR ceiling visibility minimums 1000 3sm", s: "VFR/MVFR/IFR/LIFR ceiling & visibility thresholds." },
     { t: "AIRMET, SIGMET & briefings", p: "weather-reports.html#advisories", topic: "Weather Reports", k: "airmet sierra tango zulu sigmet convective outlook briefing flight service 122.2", s: "AIRMET (light), SIGMET (severe), outlook briefing ≥ 6 hrs." },
     // Navigation
-    { t: "Pilotage & dead reckoning", p: "navigation.html#basics", topic: "Navigation", k: "pilotage dead reckoning landmarks heading time speed distance chart latitude", s: "Landmarks vs computed position; chart tick = 30 min = 0.5 deg.", cap: "VFR checkpoints — magenta flags; an underline marks the checkpoint's proper name. · Obstacle symbols — the taller form marks obstacles ≥ 1,000′ AGL. · VFR checkpoints on a sectional: magenta flags mark checkpoints; an underline indicates the proper name of the checkpoint. · Obstacle symbols: a shorter symbol for obstacles less than 1,000 ft AGL, and a taller symbol for obstacles 1,000 ft AGL or greater." },
-    { t: "VOR navigation", p: "navigation.html#vor", topic: "Navigation", k: "VOR radial CDI needle deflection TO FROM perpendicular position fix magnetic", s: "Radials are magnetic; needle right = course right; cross two radials.", cap: "A CDI : set the course with the OBS knob, then fly toward the needle to center it. The TO/FR flag shows whether the course leads to or from the station. · Two course deviation indicators (CDIs): each has an OBS knob to select a course, a vertical needle that deflects left or right to show which way the course lies, and a TO/FR flag." },
+    { t: "Pilotage & dead reckoning", p: "navigation.html#basics", topic: "Navigation", k: "pilotage dead reckoning landmarks heading time speed distance chart latitude", s: "Landmarks vs computed position; chart tick = 30 min = 0.5 deg." },
+    { t: "VOR navigation", p: "navigation.html#vor", topic: "Navigation", k: "VOR radial CDI needle deflection TO FROM perpendicular position fix magnetic VOT receiver check test 4 degrees", s: "Radials are magnetic; needle right = course right; cross two radials.", cap: "A CDI : set the course with the OBS knob, then fly toward the needle to center it. The TO/FR flag shows whether the course leads to or from the station. · Two course deviation indicators (CDIs): each has an OBS knob to select a course, a vertical needle that deflects left or right to show which way the course lies, and a TO/FR flag." },
     { t: "GPS & RAIM", p: "navigation.html#gps", topic: "Navigation", k: "GPS limitation heading track RAIM integrity accuracy", s: "GPS doesn't know heading; RAIM checks accuracy." },
-    { t: "NAVAID symbols", p: "navigation.html#navaids", topic: "Navigation", k: "VOR VORTAC VOR DME hexagon symbol true virgins make dull companions variation deviation", s: "Hexagon = VOR; +tabs = VORTAC; in a square = VOR/DME.", cap: "Hexagon = VOR · hexagon + tabs = VORTAC · hexagon in a square = VOR/DME." },
+    { t: "NAVAID symbols", p: "navigation.html#navaids", topic: "Navigation", k: "VOR VORTAC VOR DME hexagon symbol true virgins make dull companions variation deviation", s: "Hexagon = VOR; +tabs = VORTAC; in a square = VOR/DME." },
     // Navigation Planning
     { t: "Magnetic variation", p: "navigation-planning.html#variation", topic: "Navigation Planning", k: "variation isogonic agonic east is least west is best add subtract true magnetic heading", s: "East is least (subtract), west is best (add) — true to magnetic." },
     { t: "Speed, distance & time", p: "navigation-planning.html#speed-distance-time", topic: "Navigation Planning", k: "speed distance time triangle dead reckoning groundspeed knot nautical mile per hour E6-B formula", s: "D = S × T; 1 knot = 1 NM per hour.", cap: "Distance on top; speed and time on the bottom. Side-by-side = multiply; one over the other = divide." },
@@ -93,7 +93,6 @@ window.PPL_DATA = {
     { t: "Operating rule extras (PIC, INOP, SVFR)", p: "far-aim.html#operating-extras", topic: "FAR/AIM", k: "PIC pilot in command authority airworthy inoperative equipment INOP placard altimeter 100 nm special VFR clear of clouds 1 sm part 91", s: "PIC authority/airworthiness, inop equipment, altimeter 100 NM, special VFR." },
     { t: "NTSB accident & incident reporting", p: "far-aim.html#accident-reporting", topic: "FAR/AIM", k: "NTSB 830 accident incident substantial damage immediate notification nose landing gear 10 days 7 days overdue 25000 report", s: "Accident vs incident; what is NOT substantial damage; 10/7-day reports." },
     { t: "Airport beacons", p: "far-aim.html#airport-lighting", topic: "FAR/AIM", k: "airport beacon colors white green land water yellow heliport military daytime beacon IFR rotating aim chapter 2", s: "White+green = land airport; daytime beacon = poor weather." },
-    { t: "Scuba waits & hyperventilation", p: "far-aim.html#medical-extras", topic: "FAR/AIM", k: "scuba diving wait 12 24 hours 8000 feet decompression nitrogen hyperventilation carbon dioxide aim chapter 8", s: "Scuba-to-fly waits (12/24 h); hyperventilation mimics hypoxia." },
   ],
 
   /* ---- Flashcards ---- */
@@ -218,7 +217,7 @@ window.PPL_DATA = {
     // Navigation
     { topic: "Navigation", q: "What is a VOR radial?", a: "A magnetic course FROM the station." },
     { topic: "Navigation", q: "CDI needle deflected right means?", a: "The selected course/station is to your right — fly toward the needle." },
-    { topic: "Navigation", q: "No TO/FROM flag means?", a: "You're perpendicular (abeam) to the radial." },
+    { topic: "Navigation", q: "No TO/FROM flag means?", a: "You're perpendicular to the radial." },
     { topic: "Navigation", q: "How do you get a position fix from VORs?", a: "Cross two FROM radials from two different stations." },
     { topic: "Navigation", q: "Key GPS limitation?", a: "It knows position and track, but not aircraft heading." },
     { topic: "Navigation", q: "What does RAIM do?", a: "Verifies that the GPS signal is still accurate (integrity)." },

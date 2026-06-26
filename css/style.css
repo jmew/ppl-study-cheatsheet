@@ -1362,6 +1362,18 @@ select {
     max-width: none;
     margin: 4px;
   }
+  /* On desktop the results are an absolute dropdown, but inside the fixed,
+     scrollable mobile menu an absolute box gets clipped (only a sliver shows).
+     Flow them inline instead so they appear under the box and scroll with the
+     menu — same approach as the Topics dropdown above. */
+  .primary-nav .search__results {
+    position: static;
+    width: auto;
+    max-width: none;
+    margin-top: 6px;
+    max-height: min(55vh, 360px);
+    box-shadow: none;
+  }
   .dropdown {
     position: static;
     min-width: 0;

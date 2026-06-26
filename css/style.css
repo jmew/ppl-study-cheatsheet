@@ -36,6 +36,8 @@
   --hl-bg: #fff1a8;
   --hl-bg-active: #ffe261;
   --hl-border: #e0a106;
+  --star-bg: #ffd76b;
+  --star-border: #b8730a;
 
   /* Exam emphasis: numbers to memorize (amber chip) + memory adages (teal) */
   --num-bg: #ffe2a6;
@@ -89,6 +91,8 @@
   --hl-bg: #54470f;
   --hl-bg-active: #6f5c14;
   --hl-border: #e0a106;
+  --star-bg: #6a5212;
+  --star-border: #f2b50a;
 
   --num-bg: rgba(224, 161, 6, 0.22);
   --num-fg: #f2d27c;
@@ -1342,6 +1346,7 @@ select {
   .fc-toolbar,
   .fc-controls,
   .ppl-addbtn,
+  .ppl-selbar,
   .ppl-popover,
   .ppl-fab,
   .ppl-panel,
@@ -1650,6 +1655,163 @@ mark.ppl-hl.ppl-hl--active {
     padding: 12px;
     border-radius: 50%;
   }
+}
+
+/* ==========================================================================
+   Starring — selection toolbar, star highlight, Starred page
+   ========================================================================== */
+mark.ppl-hl--star {
+  background: var(--star-bg);
+  border-bottom-color: var(--star-border);
+}
+mark.ppl-hl--star.ppl-hl--active {
+  background: var(--hl-bg-active);
+}
+mark.ppl-hl--star-end::after {
+  content: "\2605";
+  font-size: 0.72em;
+  color: var(--star-border);
+  margin: 0 1px 0 2px;
+  vertical-align: text-top;
+}
+
+/* Selection toolbar (Star + Note) shown over a fresh selection */
+.ppl-selbar {
+  position: fixed;
+  z-index: 320;
+  transform: translate(-50%, calc(-100% - 8px));
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+}
+.ppl-selbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  font-family: var(--font);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.ppl-selbtn:hover {
+  background: var(--bg-subtle);
+  color: var(--accent);
+}
+.ppl-selbtn svg {
+  width: 15px;
+  height: 15px;
+}
+.ppl-selbtn--star {
+  color: var(--star-border);
+}
+.ppl-selbtn--star:hover {
+  color: var(--star-border);
+  background: var(--star-bg);
+}
+
+/* Star toggle button inside the view popover */
+.ppl-btn--star {
+  color: var(--star-border);
+  border-color: var(--star-border);
+}
+
+/* Notes-panel header actions */
+.ppl-panel__actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.ppl-panel__actions .ppl-btn {
+  padding: 5px 9px;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+/* Starred page */
+.starred-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 1.2rem;
+}
+.starred-group {
+  margin: 0 0 1.8rem;
+}
+.starred-group__title {
+  font-size: 1.05rem;
+  margin: 0 0 0.7rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--border);
+}
+.starred-group__title a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.starred-item {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--star-border);
+  border-radius: 10px;
+  background: var(--bg-elev);
+  padding: 12px 14px;
+  margin: 0 0 0.7rem;
+}
+.starred-item__quote {
+  font-size: 1rem;
+  line-height: 1.55;
+}
+.starred-item__note {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  white-space: pre-wrap;
+}
+.starred-item__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+.starred-item__link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+.starred-item__unstar {
+  font-family: var(--font);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--star-border);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  padding: 4px 9px;
+  cursor: pointer;
+}
+.starred-item__unstar:hover {
+  background: var(--star-bg);
+}
+.starred-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  border: 1px dashed var(--border-strong);
+  border-radius: 12px;
+}
+.starred-empty p {
+  margin: 0.4rem 0;
 }
 
 /* ==========================================================================

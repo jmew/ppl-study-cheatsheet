@@ -160,6 +160,7 @@
 
     var homeCur = here === "index.html" ? ' aria-current="page"' : "";
     var fcCur = here === "flashcards.html" ? ' aria-current="page"' : "";
+    var stCur = here === "starred.html" ? ' aria-current="page"' : "";
 
     var header = el(
       '<header class="site-header">' +
@@ -185,6 +186,9 @@
         '<a href="flashcards.html"' +
         fcCur +
         ">Flashcards</a>" +
+        '<a class="nav-star" href="starred.html"' +
+        stCur +
+        ">\u2605 Starred</a>" +
         '<div class="search" role="search">' +
         '<input type="search" class="search__input" id="site-search" ' +
         'placeholder="Search the guide…" autocomplete="off" ' +
@@ -401,14 +405,14 @@
     if (!document.getElementById("ppl-comments-js")) {
       var cs = document.createElement("script");
       cs.id = "ppl-comments-js";
-      cs.src = "js/comments.js?v=20260625b";
+      cs.src = "js/comments.js?v=20260625c";
       document.body.appendChild(cs);
     }
     // Load the image lightbox
     if (!document.getElementById("ppl-lightbox-js")) {
       var lb = document.createElement("script");
       lb.id = "ppl-lightbox-js";
-      lb.src = "js/lightbox.js?v=20260625b";
+      lb.src = "js/lightbox.js?v=20260625c";
       document.body.appendChild(lb);
     }
   }

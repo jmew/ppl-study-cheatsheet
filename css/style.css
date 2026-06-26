@@ -768,6 +768,39 @@ mark {
   margin: 0.6rem 0;
   overflow-x: auto;
 }
+.formula__line + .formula__line {
+  margin-top: 0.7em;
+}
+/* Stacked fraction: numerator over denominator with a horizontal rule. */
+.frac {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 0.2em;
+}
+.frac__num {
+  padding: 0 0.6em 0.12em;
+}
+.frac__den {
+  padding: 0.12em 0.6em 0;
+  border-top: 2px solid var(--text);
+}
+
+/* Difference highlights in the "ATC services by class" table: one tint for the
+   B→C change, another for the C→D changes, so the eye can trace what drops at
+   each step. Semi-transparent so they read on both light and dark themes. */
+.svc-diff {
+  border-radius: 5px;
+  padding: 0.05em 0.4em;
+}
+.svc-diff--bc {
+  background: rgba(47, 111, 237, 0.18);
+}
+.svc-diff--cd {
+  background: rgba(217, 130, 43, 0.22);
+}
 
 /* ---------- Mnemonic block ---------- */
 .mnemonic {

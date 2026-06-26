@@ -8,7 +8,7 @@
       name="description"
       content="PPL aerodynamics: the four forces, parasite vs induced drag, left-turning tendencies, axes & controls, stability, stalls, spins, load factor and ground effect."
     />
-    <link rel="stylesheet" href="css/style.css?v=20260625c" />
+    <link rel="stylesheet" href="css/style.css?v=20260625d" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
     <script>
       (function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
@@ -72,7 +72,7 @@
           </div>
 
           <figure class="diagram">
-            <svg viewBox="0 0 560 300" role="img" aria-labelledby="airfoil-t">
+            <svg viewBox="0 0 560 300" role="img" aria-labelledby="airfoil-t" class="lbl-halo">
               <title id="airfoil-t">Total lift tilts aft at high angle of attack; its horizontal component is induced drag</title>
               <!-- airfoil: leading edge at left, slight nose-up angle of attack -->
               <path d="M150 178 C205 150 330 156 405 184 C330 192 210 192 150 178 Z" style="fill: var(--text-muted); color: var(--text-muted)" opacity="0.5" />
@@ -93,13 +93,13 @@
                 <line x1="285" y1="168" x2="285" y2="74" stroke-dasharray="5 4" />
                 <polygon points="285,64 278,80 292,80" stroke="none" />
               </g>
-              <text x="222" y="100" style="fill: var(--tip-border)" font-size="21">vertical lift</text>
+              <text x="276" y="120" text-anchor="end" style="fill: var(--tip-border)" font-size="21">vertical lift</text>
               <!-- induced drag (horizontal component, pointing aft = right) -->
               <g style="stroke: var(--warn-border); fill: var(--warn-border)" stroke-width="3">
                 <line x1="285" y1="66" x2="314" y2="66" />
                 <polygon points="320,66 306,60 306,72" stroke="none" />
               </g>
-              <text x="326" y="70" style="fill: var(--warn-border)" font-size="21">induced drag</text>
+              <text x="330" y="72" style="fill: var(--warn-border)" font-size="21">induced drag</text>
             </svg>
           </figure>
 
@@ -113,7 +113,7 @@
           <p class="muted">The <span class="k-blue">L/D ratio</span> is a measure of the wing's <strong>aerodynamic efficiency</strong> — it changes <strong>only with angle of attack</strong>.</p>
 
           <figure class="diagram">
-            <svg viewBox="0 0 560 320" role="img" aria-labelledby="dragcurve-t">
+            <svg viewBox="0 0 560 320" role="img" aria-labelledby="dragcurve-t" class="lbl-halo">
               <title id="dragcurve-t">Total drag is the sum of parasite drag (rising with speed) and induced drag (falling with speed)</title>
               <!-- axes -->
               <g style="stroke: var(--text)" stroke-width="2">
@@ -127,14 +127,14 @@
               <text x="120" y="95" style="fill: var(--warn-border)" font-size="21">induced</text>
               <!-- parasite drag (rising) -->
               <path d="M90 258 C260 250, 360 200, 470 70" fill="none" style="stroke: var(--tip-border)" stroke-width="3" />
-              <text x="430" y="100" style="fill: var(--tip-border)" font-size="21">parasite</text>
+              <text x="358" y="88" style="fill: var(--tip-border)" font-size="21">parasite</text>
               <!-- total drag (U) -->
               <path d="M90 110 C200 235, 250 215, 300 205 C380 190, 440 130, 480 70" fill="none" style="stroke: var(--accent)" stroke-width="3.5" />
               <text x="150" y="150" style="fill: var(--accent)" font-weight="700" font-size="22">total</text>
               <!-- L/Dmax marker -->
               <line x1="300" y1="205" x2="300" y2="260" style="stroke: var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 4" />
               <circle cx="300" cy="205" r="5" style="fill: var(--accent)" />
-              <text x="306" y="200" style="fill: var(--text-muted)" font-size="19">L/D max</text>
+              <text x="310" y="196" style="fill: var(--text-muted)" font-size="19">L/D max</text>
             </svg>
           </figure>
         </section>
@@ -324,8 +324,8 @@
       </div>
     </main>
 
-    <script src="js/data.js?v=20260625c"></script>
-    <script src="js/search.js?v=20260625c"></script>
-    <script src="js/main.js?v=20260625c"></script>
+    <script src="js/data.js?v=20260625d"></script>
+    <script src="js/search.js?v=20260625d"></script>
+    <script src="js/main.js?v=20260625d"></script>
   </body>
 </html>

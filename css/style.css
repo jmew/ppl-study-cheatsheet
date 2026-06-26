@@ -923,6 +923,18 @@ figure.diagram svg {
   max-width: 520px;
   margin-inline: auto;
 }
+/* Label halo: paints a background-colored outline behind diagram text so any
+   curve / arrow / line passing underneath a label doesn't break its
+   legibility. Scoped via .lbl-halo (currently the two drag diagrams). The
+   stroke colour tracks the figure background so it stays invisible in both
+   light and dark themes. */
+figure.diagram svg.lbl-halo text {
+  paint-order: stroke;
+  stroke: var(--bg-elev);
+  stroke-width: 5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
 figure.diagram img {
   display: block;
   width: 100%;

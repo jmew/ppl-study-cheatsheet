@@ -115,8 +115,18 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-h) + 16px);
   -webkit-text-size-adjust: 100%;
+}
+
+/* Offset anchor jumps so a section top clears the sticky header. Applied as
+   scroll-margin-top on the jump targets themselves — NOT scroll-padding-top on
+   <html> — because scroll-padding-top makes the browser re-scroll the focused
+   (sticky) search box "into view" on every keystroke, nudging the page up a
+   little with each letter typed. scroll-margin-top only affects these targets,
+   so typing in the search box no longer moves the page. */
+.section[id],
+#main {
+  scroll-margin-top: calc(var(--header-h) + 16px);
 }
 
 @media (prefers-reduced-motion: reduce) {

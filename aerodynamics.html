@@ -8,7 +8,7 @@
       name="description"
       content="PPL aerodynamics: the four forces, parasite vs induced drag, left-turning tendencies, axes & controls, stability, stalls, spins, load factor and ground effect."
     />
-    <link rel="stylesheet" href="css/style.css?v=20260625d" />
+    <link rel="stylesheet" href="css/style.css?v=20260625e" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
     <script>
       (function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
@@ -173,48 +173,12 @@
               why you feed in right rudder on takeoff.
             </p>
           </div>
-
-          <figure class="diagram">
-            <svg viewBox="0 0 560 250" role="img" aria-labelledby="lts-t">
-              <title id="lts-t">The spiraling slipstream wraps clockwise and hits the left side of the tail</title>
-              <!-- fuselage -->
-              <g style="color: var(--text-muted)" opacity="0.6" fill="currentColor">
-                <rect x="120" y="115" width="300" height="22" rx="11" />
-                <polygon points="420,115 460,126 420,137" />
-                <polygon points="120,126 95,108 110,126 95,144" />
-              </g>
-              <!-- prop -->
-              <line x1="95" y1="96" x2="95" y2="156" style="stroke: var(--text)" stroke-width="4" stroke-linecap="round" />
-              <!-- spiral -->
-              <path d="M110 126 C160 90, 210 162, 260 126 C310 90, 360 162, 410 126" fill="none" style="stroke: var(--accent)" stroke-width="2.5" stroke-dasharray="5 4" />
-              <text x="170" y="80" style="fill: var(--accent)" font-size="21">spiraling slipstream →</text>
-              <!-- tail hit -->
-              <circle cx="410" cy="126" r="6" style="fill: var(--warn-border)" />
-              <text x="360" y="170" style="fill: var(--warn-border)" font-size="19">strikes left of tail</text>
-              <!-- yaw arrow -->
-              <path d="M250 200 q60 25 120 0" fill="none" style="stroke: var(--text-muted)" stroke-width="2" />
-              <polygon points="248,200 262,194 260,208" style="fill: var(--text-muted)" />
-              <text x="280" y="232" style="fill: var(--text-muted)" font-size="19">nose yaws left</text>
-            </svg>
-          </figure>
         </section>
 
         <!-- AXES & CONTROLS -->
         <section class="section" id="axes">
           <h2>Axes &amp; flight controls</h2>
-          <p>The airplane rotates about three axes, each driven by one primary control:</p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Motion</th><th>Axis</th><th>Control surface</th><th>Cockpit input</th></tr>
-              </thead>
-              <tbody>
-                <tr><td><strong>Roll / Bank</strong></td><td>Longitudinal (nose↔tail)</td><td>Ailerons</td><td>Yoke left/right</td></tr>
-                <tr><td><strong>Pitch</strong></td><td>Lateral (wingtip↔wingtip)</td><td>Elevator</td><td>Yoke fore/aft</td></tr>
-                <tr><td><strong>Yaw</strong></td><td>Vertical (top↔bottom)</td><td>Rudder</td><td>Rudder pedals</td></tr>
-              </tbody>
-            </table>
-          </div>
+          <p>The airplane rotates about three axes, each driven by one primary control: <strong>roll</strong> about the longitudinal axis (ailerons), <strong>pitch</strong> about the lateral axis (elevator), and <strong>yaw</strong> about the vertical axis (rudder).</p>
 
           <figure class="diagram">
             <img src="images/axes-of-rotation.png" style="max-width:510px;margin-inline:auto" loading="lazy" width="1200" height="916"
@@ -235,8 +199,8 @@
             <li>
               The <span class="k-blue">center of gravity (CG)</span> should be ahead of the <span class="k-green">center of
               pressure (CP)</span> — and ahead of the main wheels. A
-              forward CG is more stable (the tail provides a downward balancing
-              force).
+              <strong>forward CG is more stable</strong> (the tail provides a downward balancing
+              force); an <strong>aft CG is less stable</strong> and makes stall/spin recovery harder.
             </li>
             <li>
               <strong>CP (center of pressure)</strong> = the point where the
@@ -280,17 +244,6 @@
             steeper the bank, the higher the load factor — which also
             <strong>raises stall speed</strong>.
           </p>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Bank angle</th><th class="num">Load factor</th></tr></thead>
-              <tbody>
-                <tr><td>Level</td><td class="num">1.0 G</td></tr>
-                <tr><td>30°</td><td class="num">1.15 G</td></tr>
-                <tr><td>45°</td><td class="num">1.41 G</td></tr>
-                <tr><td>60°</td><td class="num">2.0 G</td></tr>
-              </tbody>
-            </table>
-          </div>
           <div class="callout callout--note">
             <div class="callout__label">Note</div>
             <p class="mb-0">Load factor matters for <strong>turns</strong> — straight-and-level pulls 1 G regardless of speed.</p>
@@ -318,14 +271,14 @@
           </figure>
           <div class="callout callout--note">
             <div class="callout__label">Wake turbulence</div>
-            <p class="mb-0">Those vortices are <span class="k-amber">wake turbulence</span>, strongest behind an aircraft that's <strong>heavy, clean, and slow</strong> (high angle of attack). A light <strong>crosswind</strong> is the trap — it can hold the upwind vortex over the runway instead of letting it drift clear.</p>
+            <p class="mb-0">Those vortices are <span class="k-amber">wake turbulence</span>, strongest behind an aircraft that's <strong>heavy, clean, and slow</strong> (high angle of attack). A light <strong>crosswind</strong> traps the vortices onto the runway — holding the upwind vortex in place instead of letting it drift clear.</p>
           </div>
         </section>
       </div>
     </main>
 
-    <script src="js/data.js?v=20260625d"></script>
-    <script src="js/search.js?v=20260625d"></script>
-    <script src="js/main.js?v=20260625d"></script>
+    <script src="js/data.js?v=20260625e"></script>
+    <script src="js/search.js?v=20260625e"></script>
+    <script src="js/main.js?v=20260625e"></script>
   </body>
 </html>

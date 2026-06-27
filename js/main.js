@@ -405,14 +405,14 @@
     if (!document.getElementById("ppl-comments-js")) {
       var cs = document.createElement("script");
       cs.id = "ppl-comments-js";
-      cs.src = "js/comments.js?v=20260625h";
+      cs.src = "js/comments.js?v=20260625i";
       document.body.appendChild(cs);
     }
     // Load the image lightbox
     if (!document.getElementById("ppl-lightbox-js")) {
       var lb = document.createElement("script");
       lb.id = "ppl-lightbox-js";
-      lb.src = "js/lightbox.js?v=20260625h";
+      lb.src = "js/lightbox.js?v=20260625i";
       document.body.appendChild(lb);
     }
   }

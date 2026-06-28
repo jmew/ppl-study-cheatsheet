@@ -1273,8 +1273,21 @@ select {
 .mt-0 {
   margin-top: 0;
 }
+.mt-2 {
+  margin-top: 0.6rem;
+}
 .mb-0 {
   margin-bottom: 0;
+}
+/* Cross-link chip: marks the broad-type words (Airplane / Rotorcraft / Glider)
+   that are a pilot's CATEGORY but an aircraft's CLASS, so the same highlight
+   appears in both the Airmen and Aircraft cards. Purple tint reads on both
+   themes. */
+.xlink {
+  background: rgba(124, 77, 255, 0.2);
+  border-radius: 5px;
+  padding: 0.05em 0.4em;
+  font-weight: 700;
 }
 .visually-hidden {
   position: absolute;

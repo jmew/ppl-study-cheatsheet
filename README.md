@@ -22,7 +22,7 @@ no dependencies** — so it hosts on GitHub Pages (or any static host) as-is.
 - **Click to enlarge** — click any diagram or screenshot to open it full-screen
   in a lightbox (close with the ×, a click outside the image, or <kbd>Esc</kbd>).
 - **Instant search** across every topic (press <kbd>/</kbd> to focus it).
-- **Flashcard deck** (~127 cards) — filter by topic, shuffle, flip with the
+- **Flashcard deck** (~140 cards) — filter by topic, shuffle, flip with the
   keyboard.
 - **Highlight-to-comment notes** — select any text on a topic page to attach a
   note. Notes are highlighted, listed via the floating **Notes** button, and

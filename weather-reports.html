@@ -52,7 +52,7 @@
         <!-- SKY COVER -->
         <section class="section" id="sky-cover">
           <h2>Sky cover</h2>
-          <p>Coverage is reported in <span class="k-blue">eighths (oktas)</span> of the sky. A <span class="k-purple">ceiling</span> is the lowest <strong>broken</strong> or <strong>overcast</strong> layer.</p>
+          <p>Coverage is reported in <span class="k-blue">eighths (oktas)</span> of the sky. A <span class="k-amber">ceiling</span> is the lowest <strong>broken</strong> or <strong>overcast</strong> layer.</p>
           <figure class="diagram">
             <svg viewBox="0 0 600 175" role="img" aria-labelledby="sky-t">
               <title id="sky-t">Sky cover scale from clear through few, scattered, broken and overcast</title>
@@ -156,14 +156,14 @@
         <!-- FLIGHT CATEGORIES -->
         <section class="section" id="flight-categories">
           <h2>Flight categories</h2>
-          <p>Forecasts and briefings rate conditions by <strong>ceiling</strong> and <strong>visibility</strong>. The <strong>worse</strong> of the two sets the category.</p>
+          <p>Forecasts and briefings rate conditions by <strong>ceiling</strong> and <strong>visibility</strong>.</p>
           <div class="table-wrap">
             <table>
               <thead><tr><th>Category</th><th>Ceiling</th><th>Visibility</th></tr></thead>
               <tbody>
                 <tr><td><span class="k-green">VFR</span></td><td>&gt; <span class="k-num">3,000 ft</span></td><td>&gt; <span class="k-num">5 SM</span></td></tr>
-                <tr><td><span class="k-blue">MVFR</span> <span class="muted">(marginal)</span></td><td><span class="k-num">1,000–3,000 ft</span></td><td><span class="k-num">3–5 SM</span></td></tr>
-                <tr><td><span class="k-red">IFR</span></td><td><span class="k-num">500–&lt;1,000 ft</span></td><td><span class="k-num">1–&lt;3 SM</span></td></tr>
+                <tr><td><span class="k-blue">MVFR</span> <span class="muted">(marginal)</span></td><td><span class="k-num">1,000 to 3,000 ft</span></td><td><span class="k-num">3 to 5 SM</span></td></tr>
+                <tr><td><span class="k-red">IFR</span></td><td><span class="k-num">500 to &lt;1,000 ft</span></td><td><span class="k-num">1 to &lt;3 SM</span></td></tr>
                 <tr><td><span class="k-purple">LIFR</span> <span class="muted">(low)</span></td><td>&lt; <span class="k-num">500 ft</span></td><td>&lt; <span class="k-num">1 SM</span></td></tr>
               </tbody>
             </table>
@@ -195,9 +195,15 @@
               </ul>
             </div>
           </div>
-          <div class="callout callout--note">
-            <div class="callout__label">Briefings</div>
-            <p class="mb-0">An <span class="k-blue">outlook briefing</span> is for a departure <span class="k-num">6 or more hours</span> away. (Standard = full briefing; abbreviated = an update.) <strong>Flight Service is on <span class="k-num">122.2</span>.</strong></p>
+          <h3>Weather briefings</h3>
+          <div class="deflist">
+            <div><dt>Standard</dt><dd>A full pre-flight briefing.</dd></div>
+            <div><dt>Abbreviated</dt><dd>An update to a briefing you already received.</dd></div>
+            <div><dt>Outlook</dt><dd>For a departure <span class="k-num">6 or more hours</span> away.</dd></div>
+          </div>
+          <div class="callout callout--tip">
+            <div class="callout__label">Frequency</div>
+            <p class="mb-0"><strong>Flight Service is on <span class="k-num">122.2</span></strong>.</p>
           </div>
         </section>
       </div>

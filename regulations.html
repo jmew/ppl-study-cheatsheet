@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Regulations — PPL Study Guide</title>
     <meta name="description" content="PPL regulations: required documents & equipment (ARROW, ATOMATOFLAMES, FLAPS, NWKRAFT), right-of-way, altitudes, speed limits, currency, medicals and inspections." />
-    <link rel="stylesheet" href="css/style.css?v=20260625k" />
+    <link rel="stylesheet" href="css/style.css?v=20260629b" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
     <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
   </head>
@@ -91,6 +91,8 @@
           <ul>
             <li><span class="k-blue">Least maneuverable has priority</span>: balloons &gt; gliders &gt; airships &gt; airplanes.</li>
             <li>An aircraft <span class="k-red">in distress</span> always has the right of way, and a <span class="k-amber">towing</span> aircraft outranks a plain airplane.</li>
+            <li>Aircraft <span class="k-green">on final approach or landing</span> have the right of way over aircraft in flight or on the surface.</li>
+            <li>When two aircraft are approaching to land, the one at the <span class="k-green">lower altitude</span> has the right of way — but <strong>must not cut in front of</strong> or overtake an aircraft on final.</li>
           </ul>
           <figure class="diagram">
             <img src="images/minimum-safe-altitudes.png" alt="Minimum safe altitudes: congested areas 1,000 ft above the highest obstacle within 2,000 ft; other areas 500 ft AGL; over open water or sparsely populated areas, 500 ft from any person, vessel, or structure." loading="lazy" />
@@ -208,9 +210,9 @@
             <table>
               <thead><tr><th>Limitation / feature</th><th>BasicMed</th><th>3rd-class medical (standard PPL)</th></tr></thead>
               <tbody>
-                <tr><td>Max aircraft seats</td><td><span class="k-num">6 seats</span></td><td>No restriction</td></tr>
-                <tr><td>Max passengers</td><td><span class="k-num">5 passengers</span></td><td>No restriction</td></tr>
-                <tr><td>Max takeoff weight</td><td><span class="k-num">6,000 lbs</span></td><td>No restriction</td></tr>
+                <tr><td>Max occupants</td><td><span class="k-num">7 occupants</span></td><td>No restriction</td></tr>
+                <tr><td>Max passengers</td><td><span class="k-num">6 passengers</span></td><td>No restriction</td></tr>
+                <tr><td>Max takeoff weight</td><td><span class="k-num">12,500 lbs</span></td><td>No restriction</td></tr>
                 <tr><td>Max altitude</td><td><span class="k-num">18,000 ft MSL</span> (below Class A)</td><td>No restriction</td></tr>
                 <tr><td>Max speed</td><td><span class="k-num">250 KIAS</span></td><td>No restriction</td></tr>
               </tbody>
@@ -230,6 +232,23 @@
           </div>
         </section>
 
+        <!-- ENDORSEMENTS -->
+        <section class="section" id="endorsements">
+          <h2>Training endorsements</h2>
+          <p>Beyond the <strong>type rating</strong> (over 12,500 lb / turbojets), some airplanes need a <strong>one-time logbook endorsement</strong> after training:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Endorsement</th><th>When it's required</th></tr></thead>
+              <tbody>
+                <tr><td><span class="k-blue">High-performance</span></td><td>Engine of more than <span class="k-num">200 hp</span></td></tr>
+                <tr><td><span class="k-green">Complex</span></td><td><span class="k-amber">Retractable gear + flaps + a controllable-pitch prop</span></td></tr>
+                <tr><td><span class="k-purple">High-altitude</span></td><td>Pressurized, with a service ceiling / max operating altitude above <span class="k-num">25,000 ft MSL</span></td></tr>
+                <tr><td><strong>Tailwheel</strong></td><td>Any tailwheel (conventional-gear) airplane</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         <!-- LIMITS -->
         <section class="section" id="alcohol-aerobatic">
           <h2>Alcohol &amp; aerobatic limits</h2>
@@ -237,8 +256,25 @@
             <li><strong>Alcohol:</strong> no flying within <span class="k-amber">8 hours</span> of drinking or with a BAC of <span class="k-amber">0.04 or higher</span>.</li>
             <li><strong>Parachutes:</strong> required when intentionally exceeding <span class="k-num">30° of pitch</span> or <span class="k-num">60° of bank</span> with passengers aboard — and any approved parachute carried must have been <strong>repacked within the preceding <span class="k-num">180 days</span></strong> by a certificated rigger.</li>
             <li><strong>NTSB:</strong> notify <strong>immediately</strong> of an accident or certain serious incidents — including a <strong>required crewmember unable to perform normal flight duties from injury or illness</strong>; file the written report within <span class="k-num">10 days</span>.</li>
-            <li><strong>Emergency deviation from ATC:</strong> if an in-flight emergency makes you deviate from a clearance or instruction, a written report is required <strong>only if ATC asks for one</strong> — then submit it within <span class="k-num">48 hours</span> to the chief of that ATC facility.</li>
           </ul>
+        </section>
+
+        <!-- EMERGENCY AUTHORITY & REPORTING -->
+        <section class="section" id="emergency-reporting">
+          <h2>Emergency authority &amp; reporting</h2>
+          <p>In an emergency the PIC has broad authority — the catch is <strong>who you report to afterward, and only if asked</strong>.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Situation</th><th>In-flight action</th><th>Written report?</th></tr></thead>
+              <tbody>
+                <tr><td>Emergency — deviate from an <span class="k-blue">ATC clearance/instruction</span></td><td>Notify ATC <strong>as soon as possible</strong></td><td>Only if ATC requests → within <span class="k-num">48 hrs</span> to the <strong>ATC facility manager</strong></td></tr>
+                <tr><td>Emergency — deviate from <span class="k-purple">any Part 91 rule</span></td><td>Do what the emergency requires</td><td>Only if requested → to the <strong>FAA Administrator</strong></td></tr>
+                <tr><td><span class="k-amber">Given priority</span> by ATC (no deviation)</td><td>—</td><td>Only if ATC requests → within <span class="k-num">48 hrs</span> to the <strong>ATC facility manager</strong></td></tr>
+                <tr><td><span class="k-green">TCAS/ACAS</span> resolution advisory</td><td>Notify ATC as soon as possible</td><td><strong>Not required</strong></td></tr>
+                <tr><td>Non-emergency ATC deviation</td><td colspan="2"><strong>Not allowed</strong> without an amended clearance</td></tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <!-- CATEGORIES -->
@@ -269,8 +305,8 @@
       </div>
     </main>
 
-    <script src="js/data.js?v=20260625k"></script>
-    <script src="js/search.js?v=20260625k"></script>
-    <script src="js/main.js?v=20260625k"></script>
+    <script src="js/data.js?v=20260629b"></script>
+    <script src="js/search.js?v=20260629b"></script>
+    <script src="js/main.js?v=20260629b"></script>
   </body>
 </html>

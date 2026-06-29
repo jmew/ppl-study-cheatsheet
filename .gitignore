@@ -60,3 +60,6 @@ venv/
 *.tmp
 *.bak
 .cache/
+
+# ---- Personal study notes (generated, not for the published site) ----
+ppl-far-aim-cheat-sheet.md

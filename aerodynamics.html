@@ -8,7 +8,7 @@
       name="description"
       content="PPL aerodynamics: the four forces, parasite vs induced drag, left-turning tendencies, axes & controls, stability, stalls, spins, load factor and ground effect."
     />
-    <link rel="stylesheet" href="css/style.css?v=20260630c" />
+    <link rel="stylesheet" href="css/style.css?v=20260630d" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
     <script>
       (function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
@@ -237,17 +237,18 @@
           </ul>
 
           <h3>What changes stall speed</h3>
-          <p>You always stall at the <strong>critical angle of attack</strong> — but the <em>speed</em> at which you reach it shifts with how hard the wing is working:</p>
+          <p>A wing always stalls at the same <strong>critical angle of attack</strong> — that AoA itself stays constant (only <strong>contamination</strong> lowers it). What shifts is the <strong>indicated speed</strong> at which you reach it:</p>
           <div class="table-wrap">
             <table>
-              <thead><tr><th>Factor</th><th>Condition</th><th>Stall speed</th><th>Why</th></tr></thead>
+              <thead><tr><th>Factor</th><th>Condition</th><th>Indicated stall speed</th><th>Critical AoA</th><th>Why</th></tr></thead>
               <tbody>
-                <tr><td>Weight</td><td>Heavier</td><td><span class="k-red">↑ higher</span></td><td>More lift needed → higher AoA just to stay level.</td></tr>
-                <tr><td>Load factor</td><td>Steep bank / pull-up</td><td><span class="k-red">↑ higher</span></td><td>G‑force acts like extra weight — the wing works harder.</td></tr>
-                <tr><td>CG</td><td>Forward CG</td><td><span class="k-red">↑ higher</span></td><td>More tail downforce to hold the nose up = extra weight to carry.</td></tr>
-                <tr><td>Flaps</td><td>Extended</td><td><span class="k-green">↓ lower</span></td><td>More camber → more lift at slower speed.</td></tr>
-                <tr><td>Contamination</td><td>Ice / frost / bugs</td><td><span class="k-red">↑ higher</span></td><td>Disrupts airflow → wing stalls at a lower critical AoA.</td></tr>
-                <tr><td>Altitude</td><td>Higher</td><td><span class="k-amber">no change</span></td><td>True stall speed rises, but the <strong>indicated</strong> stall speed is unchanged (see <a href="systems.html#airspeeds">airspeeds</a>).</td></tr>
+                <tr><td>Weight</td><td>Heavier</td><td><span class="k-red">↑ higher</span></td><td><span class="muted">unchanged</span></td><td>More lift needed → higher AoA just to stay level.</td></tr>
+                <tr><td>Load factor</td><td>Steeper bank / pull-up</td><td><span class="k-red">↑ higher</span></td><td><span class="muted">unchanged</span></td><td>G‑force acts like extra weight — the wing works harder.</td></tr>
+                <tr><td>CG</td><td>Forward CG</td><td><span class="k-red">↑ higher</span></td><td><span class="muted">unchanged</span></td><td>More tail downforce to hold the nose up = extra weight to carry.</td></tr>
+                <tr><td>CG</td><td>Aft CG</td><td><span class="k-green">↓ lower</span></td><td><span class="muted">unchanged</span></td><td>Less tail downforce → less effective weight for the wing to support.</td></tr>
+                <tr><td>Flaps</td><td>Extended</td><td><span class="k-green">↓ lower</span></td><td><span class="muted">unchanged</span></td><td>More camber → more lift at slower speed.</td></tr>
+                <tr><td>Contamination</td><td>Ice / frost / bugs</td><td><span class="k-red">↑ higher</span></td><td><span class="k-red">↓ lower</span></td><td>Disrupts airflow → the wing stalls at a lower AoA. <strong>The one exception.</strong></td></tr>
+                <tr><td>Altitude</td><td>Higher</td><td><span class="k-amber">no change</span></td><td><span class="muted">unchanged</span></td><td>True stall speed rises, but the <strong>indicated</strong> stall speed is unchanged (see <a href="systems.html#airspeeds">airspeeds</a>).</td></tr>
               </tbody>
             </table>
           </div>
@@ -295,8 +296,8 @@
       </div>
     </main>
 
-    <script src="js/data.js?v=20260630c"></script>
-    <script src="js/search.js?v=20260630c"></script>
-    <script src="js/main.js?v=20260630c"></script>
+    <script src="js/data.js?v=20260630d"></script>
+    <script src="js/search.js?v=20260630d"></script>
+    <script src="js/main.js?v=20260630d"></script>
   </body>
 </html>

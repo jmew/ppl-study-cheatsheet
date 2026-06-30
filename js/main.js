@@ -100,6 +100,12 @@
       desc: "High-yield rules & AIM by part/chapter",
       nav: true,
     },
+    {
+      file: "acs.html",
+      label: "ACS Extras",
+      desc: "ADM, diversion, emergencies & more",
+      nav: true,
+    },
     { file: "flashcards.html", label: "Flashcards", nav: false },
   ];
 

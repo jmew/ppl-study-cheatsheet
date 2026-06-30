@@ -8,7 +8,7 @@
       name="description"
       content="PPL aerodynamics: the four forces, parasite vs induced drag, left-turning tendencies, axes & controls, stability, stalls, spins, load factor and ground effect."
     />
-    <link rel="stylesheet" href="css/style.css?v=20260629b" />
+    <link rel="stylesheet" href="css/style.css?v=20260629c" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
     <script>
       (function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
@@ -235,6 +235,22 @@
               <strong>T-tail</strong> airplanes sit the elevator <strong>above the wing's turbulent wake</strong>, so the tail <strong>doesn't buffet</strong> as the wing nears the stall — you lose the usual stall-warning vibration, which makes the stall <strong>harder to recognize and recover from</strong>.
             </li>
           </ul>
+
+          <h3>What changes stall speed</h3>
+          <p>You always stall at the <strong>critical angle of attack</strong> — but the <em>speed</em> at which you reach it shifts with how hard the wing is working:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Factor</th><th>Condition</th><th>Stall speed</th><th>Why</th></tr></thead>
+              <tbody>
+                <tr><td>Weight</td><td>Heavier</td><td><span class="k-red">↑ higher</span></td><td>More lift needed → higher AoA just to stay level.</td></tr>
+                <tr><td>Load factor</td><td>Steep bank / pull-up</td><td><span class="k-red">↑ higher</span></td><td>G‑force acts like extra weight — the wing works harder.</td></tr>
+                <tr><td>CG</td><td>Forward CG</td><td><span class="k-red">↑ higher</span></td><td>More tail downforce to hold the nose up = extra weight to carry.</td></tr>
+                <tr><td>Flaps</td><td>Extended</td><td><span class="k-green">↓ lower</span></td><td>More camber → more lift at slower speed.</td></tr>
+                <tr><td>Contamination</td><td>Ice / frost / bugs</td><td><span class="k-red">↑ higher</span></td><td>Disrupts airflow → wing stalls at a lower critical AoA.</td></tr>
+                <tr><td>Altitude</td><td>Higher</td><td><span class="k-amber">no change</span></td><td>True stall speed rises, but the <strong>indicated</strong> stall speed is unchanged (see <a href="systems.html#airspeeds">airspeeds</a>).</td></tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <!-- LOAD FACTOR -->
@@ -279,8 +295,8 @@
       </div>
     </main>
 
-    <script src="js/data.js?v=20260629b"></script>
-    <script src="js/search.js?v=20260629b"></script>
-    <script src="js/main.js?v=20260629b"></script>
+    <script src="js/data.js?v=20260629c"></script>
+    <script src="js/search.js?v=20260629c"></script>
+    <script src="js/main.js?v=20260629c"></script>
   </body>
 </html>

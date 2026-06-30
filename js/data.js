@@ -18,7 +18,7 @@ window.PPL_DATA = {
     { t: "Left-turning tendencies", p: "aerodynamics.html#left-turning", topic: "Aerodynamics", k: "p-factor torque spiraling slipstream gyroscopic precession right rudder climb", s: "P-factor, spiraling slipstream and torque all yaw/roll the airplane left." },
     { t: "Axes & flight controls", p: "aerodynamics.html#axes", topic: "Aerodynamics", k: "roll pitch yaw aileron elevator rudder longitudinal lateral vertical axis", s: "Roll/aileron, pitch/elevator, yaw/rudder about the three axes.", cap: "Longitudinal = length (nose to tail). · The three axes of rotation through an airplane's center of gravity: the longitudinal axis (roll, nose to tail), the lateral axis (pitch, wingtip to wingtip), and the vertical axis (yaw)." },
     { t: "Stability & the CG", p: "aerodynamics.html#stability", topic: "Aerodynamics", k: "stable static dynamic center of gravity center of pressure dihedral longitudinal", s: "CG ahead of CP is stable; dihedral gives lateral stability." },
-    { t: "Stalls & spins", p: "aerodynamics.html#stalls-spins", topic: "Aerodynamics", k: "stall spin rectangular wing root tip 172 autorotation aileron effectiveness critical angle of attack any airspeed attitude", s: "A wing stalls past its critical angle of attack — at any airspeed; a spin needs both wings stalled, one more than the other." },
+    { t: "Stalls & spins", p: "aerodynamics.html#stalls-spins", topic: "Aerodynamics", k: "stall spin rectangular wing root tip 172 autorotation aileron effectiveness critical angle of attack any airspeed attitude stall speed factors weight load factor cg flaps contamination ice frost altitude", s: "A wing stalls past its critical angle of attack — at any airspeed; a spin needs both wings stalled, one more than the other." },
     { t: "Load factor", p: "aerodynamics.html#load-factor", topic: "Aerodynamics", k: "load factor g force bank turn stall speed 60 degrees 2g", s: "Load factor = G-force; increases in turns and raises stall speed.", cap: "The Vg diagram (flight envelope). · Vg diagram (flight envelope): load factor versus indicated airspeed, showing the normal operating range, caution range, never-exceed speed, stall speed line and gust lines." },
     { t: "Ground effect", p: "aerodynamics.html#ground-effect", topic: "Aerodynamics", k: "ground effect wingspan induced drag vortices float runway", s: "Within one wingspan of the surface, induced drag drops and the airplane floats.", cap: "A wingtip vortex — the source of induced drag. Near the ground the surface squashes these vortices, so the airplane \"floats.\" · Front view of an airplane: higher-pressure air under the wing curls up and around the wingtip toward the lower-pressure air on top, forming a wingtip vortex." },
     // Systems
@@ -27,6 +27,7 @@ window.PPL_DATA = {
     { t: "Pitot-static system", p: "systems.html#pitot-static", topic: "Systems", k: "pitot static port airspeed altimeter vsi blocked alternate static source", s: "Pitot feeds the ASI; static feeds ASI, altimeter and VSI; blockages and effects.", cap: "Pitot → ASI only. Static → ASI + Altimeter + VSI. · Pitot-static plumbing: the pitot tube feeds only the airspeed indicator; the static port feeds the airspeed indicator, altimeter and vertical speed indicator." },
     { t: "Attitude indicator", p: "systems.html#attitude-indicator", topic: "Systems", k: "attitude indicator gyroscope gyro horizon bar miniature airplane adjust fixed in space", s: "Gyro holds the horizon bar fixed; set the little airplane to it." },
     { t: "Types of altitude", p: "systems.html#altitudes", topic: "Systems", k: "indicated true MSL absolute AGL pressure density altitude 29.92 inch hg", s: "True = MSL, absolute = AGL, pressure altitude at 29.92." },
+    { t: "Airspeeds: IAS, CAS, TAS, GS", p: "systems.html#airspeeds", topic: "Systems", k: "indicated calibrated true airspeed ground speed IAS CAS TAS GS ICE-T position installation error air density altitude temperature wind 2 percent per 1000 ft v-speeds stall convert difference", s: "IAS → CAS (position error) → TAS (air density) → GS (wind); you fly IAS." },
     // Airspace
     { t: "Airspace overview (wedding cake)", p: "airspace.html#overview", topic: "Airspace", k: "controlled uncontrolled class A B C D E G cross section two-way radio", s: "How controlled airspace stacks up from A through G.", cap: "The airspace classes in cross-section. · Cross-section of US airspace classes A through G with a table of entry requirements, VFR visibility minimums, and VFR cloud clearance for each class." },
     { t: "Classes A–G", p: "airspace.html#classes", topic: "Airspace", k: "class A B C D E G IFR clearance two way radio contact ceiling bracket", s: "Each class, its entry requirement and chart color." },
@@ -38,7 +39,7 @@ window.PPL_DATA = {
     { t: "Traffic pattern", p: "airports.html#pattern", topic: "Airports", k: "traffic pattern upwind crosswind downwind base final 45 entry left traffic windsock", s: "Left traffic; enter downwind at 45 degrees; the five legs.", cap: "All turns are to the left unless right traffic is published — enter the downwind on the 45° . · A windsock is a carrot — take off and land the way you'd eat it: small → large (toward the fat end, into the wind). · The pointy end indicates where the wind is coming from — and the direction in which aircraft should take off and land. · A runway layout with a tetrahedron landing-direction indicator inside a segmented circle; the tetrahedron's pointed end points into the wind." },
     { t: "Runway numbers & signs", p: "airports.html#runways", topic: "Airports", k: "runway number magnetic heading red sign yellow sign hold short LAHSO wildlife refuge threshold bar demarcation bar displaced threshold white yellow blast pad chevron", s: "Runway numbers come from the magnetic heading; red = on runway, yellow = direction.", cap: "Red = mandatory — hold short of Runway 22. · Black = location — you are on Runway 22. · Yellow + arrow = direction to a runway. · Airport surface diagram labeling: B a surface hold-position sign, C vehicle roadway markings, D a non-movement area boundary marking, and E an intermediate holding-position marking on a taxiway." },
     { t: "Taxiing", p: "airports.html#taxiing", topic: "Airports", k: "taxi taxiing wind control aileron elevator tailwind headwind climb into dive away taxi lights blue edge green centerline night", s: "Climb into a headwind, dive away from a tailwind; taxi lights: blue edge, green centerline.", cap: "At night: blue = taxiway edge lights; green = taxiway centerline lights. · Taxi lights at night: blue lights line both edges of the taxiway and green lights run down the taxiway centerline." },
-    { t: "PAPI vs VASI glidepath", p: "airports.html#glidepath", topic: "Airports", k: "PAPI VASI red white glidepath 3 degree stabilized approach", s: "Red over white, you're alright; 3 degree stabilized approach." },
+    { t: "PAPI vs VASI glidepath", p: "airports.html#glidepath", topic: "Airports", k: "PAPI VASI red white glidepath 3 degree stabilized approach speed +10 -5 KIAS landing speed POH", s: "Red over white, you're alright; 3 degree stabilized approach." },
     { t: "Pilot-controlled lighting", p: "airports.html#pilot-lighting", topic: "Airports", k: "pilot controlled lighting runway lights mic clicks key microphone 7 5 3 brightness intensity 15 minutes CTAF night", s: "Key the mic — 7/5/3 clicks for high/medium/low; on for 15 minutes." },
     { t: "Wake turbulence", p: "airports.html#wake-turbulence", topic: "Airports", k: "wake turbulence wingtip vortices heavy clean slow rotate touchdown 2 minutes light quartering tailwind", s: "Vortices worst heavy/clean/slow; land beyond, rotate before, wait 2 minutes." },
     // ATC
@@ -69,13 +70,13 @@ window.PPL_DATA = {
     { t: "Thunderstorms", p: "weather.html#thunderstorms", topic: "Weather", k: "thunderstorm moisture lifting unstable towering cumulus mature dissipating stages", s: "Ingredients: moisture, lift, instability; 3 stages." },
     { t: "Fronts", p: "weather.html#fronts", topic: "Weather", k: "warm cold stationary occluded front wind shift change direction", s: "Four fronts; wind direction changes when you cross one.", cap: "Cold = pointed triangles; warm = rounded bumps; stationary = both, opposite sides; occluded = both, same side (purple)." },
     { t: "Fog & temperature inversions", p: "weather.html#fog", topic: "Weather", k: "radiation advection upslope fog temperature inversion poor visibility", s: "Radiation, advection and upslope fog; inversions trap air." },
-    { t: "Upper-air hazards", p: "weather.html#hazards", topic: "Weather", k: "tropopause cirrus jet stream clear air turbulence wind shear icing 25 kts", s: "Tropopause, CAT, wind shear, cirrus and icing." },
+    { t: "Upper-air hazards", p: "weather.html#hazards", topic: "Weather", k: "tropopause cirrus jet stream clear air turbulence wind shear icing 25 kts structural airframe visible moisture carburetor icing clear air", s: "Tropopause, CAT, wind shear, cirrus and icing." },
     // Weather Reports
     { t: "METAR & TAF", p: "weather-reports.html#metar-taf", topic: "Weather Reports", k: "metar taf observation forecast decode zulu wind visibility altimeter P6SM", s: "METAR = observation, TAF = forecast (vis to 6 SM)." },
     { t: "Sky cover & weather codes", p: "weather-reports.html#sky-cover", topic: "Weather Reports", k: "CLR FEW SCT BKN OVC ceiling eighths oktas BR FG RA DZ SN TS HZ VC", s: "CLR to OVC sky cover; ceiling is first BKN/OVC; weather codes." },
     { t: "Winds & temps aloft", p: "weather-reports.html#winds-aloft", topic: "Weather Reports", k: "winds aloft decode 730649 over 100 knots add 50 subtract 100 temperature", s: "Over 100 kt: +50 to direction, -100 from speed." },
     { t: "Flight categories", p: "weather-reports.html#flight-categories", topic: "Weather Reports", k: "VFR MVFR IFR LIFR ceiling visibility minimums 1000 3sm", s: "VFR/MVFR/IFR/LIFR ceiling & visibility thresholds." },
-    { t: "AIRMET, SIGMET & briefings", p: "weather-reports.html#advisories", topic: "Weather Reports", k: "airmet sierra tango zulu sigmet convective outlook briefing flight service 122.2", s: "AIRMET (light), SIGMET (severe), outlook briefing ≥ 6 hrs." },
+    { t: "AIRMET, SIGMET & briefings", p: "weather-reports.html#advisories", topic: "Weather Reports", k: "airmet sierra tango zulu sigmet convective outlook briefing flight service 122.2 significant weather prognostic prog chart altitude blocks areas to avoid", s: "AIRMET (light), SIGMET (severe), outlook briefing ≥ 6 hrs." },
     // Navigation
     { t: "Pilotage & dead reckoning", p: "navigation.html#basics", topic: "Navigation", k: "pilotage dead reckoning landmarks heading time speed distance chart latitude", s: "Landmarks vs computed position; chart tick = 30 min = 0.5 deg." },
     { t: "VOR navigation", p: "navigation.html#vor", topic: "Navigation", k: "VOR radial CDI needle deflection TO FROM perpendicular position fix magnetic VOT receiver check test 4 degrees", s: "Radials are magnetic; needle right = course right; cross two radials.", cap: "A CDI : set the course with the OBS knob, then fly toward the needle to center it. The TO/FR flag shows whether the course leads to or from the station. · Two course deviation indicators (CDIs): each has an OBS knob to select a course, a vertical needle that deflects left or right to show which way the course lies, and a TO/FR flag." },
@@ -100,6 +101,17 @@ window.PPL_DATA = {
     { t: "Operating rule extras (PIC, INOP, SVFR)", p: "far-aim.html#operating-extras", topic: "FAR/AIM", k: "PIC pilot in command authority airworthy inoperative equipment INOP placard altimeter 100 nm special VFR clear of clouds 1 sm dropping objects 91.15 two-way radio tower 4 nm 2500 agl satellite emergency deviate part 91", s: "PIC authority/airworthiness, inop equipment, altimeter 100 NM, special VFR." },
     { t: "NTSB accident & incident reporting", p: "far-aim.html#accident-reporting", topic: "FAR/AIM", k: "NTSB 830 accident incident substantial damage immediate notification nose landing gear 10 days 7 days overdue 25000 report", s: "Accident vs incident; what is NOT substantial damage; 10/7-day reports." },
     { t: "Airport beacons", p: "far-aim.html#airport-lighting", topic: "FAR/AIM", k: "airport beacon colors white green land water yellow heliport military daytime beacon IFR rotating aim chapter 2", s: "White+green = land airport; daytime beacon = poor weather." },
+    // ACS
+    { t: "ACS: PAR test & ACS codes", p: "acs.html#about", topic: "ACS", k: "ACS FAA-S-ACS-6 PAR knowledge test 60 questions 70 percent passing airman knowledge test report AKTR code age 15", s: "PAR: 60 questions, 2.5 hr, 70% to pass; AKTR codes map to ACS." },
+    { t: "ACS: Airworthiness extras (AD/SAIB, MEL/KOEL)", p: "acs.html#airworthiness", topic: "ACS", k: "airworthiness directive AD mandatory SAIB special airworthiness information bulletin advisory special flight permit ferry permit MEL minimum equipment list KOEL kinds of operation", s: "AD vs SAIB; special flight permit; MEL vs KOEL." },
+    { t: "ACS: Weather extras (mountain wave, microburst, frost)", p: "acs.html#weather", topic: "ACS", k: "surface analysis chart CVA ceiling visibility analysis mountain wave lenticular rotor microburst wind shear frost lift", s: "Surface analysis/CVA; mountain wave; microburst; frost." },
+    { t: "ACS: Flight-plan extras (activate/close, intercept)", p: "acs.html#planning", topic: "ACS", k: "VFR flight plan activate close flight service search and rescue SAR 30 minutes ETA inflight intercept procedures 121.5", s: "Activate/close a VFR flight plan; SAR; intercept procedures." },
+    { t: "ACS: Airspace extras (TFR, SFRA, MTR)", p: "acs.html#airspace", topic: "ACS", k: "TFR temporary flight restriction SFRA special flight rules area DC MTR military training route IR VR other airspace", s: "TFRs, SFRAs, and military training routes." },
+    { t: "ACS: Aeronautical decision-making (ADM)", p: "acs.html#adm", topic: "ACS", k: "ADM hazardous attitudes antidotes anti-authority impulsivity invulnerability macho resignation PAVE DECIDE CRM SRM risk management situational awareness bias", s: "5 hazardous attitudes + antidotes; PAVE; DECIDE; SRM." },
+    { t: "ACS: Runway status lights (RWSL)", p: "acs.html#lighting", topic: "ACS", k: "runway status lights RWSL REL runway entrance lights THL takeoff hold lights red automatic", s: "RWSL: automatic red REL/THL; a red light overrides a clearance." },
+    { t: "ACS: Diversion & lost procedures", p: "acs.html#diversion-lost", topic: "ACS", k: "diversion alternate divert lost procedures five c climb communicate confess comply conserve 7700", s: "Diversion technique; lost = the 5 C's." },
+    { t: "ACS: Spin, unusual-attitude & IMC recovery", p: "acs.html#recovery", topic: "ACS", k: "spin recovery PARE power ailerons rudder elevator unusual attitude nose high nose low inadvertent IMC IIMC UIMC 180 degree turn spatial disorientation", s: "PARE spin recovery; unusual-attitude & IIMC recovery." },
+    { t: "ACS: Emergency procedures", p: "acs.html#emergencies", topic: "ACS", k: "emergency descent in-flight fire engine electrical cabin vacuum gyro failure partial panel attitude heading indicator ballistic parachute CAPS autoland", s: "Emergency descent; in-flight fire; vacuum/gyro failure; CAPS/autoland." },
   ],
 
   /* ---- Flashcards ---- */
@@ -123,6 +135,7 @@ window.PPL_DATA = {
     { topic: "Aerodynamics", q: "Load factor in a 60° bank?", a: "2.0 G." },
     { topic: "Aerodynamics", q: "Load factor matters for which maneuver?", a: "Turns/banks — straight-and-level is always 1 G." },
     { topic: "Aerodynamics", q: "Ground effect is strongest within what height?", a: "About one wingspan above the surface (induced drag drops)." },
+    { topic: "Aerodynamics", q: "What raises or lowers stall speed?", a: "Higher with more weight, load factor (steep bank/pull-up), forward CG, or contamination (ice/frost/bugs); lower with flaps. Altitude → no change in indicated stall speed." },
     // Systems
     { topic: "Systems", q: "What is a constant-speed propeller?", a: "A propeller whose blade angle (pitch) can be adjusted." },
     { topic: "Systems", q: "What does carburetor heat do to the mixture?", a: "It enriches it — warm air is less dense, so more fuel-to-air." },
@@ -137,6 +150,10 @@ window.PPL_DATA = {
     { topic: "Systems", q: "Absolute altitude is referenced to what?", a: "Above ground level (AGL)." },
     { topic: "Systems", q: "Pressure altitude is read with the altimeter set to?", a: "29.92 in Hg." },
     { topic: "Systems", q: "1 inch of Hg is about how many feet?", a: "About 1,000 ft." },
+    { topic: "Systems", q: "IAS → CAS → TAS → GS: what correction does each step add?", a: "IAS→CAS: instrument/position error. CAS→TAS: air density (altitude + temperature). TAS→GS: wind." },
+    { topic: "Systems", q: "Which airspeed do you actually fly (V-speeds, stalls)?", a: "Indicated (IAS) — the wing stalls at the same IAS at any altitude." },
+    { topic: "Systems", q: "How does TAS compare with IAS as you climb?", a: "TAS gets higher than IAS (thinner air) — about +2% per 1,000 ft; at sea level on a standard day IAS ≈ CAS ≈ TAS." },
+    { topic: "Systems", q: "Ground speed vs true airspeed?", a: "GS = TAS adjusted for wind: headwind → GS less than TAS; tailwind → GS more than TAS." },
     // Airspace
     { topic: "Airspace", q: "Class A altitudes and rule?", a: "18,000 ft MSL up to FL600, IFR only." },
     { topic: "Airspace", q: "Class B VFR minimums and entry?", a: "3 SM visibility, clear of clouds, and an explicit ATC clearance." },
@@ -161,6 +178,8 @@ window.PPL_DATA = {
     { topic: "Airports", q: "What does LAHSO stand for?", a: "Land And Hold Short Operations." },
     { topic: "Airports", q: "When is wake turbulence strongest?", a: "When the aircraft ahead is heavy, clean, and slow." },
     { topic: "Airports", q: "Avoiding wake turbulence landing/departing behind a larger aircraft?", a: "Landing: stay at/above its path and land beyond its touchdown point. Departing: rotate before its rotation point and climb above its path. Wait ~2 minutes." },
+    { topic: "Airports", q: "Displaced threshold vs blast pad markings?", a: "Displaced threshold = white arrows leading to the threshold bar (no landing before it). Blast pad/stopway = yellow chevrons (no taxi, takeoff, or landing)." },
+    { topic: "Airports", q: "Stabilized approach — target airspeed?", a: "The landing speed in the POH/AFM, held within +10 / −5 KIAS (constant ~3° descent)." },
     // ATC
     { topic: "ATC", q: "VFR squawk code?", a: "1200." },
     { topic: "ATC", q: "Squawk 7500?", a: "Hijack." },
@@ -218,6 +237,7 @@ window.PPL_DATA = {
     { topic: "Weather", q: "The four front types?", a: "Warm, cold, stationary, occluded." },
     { topic: "Weather", q: "What do you notice flying across a front?", a: "A change in wind direction." },
     { topic: "Weather", q: "Where is clear air turbulence found?", a: "On the cold side of the jet stream, near the trough." },
+    { topic: "Weather", q: "Does icing need visible moisture?", a: "Structural (airframe) icing does — visible moisture + freezing temps. Carburetor icing does NOT — just high humidity, so it can form in clear air." },
     // Weather Reports
     { topic: "Weather Reports", q: "METAR vs TAF?", a: "METAR = current observation; TAF = forecast." },
     { topic: "Weather Reports", q: "Sky cover, least to most?", a: "CLR → FEW → SCT → BKN → OVC." },
@@ -230,6 +250,7 @@ window.PPL_DATA = {
     { topic: "Weather Reports", q: "What does 'convective' mean in a forecast?", a: "Thunderstorms." },
     { topic: "Weather Reports", q: "When is an outlook briefing used?", a: "When departure is 6 or more hours away." },
     { topic: "Weather Reports", q: "Flight categories — VFR, MVFR, IFR, LIFR?", a: "VFR: ceiling >3,000 ft and vis >5 SM. MVFR: 1,000–3,000 ft and/or 3–5 SM. IFR: 500–<1,000 ft and/or 1–<3 SM. LIFR: <500 ft and/or <1 SM." },
+    { topic: "Weather Reports", q: "What is a significant weather prog chart for?", a: "Forecasting hazards (IFR/MVFR areas, turbulence, freezing levels) by altitude block — to decide which areas and altitudes to avoid." },
     // Navigation
     { topic: "Navigation", q: "What is a VOR radial?", a: "A magnetic course FROM the station." },
     { topic: "Navigation", q: "CDI needle deflected right means?", a: "The selected course/station is to your right — fly toward the needle." },
@@ -255,5 +276,16 @@ window.PPL_DATA = {
     { topic: "Human Factors", q: "Scuba diving: how long before flying?", a: "12 hours (flight up to 8,000 ft, no-decompression dive); 24 hours (flight above 8,000 ft, or after a dive needing a controlled ascent)." },
     { topic: "Human Factors", q: "Hyperventilation — cause and fix?", a: "Breathing too fast blows off CO₂; symptoms mimic hypoxia. Fix by slowing the breathing rate; ensure oxygen first if at altitude." },
     { topic: "Human Factors", q: "The leans vs the Coriolis illusion?", a: "The leans = false sensation of banking (most common). Coriolis = abrupt head movement in a turn causes severe tumbling — avoid sudden head movements." },
+    // ACS
+    { topic: "ACS", q: "The 5 hazardous attitudes?", a: "Anti-authority, Impulsivity, Invulnerability, Macho, Resignation." },
+    { topic: "ACS", q: "Antidotes — Macho and Invulnerability?", a: "Macho → 'taking chances is foolish.' Invulnerability → 'it could happen to me.'" },
+    { topic: "ACS", q: "PAVE and DECIDE stand for?", a: "PAVE = Pilot, Aircraft, enVironment, External pressures. DECIDE = Detect, Estimate, Choose, Identify, Do, Evaluate." },
+    { topic: "ACS", q: "Airworthiness Directive vs SAIB?", a: "AD = mandatory; Special Airworthiness Information Bulletin = advisory only." },
+    { topic: "ACS", q: "Spin recovery — PARE?", a: "Power idle, Ailerons neutral, Rudder full opposite the spin, Elevator forward to break the stall." },
+    { topic: "ACS", q: "Lost procedure — the 5 C's?", a: "Climb, Communicate, Confess, Comply, Conserve (squawk 7700 if it's an emergency)." },
+    { topic: "ACS", q: "Inadvertent IMC (VFR into clouds) — what do you do?", a: "Trust the instruments and make a 180° level turn back to VMC; climb if terrain requires; get help (ATC / 121.5)." },
+    { topic: "ACS", q: "Vacuum/gyro failure — which instruments are lost?", a: "Attitude indicator and heading indicator; turn coordinator, airspeed, altimeter, VSI and compass keep working (partial panel)." },
+    { topic: "ACS", q: "A VFR flight plan — what must you do with it?", a: "Activate it with Flight Service after departure and close it on arrival; SAR begins 30 min after your ETA if you don't close it." },
+    { topic: "ACS", q: "Runway Status Lights (RWSL)?", a: "Automatic red lights (REL/THL) independent of ATC — never enter or depart on red; a red light overrides an ATC clearance." },
   ],
 };

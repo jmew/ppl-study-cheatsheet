@@ -52,33 +52,101 @@
     return (start > 0 ? "… " : "") + cap.slice(start, end).trim() + (end < cap.length ? " …" : "");
   }
 
+  // --- Typo tolerance --------------------------------------------------
+  // How many single-character edits a term may be "off" and still match a
+  // word. Short terms must be exact (fuzzing them gives false positives).
+  function maxEdits(term) {
+    if (term.length <= 3) return 0;
+    if (term.length <= 5) return 1;
+    return 2;
+  }
+
+  // Bounded Levenshtein distance: bails out early (returning max + 1) once a
+  // whole row exceeds the budget, so it stays cheap.
+  function boundedLev(a, b, max) {
+    var la = a.length, lb = b.length;
+    if (Math.abs(la - lb) > max) return max + 1;
+    if (la === 0) return lb;
+    if (lb === 0) return la;
+    var prev = [], curr = [], i, j;
+    for (j = 0; j <= lb; j++) prev[j] = j;
+    for (i = 1; i <= la; i++) {
+      curr[0] = i;
+      var rowMin = curr[0];
+      var ac = a.charCodeAt(i - 1);
+      for (j = 1; j <= lb; j++) {
+        var cost = ac === b.charCodeAt(j - 1) ? 0 : 1;
+        var v = Math.min(prev[j] + 1, curr[j - 1] + 1, prev[j - 1] + cost);
+        curr[j] = v;
+        if (v < rowMin) rowMin = v;
+      }
+      if (rowMin > max) return max + 1;
+      for (j = 0; j <= lb; j++) prev[j] = curr[j];
+    }
+    return prev[lb];
+  }
+
+  // True if any whole word in the haystack is within the term's edit budget.
+  function fuzzyWordHit(term, words, max) {
+    for (var i = 0; i < words.length; i++) {
+      var w = words[i];
+      if (!w || Math.abs(w.length - term.length) > max) continue;
+      if (boundedLev(term, w, max) <= max) return true;
+    }
+    return false;
+  }
+
+  // Score one item against all terms. Each term must match (exact substring,
+  // or — when allowFuzzy — within its edit budget of an indexed word).
+  // Returns the score, or null if any term fails to match.
+  function matchItem(item, terms, allowFuzzy) {
+    var title = item.t.toLowerCase();
+    var topic = item.topic.toLowerCase();
+    var keys = item.k.toLowerCase();
+    var snip = item.s.toLowerCase();
+    var cap = (item.cap || "").toLowerCase();
+    var hay = title + " " + topic + " " + keys + " " + snip + " " + cap;
+    var words = null; // lazily tokenized, only when a fuzzy fallback is needed
+    var score = 0;
+    for (var ti = 0; ti < terms.length; ti++) {
+      var t = terms[ti];
+      // Exact substring match (preferred) — original field weighting.
+      var exact = false;
+      if (title.indexOf(t) === 0) { score += 6; exact = true; }
+      if (title.indexOf(t) >= 0) { score += 10; exact = true; }
+      if (topic.indexOf(t) >= 0) { score += 4; exact = true; }
+      if (keys.indexOf(t) >= 0) { score += 3; exact = true; }
+      if (cap.indexOf(t) >= 0) { score += 2; exact = true; }
+      if (snip.indexOf(t) >= 0) { score += 1; exact = true; }
+      if (exact) continue;
+      if (allowFuzzy) {
+        var max = maxEdits(t);
+        if (max > 0) {
+          if (words === null) words = hay.split(/[^a-z0-9]+/);
+          if (fuzzyWordHit(t, words, max)) { score += 1; continue; }
+        }
+      }
+      return null; // this term didn't match
+    }
+    return score;
+  }
+
   function runSearch(q) {
     var data = (window.PPL_DATA && window.PPL_DATA.searchIndex) || [];
     var terms = q.toLowerCase().split(/\s+/).filter(Boolean);
     if (!terms.length) return [];
-    var scored = [];
-    data.forEach(function (item) {
-      var hay = (item.t + " " + item.topic + " " + item.k + " " + item.s + " " + (item.cap || "")).toLowerCase();
-      var ok = terms.every(function (t) {
-        return hay.indexOf(t) >= 0;
+    function pass(allowFuzzy) {
+      var scored = [];
+      data.forEach(function (item) {
+        var s = matchItem(item, terms, allowFuzzy);
+        if (s !== null) scored.push({ item: item, score: s });
       });
-      if (!ok) return;
-      var title = item.t.toLowerCase();
-      var topic = item.topic.toLowerCase();
-      var keys = item.k.toLowerCase();
-      var snip = item.s.toLowerCase();
-      var cap = (item.cap || "").toLowerCase();
-      var score = 0;
-      terms.forEach(function (t) {
-        if (title.indexOf(t) === 0) score += 6;
-        if (title.indexOf(t) >= 0) score += 10;
-        if (topic.indexOf(t) >= 0) score += 4;
-        if (keys.indexOf(t) >= 0) score += 3;
-        if (cap.indexOf(t) >= 0) score += 2;
-        if (snip.indexOf(t) >= 0) score += 1;
-      });
-      scored.push({ item: item, score: score });
-    });
+      return scored;
+    }
+    // Exact first (fast, precise); only fall back to typo-tolerant matching
+    // when an exact search finds nothing — so good queries stay noise-free.
+    var scored = pass(false);
+    if (!scored.length) scored = pass(true);
     scored.sort(function (a, b) {
       return b.score - a.score;
     });

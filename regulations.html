@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Regulations — PPL Study Guide</title>
     <meta name="description" content="PPL regulations: required documents & equipment (ARROW, ATOMATOFLAMES, FLAPS, NWKRAFT), right-of-way, altitudes, speed limits, currency, medicals and inspections." />
-    <link rel="stylesheet" href="css/style.css?v=20260630y" />
+    <link rel="stylesheet" href="css/style.css?v=20260630z" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
     <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
   </head>
@@ -266,40 +266,47 @@
         <!-- EMERGENCY AUTHORITY & REPORTING -->
         <section class="section" id="emergency-reporting">
           <h2>Emergency authority &amp; reporting</h2>
-          <p>In an emergency the PIC has broad authority — the catch is <strong>who you report to afterward, and only if asked</strong>.</p>
+          <p>In an emergency the PIC has broad authority to deviate as needed. What differs afterward is <strong>who you report to, how fast, and whether a written report is required</strong>.</p>
           <div class="table-wrap">
             <table>
-              <thead><tr><th>Situation</th><th>In-flight action</th><th>Written report?</th></tr></thead>
+              <thead><tr><th>Scenario</th><th>Agency</th><th>Immediate action</th><th>Written report</th></tr></thead>
               <tbody>
-                <tr><td>Emergency — deviate from an <span class="k-blue">ATC clearance/instruction</span></td><td>Notify ATC <strong>as soon as possible</strong></td><td>Only if ATC requests → within <span class="k-num">48 hrs</span> to the <strong>ATC facility manager</strong></td></tr>
-                <tr><td>Emergency — deviate from <span class="k-purple">any Part 91 rule</span></td><td>Do what the emergency requires</td><td>Only if requested → to the <strong>FAA Administrator</strong></td></tr>
-                <tr><td><span class="k-amber">Given priority</span> by ATC (no deviation)</td><td>—</td><td>Only if ATC requests → within <span class="k-num">48 hrs</span> to the <strong>ATC facility manager</strong></td></tr>
-                <tr><td><span class="k-green">TCAS/ACAS</span> resolution advisory</td><td>Notify ATC as soon as possible</td><td><strong>Not required</strong></td></tr>
-                <tr><td>Non-emergency ATC deviation</td><td colspan="2"><strong>Not allowed</strong> without an amended clearance</td></tr>
+                <tr><td>Aircraft accident</td><td><span class="k-green">NTSB</span></td><td>Notify immediately</td><td>Within <span class="k-num">10 days</span></td></tr>
+                <tr><td>Overdue / missing aircraft</td><td><span class="k-green">NTSB</span></td><td>Notify immediately</td><td>Within <span class="k-num">7 days</span></td></tr>
+                <tr><td>Serious incidents <span class="k-red">*</span></td><td><span class="k-green">NTSB</span></td><td>Notify immediately</td><td>Only if requested</td></tr>
+                <tr><td>Emergency deviation (FARs)</td><td><span class="k-blue">FAA</span></td><td>None</td><td>Only if requested</td></tr>
+                <tr><td>Emergency (ATC priority)</td><td><span class="k-amber">ATC</span></td><td>Notify via radio ASAP</td><td>Within <span class="k-num">48 hrs</span> (if requested)</td></tr>
               </tbody>
             </table>
+          </div>
+          <div class="callout callout--warn">
+            <div class="callout__label">* PAR exam "serious incidents" list</div>
+            <p>The written exam frequently tests which incidents require <strong>immediate NTSB notification even when they aren't "accidents."</strong> Memorize these four:</p>
+            <ol class="mb-0">
+              <li>Flight control system malfunction or failure.</li>
+              <li>Inability of a required crewmember to perform duties (illness or injury).</li>
+              <li>In-flight fire.</li>
+              <li>Aircraft collision in flight.</li>
+            </ol>
           </div>
         </section>
 
         <!-- CATEGORIES -->
         <section class="section" id="categories-classes">
           <h2>Categories &amp; classes</h2>
-          <p><strong>"Category" and "class" mean different things</strong> for the <span class="k-blue">airman</span> (you) vs. the <span class="k-green">aircraft</span> (the machine) — a classic test trap.</p>
-          <div class="grid grid--2">
-            <div class="card">
-              <h3 class="mt-0"><span class="k-blue">Airmen</span> — your pilot certificate</h3>
-              <p class="mb-0"><strong>Category</strong> <span class="muted">(broad)</span><br><span class="xlink">Airplane · Rotorcraft · Glider</span> · Lighter-than-air</p>
-              <p class="mb-0 mt-2"><strong>Class</strong> <span class="muted">(narrows it)</span><br>Single-Engine Land, Multi-Engine Land, Single-/Multi-Engine Sea</p>
-            </div>
-            <div class="card">
-              <h3 class="mt-0"><span class="k-green">Aircraft</span> — the airworthiness cert</h3>
-              <p class="mb-0"><strong>Category</strong> <span class="muted">(how it's certified)</span><br>Normal · Utility · Acrobatic · Transport</p>
-              <p class="mb-0 mt-2"><strong>Class</strong> <span class="muted">(broad type)</span><br><span class="xlink">Airplane · Rotorcraft · Glider</span> · Balloon</p>
-            </div>
+          <p><strong>"Category" and "class" flip roles</strong> between the <span class="k-green">aircraft</span> and the <span class="k-blue">airman</span> — a classic test trap:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Category <span class="muted">(broadest)</span></th><th>Class <span class="muted">(sub-group)</span></th></tr></thead>
+              <tbody>
+                <tr><td><span class="k-green">Aircraft</span> <span class="muted">(the metal)</span></td><td>Mission: Normal, Utility, Acrobatic</td><td>Machine: Airplane, Rotorcraft</td></tr>
+                <tr><td><span class="k-blue">Airmen</span> <span class="muted">(the pilot)</span></td><td>Machine: Airplane, Rotorcraft</td><td>Specs: Single-Engine Land, Helicopter</td></tr>
+              </tbody>
+            </table>
           </div>
           <div class="callout callout--tip">
-            <div class="callout__label">How to keep them straight</div>
-            <p class="mb-0">The broad-type words <span class="xlink">Airplane / Rotorcraft / Glider</span> <strong>flip roles</strong>: a <span class="k-blue">pilot's <em>category</em></span>, but an <span class="k-green">aircraft's <em>class</em></span>. Each side then adds a second axis. A <span class="k-blue">pilot's class</span> is engine count + land/sea (SEL, MEL, SES); an <span class="k-green">aircraft's category</span> is how hard you can fly it — <strong>Normal → Utility → Acrobatic</strong> (rising G-limits), plus Transport.</p>
+            <div class="callout__label">The flip</div>
+            <p class="mb-0"><span class="k-green">Aircraft <strong>Class</strong></span> = <span class="k-blue">Airmen <strong>Category</strong></span> — the same broad words (<strong>Airplane, Rotorcraft</strong>) sit one rung apart on each side.</p>
           </div>
           <div class="callout callout--note">
             <div class="callout__label">Also good to know</div>
@@ -309,8 +316,8 @@
       </div>
     </main>
 
-    <script src="js/data.js?v=20260630y"></script>
-    <script src="js/search.js?v=20260630y"></script>
-    <script src="js/main.js?v=20260630y"></script>
+    <script src="js/data.js?v=20260630z"></script>
+    <script src="js/search.js?v=20260630z"></script>
+    <script src="js/main.js?v=20260630z"></script>
   </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Airports &amp; Operations — PPL Study Guide</title>
     <meta name="description" content="PPL airport operations: the traffic pattern, runway numbering and signs, hold-short/LAHSO, PAPI vs VASI glidepath lights, and stabilized approaches." />
-    <link rel="stylesheet" href="css/style.css?v=20260630v" />
+    <link rel="stylesheet" href="css/style.css?v=20260630w" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
     <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
   </head>
@@ -124,13 +124,13 @@
               <figcaption><strong>Black</strong> = <span class="k-green">location</span> — you <strong>are on</strong> Runway 22.</figcaption>
             </figure>
             <figure class="diagram" style="margin:0">
-              <svg viewBox="0 0 96 56" role="img" aria-label="Yellow direction sign with 22 and an arrow" style="max-width:170px;margin-inline:auto">
+              <svg viewBox="0 0 96 56" role="img" aria-label="Yellow direction sign with letter D and an arrow" style="max-width:170px;margin-inline:auto">
                 <rect x="7" y="6" width="82" height="44" rx="6" style="fill:#f4b400" />
                 <rect x="7" y="6" width="82" height="44" rx="6" fill="none" style="stroke:#9a7000" stroke-width="2" />
-                <text x="38" y="38" text-anchor="middle" fill="#1a1a1a" font-size="27" font-weight="800" font-family="monospace">22</text>
+                <text x="38" y="38" text-anchor="middle" fill="#1a1a1a" font-size="27" font-weight="800" font-family="monospace">D</text>
                 <text x="64" y="37" fill="#1a1a1a" font-size="23" font-weight="800">↗</text>
               </svg>
-              <figcaption><strong>Yellow</strong> + arrow = <span class="k-amber">direction to</span> a runway.</figcaption>
+              <figcaption><strong>Yellow</strong> + arrow = <span class="k-amber">direction to</span> a taxiway.</figcaption>
             </figure>
           </div>
           <div class="callout callout--note">
@@ -144,20 +144,21 @@
 
           <p>Other surface markings and signs you'll see while taxiing:</p>
           <figure class="diagram">
-            <img src="images/airport-markings.png" loading="lazy" width="1100" height="1153"
-                 alt="Airport surface diagram labeling: B a surface hold-position sign, C vehicle roadway markings, D a non-movement area boundary marking, and E an intermediate holding-position marking on a taxiway." />
+            <img src="images/airport-markings.png" loading="lazy" width="976" height="1024"
+                 alt="Airport surface diagram labeling: B an ILS hold-position marking, C white vehicle roadway markings, D a runway holding-position marking, E an intermediate holding-position marking, and G a non-movement area boundary marking on a taxiway." />
           </figure>
           <ul>
-            <li><strong>B</strong> — <span class="k-red">Surface hold-position sign</span>.</li>
-            <li><strong>C</strong> — <span class="k-amber">Vehicle roadway markings</span>.</li>
-            <li><strong>D</strong> — <span class="k-green">Non-movement area</span> boundary marking.</li>
+            <li><strong>B</strong> — <span class="k-amber">ILS hold position</span> — hold here to stay clear of the ILS critical area when told to "hold short of the ILS".</li>
+            <li><strong>C</strong> — <span style="color:#fff">Vehicle roadway markings</span> — white lines marking a vehicle path across the movement area.</li>
+            <li><strong>D</strong> — <span class="k-red">Runway holding position</span> — the marking where you stop and hold short of a runway.</li>
             <li><strong>E</strong> — <span class="k-blue">Intermediate holding-position marking</span> — where you stop and hold short of an intersecting taxiway.</li>
+            <li><strong>G</strong> — <span class="k-green">Non-movement area boundary</span> — solid + dashed yellow line dividing the movement area (needs ATC clearance) from ramps and aprons.</li>
           </ul>
 
           <h3>Threshold &amp; demarcation bars</h3>
           <figure class="diagram">
-            <img src="images/runway-demarcation-threshold.png" style="max-width:345px;margin-inline:auto" loading="lazy" width="469" height="517"
-                 alt="A white runway threshold bar marks the start of the usable landing surface at a displaced threshold; a yellow runway demarcation bar 3 feet wide painted on the taxiway separates the non-runway area from the displaced threshold; taxiway centerline and edge markings are yellow." />
+            <img src="images/runway-demarcation-threshold.png" loading="lazy" width="1467" height="557"
+                 alt="Displaced-threshold diagram: a white threshold bar (10 ft wide) marks the start of the usable landing surface, with white arrows leading up to it; yellow chevrons mark the blast pad or stopway; a yellow demarcation bar 3 feet wide separates the blast pad from the displaced threshold; a taxiway joins with yellow centerline and edge markings." />
           </figure>
           <ul>
             <li><span class="k-blue">Displaced threshold</span> — <strong>white arrows</strong> down the centerline leading to the threshold bar. The pavement before it is usable for <strong>taxi, takeoff, and landing rollout — but not for landing</strong>.</li>
@@ -232,8 +233,8 @@
           </div>
           <div class="callout callout--tip">
             <div class="callout__label">Approach speed by landing type</div>
-            <p><strong>Soft-field landing:</strong> fly the <strong>same approach speed as a normal landing</strong> — the soft-field technique is all in the touchdown (hold the nosewheel off), not the approach.</p>
-            <p class="mb-0"><strong>Short-field landing in gusty wind:</strong> add <strong>half the gust factor</strong> to the approach speed (e.g. wind <span class="k-num">15</span> gusting <span class="k-num">25</span> → add <span class="k-num">5</span> kt).</p>
+            <p><strong>Soft-field landing:</strong> fly the <strong>same approach speed as a normal landing</strong>.</p>
+            <p class="mb-0"><strong>Short-field landing in gusty wind:</strong> add <strong><mark>half the gust factor</mark></strong> to the approach speed (e.g. wind <span class="k-num">15</span> gusting <span class="k-num">25</span> → add <span class="k-num">5</span> kt).</p>
           </div>
         </section>
 
@@ -290,8 +291,8 @@
       </div>
     </main>
 
-    <script src="js/data.js?v=20260630v"></script>
-    <script src="js/search.js?v=20260630v"></script>
-    <script src="js/main.js?v=20260630v"></script>
+    <script src="js/data.js?v=20260630w"></script>
+    <script src="js/search.js?v=20260630w"></script>
+    <script src="js/main.js?v=20260630w"></script>
   </body>
 </html>

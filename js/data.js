@@ -116,6 +116,7 @@ window.PPL_DATA = {
     // Testing Supplement
     { t: "Testing supplement cheatsheet (what to look up)", p: "supplement.html#about", topic: "Supplement", k: "testing supplement FAA-CT-8080-2 8080 figures legends look up lookup akts airman knowledge test provided booklet reference memorize vs which figure", s: "Which study topics you can look up in the test supplement (figures/legends) vs. must memorize." },
     { t: "Supplement: figures for performance, weather & charts", p: "supplement.html#performance", topic: "Supplement", k: "density altitude figure 8 weight balance 32 crosswind 36 metar 12 taf 15 winds aloft 17 sectional legend 1 VOR 28 wind triangle 68 load factor 2 attitude indicator 7 airport signs markings 64 65 VASI 47", s: "Figure numbers for density altitude, W&B, METAR/TAF, sectional charts, VOR and more." },
+    { t: "Supplement: Appendix 1 legends (chart & airport keys)", p: "supplement.html#legends", topic: "Supplement", k: "appendix 1 legend 1 sectional chart legend 2 19 chart supplement directory legend 9 pilot control airport lighting clicks 7 5 3 magnetic variation isogonic navaid symbols airspace colors towered magenta CTAF UNICOM ATIS LAHSO declared distance", s: "What each supplement legend keys: sectional symbols, airport data, pilot-controlled lighting & PAPI/VASI (Legend 9), magnetic variation (Legend 1)." },
   ],
 
   /* ---- Flashcards ---- */
@@ -311,5 +312,7 @@ window.PPL_DATA = {
     { topic: "Supplement", q: "Which figures decode a METAR and a TAF?", a: "Figure 12 (METAR) and Figure 15 (TAF)." },
     { topic: "Supplement", q: "Where do you read load factor for a bank angle?", a: "Figure 2 — Load Factor Chart (60° bank ≈ 2 G)." },
     { topic: "Supplement", q: "What do you use for sectional chart / airspace questions?", a: "Legend 1 (Sectional Aeronautical Chart) plus the Sectional Chart Excerpt figures." },
+    { topic: "Supplement", q: "Where do you look up the pilot-controlled lighting clicks?", a: "Legend 9 (Chart Supplement directory legend): 7/5/3 mic clicks = high/medium/low intensity." },
+    { topic: "Supplement", q: "Where can you find the magnetic variation for a location?", a: "Read the isogonic line off the sectional chart (Legend 1) — no need to memorize it." },
   ],
 };

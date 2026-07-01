@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Testing Supplement — PPL Study Guide</title>
     <meta name="description" content="A lookup cheatsheet mapping PPL study topics to the figures and legends in the FAA Airman Knowledge Testing Supplement (FAA-CT-8080-2H), so you can look them up on test day instead of memorizing — plus what you still must memorize." />
-    <link rel="stylesheet" href="css/style.css?v=20260630g" />
+    <link rel="stylesheet" href="css/style.css?v=20260630h" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
     <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
   </head>
@@ -59,7 +59,8 @@
               <thead><tr><th>On your site</th><th>Look up</th><th>Quick note</th></tr></thead>
               <tbody>
                 <tr><td><a href="airports.html#taxiing">Taxi control positions</a></td><td><span class="k-blue">Figure 9</span></td><td>Aileron/elevator by wind quadrant (climb into / dive away).</td></tr>
-                <tr><td><a href="airports.html#glidepath">PAPI / VASI</a></td><td><span class="k-blue">Figure 47</span></td><td>Red-over-white glidepath combinations.</td></tr>
+                <tr><td><a href="airports.html#glidepath">PAPI / VASI</a></td><td><span class="k-blue">Figure 47</span> · <span class="k-green">Legend 9</span></td><td>Red-over-white combos (Fig 47); PAPI/VASI type codes on Legend 9.</td></tr>
+                <tr><td><a href="airports.html#pilot-lighting">Pilot-controlled lighting</a></td><td><span class="k-green">Legend 9</span></td><td>Mic clicks <strong>7 / 5 / 3</strong> → high / med / low. (The "on ~15 min" is an AIM fact, not shown.)</td></tr>
                 <tr><td><a href="airports.html#runways">Runway markings</a></td><td><span class="k-blue">Figure 64</span></td><td>Displaced threshold, blast pad, etc.</td></tr>
                 <tr><td><a href="airports.html#runways">Airport signs</a></td><td><span class="k-blue">Figure 65</span></td><td>Red = mandatory, yellow = direction/info.</td></tr>
                 <tr><td><a href="airports.html#pattern">Wind / landing indicator</a></td><td><span class="k-blue">Figure 50</span></td><td>Windsock &amp; segmented circle.</td></tr>
@@ -118,10 +119,31 @@
                 <tr><td><a href="atc.html#non-towered">Airport data</a> (freqs, CTAF/UNICOM)</td><td><span class="k-green">Legends 2–19</span> + <span class="k-blue">Figs 31, 52, 63, 77, 79, 81</span></td><td>Chart Supplement (old A/FD).</td></tr>
                 <tr><td><a href="navigation.html#vor">VOR radials / CDI</a></td><td><span class="k-blue">Figure 28</span></td><td>TO/FROM and radial intercepts.</td></tr>
                 <tr><td><a href="navigation-planning.html#speed-distance-time">Wind triangle</a></td><td><span class="k-blue">Figure 68</span></td><td>Wind correction &amp; groundspeed.</td></tr>
+                <tr><td><a href="navigation-planning.html#variation">Magnetic variation</a></td><td><span class="k-green">Legend 1</span></td><td>Read the local value off the isogonic line ("east is least" to apply it).</td></tr>
                 <tr><td>Zulu time conversion</td><td><span class="k-blue">Figure 27</span></td><td>Local ↔ UTC table.</td></tr>
                 <tr><td>VFR flight plan form</td><td><span class="k-blue">Figure 51</span></td><td>Field-by-field.</td></tr>
               </tbody>
             </table>
+          </div>
+        </section>
+
+        <!-- LEGENDS (APPENDIX 1) -->
+        <section class="section" id="legends">
+          <h2>Legends (Appendix 1) — the reference keys</h2>
+          <p>The two legends are <strong>keys you flip to</strong> and read directly (the topic tables above tell you <em>which</em> one). Colors match: <span class="k-green">legends</span> vs. <span class="k-blue">figures</span>.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Legend</th><th>What it keys</th><th>Use it for</th></tr></thead>
+              <tbody>
+                <tr><td><span class="k-green">Legend 1</span> — Sectional chart</td><td>Airspace classes &amp; special-use (with colors); airport symbols (<strong>blue = towered, magenta = non-towered</strong>); NAVAID symbols; the <strong>isogonic line</strong> = magnetic variation; obstruction heights.</td><td>Airspace, Navigation, Nav&nbsp;Planning</td></tr>
+                <tr><td><span class="k-green">Legends 2–19</span> — Chart Supplement</td><td>How to read an airport listing: CTAF, UNICOM, ATIS, tower/ground/approach freqs, AWOS/ASOS, fuel, runway data, airspace class, NAVAID freqs.</td><td>ATC comms, Airports, Navigation</td></tr>
+                <tr><td><span class="k-green">Legend 9</span> — Directory legend</td><td><strong>Pilot control of airport lighting (7/5/3 clicks)</strong>; PAPI/VASI type codes; LAHSO &amp; runway declared distances (TORA/TODA/ASDA/LDA).</td><td>Airports</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout callout--note">
+            <div class="callout__label">Standing conventions (noted on the legends)</div>
+            <p class="mb-0">On charts &amp; the Chart Supplement: bearings/radials are <strong>magnetic</strong>, times are <strong>UTC (Zulu)</strong>, and elevations are <strong>MSL</strong>.</p>
           </div>
         </section>
 
@@ -153,8 +175,8 @@
       </div>
     </main>
 
-    <script src="js/data.js?v=20260630g"></script>
-    <script src="js/search.js?v=20260630g"></script>
-    <script src="js/main.js?v=20260630g"></script>
+    <script src="js/data.js?v=20260630h"></script>
+    <script src="js/search.js?v=20260630h"></script>
+    <script src="js/main.js?v=20260630h"></script>
   </body>
 </html>

@@ -106,6 +106,12 @@
       desc: "ADM, diversion, emergencies & more",
       nav: true,
     },
+    {
+      file: "supplement.html",
+      label: "Testing Supplement",
+      desc: "What you can look up vs. memorize",
+      nav: true,
+    },
     { file: "flashcards.html", label: "Flashcards", nav: false },
   ];
 

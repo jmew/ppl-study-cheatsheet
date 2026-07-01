@@ -113,6 +113,9 @@ window.PPL_DATA = {
     { t: "ACS: Diversion & lost procedures", p: "acs.html#diversion-lost", topic: "ACS", k: "diversion alternate divert lost procedures five c climb communicate confess comply conserve 7700", s: "Diversion technique; lost = the 5 C's." },
     { t: "ACS: Spin, unusual-attitude & IMC recovery", p: "acs.html#recovery", topic: "ACS", k: "spin recovery PARE power ailerons rudder elevator unusual attitude nose high nose low inadvertent IMC IIMC UIMC 180 degree turn spatial disorientation", s: "PARE spin recovery; unusual-attitude & IIMC recovery." },
     { t: "ACS: Emergency procedures", p: "acs.html#emergencies", topic: "ACS", k: "emergency descent in-flight fire engine electrical cabin vacuum gyro failure partial panel attitude heading indicator ballistic parachute CAPS autoland", s: "Emergency descent; in-flight fire; vacuum/gyro failure; CAPS/autoland." },
+    // Testing Supplement
+    { t: "Testing supplement cheatsheet (what to look up)", p: "supplement.html#about", topic: "Supplement", k: "testing supplement FAA-CT-8080-2 8080 figures legends look up lookup akts airman knowledge test provided booklet reference memorize vs which figure", s: "Which study topics you can look up in the test supplement (figures/legends) vs. must memorize." },
+    { t: "Supplement: figures for performance, weather & charts", p: "supplement.html#performance", topic: "Supplement", k: "density altitude figure 8 weight balance 32 crosswind 36 metar 12 taf 15 winds aloft 17 sectional legend 1 VOR 28 wind triangle 68 load factor 2 attitude indicator 7 airport signs markings 64 65 VASI 47", s: "Figure numbers for density altitude, W&B, METAR/TAF, sectional charts, VOR and more." },
   ],
 
   /* ---- Flashcards ---- */
@@ -303,5 +306,10 @@ window.PPL_DATA = {
     { topic: "ACS", q: "Vacuum/gyro failure — which instruments are lost?", a: "Attitude indicator and heading indicator; turn coordinator, airspeed, altimeter, VSI and compass keep working (partial panel)." },
     { topic: "ACS", q: "A VFR flight plan — what must you do with it?", a: "Activate it with Flight Service after departure and close it on arrival; SAR begins 30 min after your ETA if you don't close it." },
     { topic: "ACS", q: "Runway Status Lights (RWSL)?", a: "Automatic red lights (REL/THL) independent of ATC — never enter or depart on red; a red light overrides an ATC clearance." },
+    // Testing Supplement
+    { topic: "Supplement", q: "Where do you look up density altitude on the test?", a: "Figure 8 — Density Altitude Chart (in the Airman Knowledge Testing Supplement)." },
+    { topic: "Supplement", q: "Which figures decode a METAR and a TAF?", a: "Figure 12 (METAR) and Figure 15 (TAF)." },
+    { topic: "Supplement", q: "Where do you read load factor for a bank angle?", a: "Figure 2 — Load Factor Chart (60° bank ≈ 2 G)." },
+    { topic: "Supplement", q: "What do you use for sectional chart / airspace questions?", a: "Legend 1 (Sectional Aeronautical Chart) plus the Sectional Chart Excerpt figures." },
   ],
 };

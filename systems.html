@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Systems &amp; Instruments — PPL Study Guide</title>
     <meta name="description" content="PPL aircraft systems & instruments: propeller and engine, carb heat, magnetic compass errors (ANDS/UNOS), the pitot-static system, and altitude types." />
-    <link rel="stylesheet" href="css/style.css?v=20260630s" />
+    <link rel="stylesheet" href="css/style.css?v=20260630t" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
     <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
   </head>
@@ -131,7 +131,7 @@
         <!-- AIRSPEEDS -->
         <section class="section" id="airspeeds">
           <h2>Airspeeds: IAS → CAS → TAS → GS</h2>
-          <p>Four speeds — each is the one before it with <strong>one more correction</strong> applied. Mnemonic <span class="adage">ICE‑T</span>: <strong>I</strong>ndicated → <strong>C</strong>alibrated → (Equivalent) → <strong>T</strong>rue — then apply the wind to get groundspeed.</p>
+          <p>Four speeds — each is the one before it with <strong>one more correction</strong> applied.</p>
 
           <figure class="diagram">
             <svg viewBox="0 0 520 372" role="img" aria-labelledby="spd-t" style="max-width:470px;margin-inline:auto">
@@ -173,7 +173,7 @@
             <div><dt><span class="k-blue">IAS</span> — Indicated</dt><dd>What the airspeed indicator reads straight off ram air. <strong>This is what you fly</strong> — V‑speeds and stall margins are all in indicated airspeed.</dd></div>
             <div><dt><span class="k-green">CAS</span> — Calibrated</dt><dd>IAS corrected for <strong>instrument &amp; position (installation) error</strong> — largest at <strong>low speed / high angle of attack</strong> (e.g., flaps down). Read it from the POH airspeed‑calibration table; near cruise CAS ≈ IAS.</dd></div>
             <div><dt><span class="k-amber">TAS</span> — True</dt><dd>CAS corrected for <strong>air density (altitude &amp; temperature)</strong> — your real speed through the air mass. Used for performance &amp; flight planning; found on the E6‑B from pressure altitude + OAT.</dd></div>
-            <div><dt><span class="k-purple">GS</span> — Ground speed</dt><dd>TAS corrected for <strong>wind</strong> — your speed over the ground. Drives <strong>time en route, fuel burn, and ETA</strong>.</dd></div>
+            <div><dt><span class="k-purple">GS</span> — Ground speed</dt><dd>TAS corrected for <strong>wind</strong> — your speed over the ground. Drives <strong>time en route, fuel burn, and ETA</strong>; found on the <strong>wind side of the E6‑B</strong>.</dd></div>
           </div>
 
           <div class="callout callout--note">
@@ -195,10 +195,6 @@
         <section class="section" id="attitude-indicator">
           <h2>Attitude indicator</h2>
           <p>The <span class="k-blue">attitude indicator</span> is <strong>gyroscopic</strong>: the gyro holds the <strong>horizon bar fixed in space</strong>, and the instrument case — with the little reference airplane — moves <em>around</em> it as the aircraft pitches and rolls.</p>
-          <div class="callout callout--note">
-            <div class="callout__label">Adjusting it</div>
-            <p class="mb-0">Only the <strong>miniature airplane</strong> is adjustable, so you set <strong>it</strong> to the horizon bar — the gyro-locked horizon won't come to it. In level cruise, align the little airplane with the horizon line.</p>
-          </div>
           <div class="callout callout--tip">
             <div class="callout__label">Reading it</div>
             <p class="mb-0">Always judge pitch and bank <strong>only from the miniature airplane's position relative to the horizon line</strong> — not from any other marking. From your seat the little airplane stays put while the <strong>horizon rotates around it</strong>.</p>
@@ -234,8 +230,8 @@
       </div>
     </main>
 
-    <script src="js/data.js?v=20260630s"></script>
-    <script src="js/search.js?v=20260630s"></script>
-    <script src="js/main.js?v=20260630s"></script>
+    <script src="js/data.js?v=20260630t"></script>
+    <script src="js/search.js?v=20260630t"></script>
+    <script src="js/main.js?v=20260630t"></script>
   </body>
 </html>

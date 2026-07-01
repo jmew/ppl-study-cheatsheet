@@ -43,7 +43,6 @@ window.PPL_DATA = {
     { t: "Pilot-controlled lighting", p: "airports.html#pilot-lighting", topic: "Airports", k: "pilot controlled lighting runway lights mic clicks key microphone 7 5 3 brightness intensity 15 minutes CTAF night", s: "Key the mic — 7/5/3 clicks for high/medium/low; on for 15 minutes." },
     { t: "Wake turbulence", p: "airports.html#wake-turbulence", topic: "Airports", k: "wake turbulence wingtip vortices heavy clean slow rotate touchdown 2 minutes light quartering tailwind", s: "Vortices worst heavy/clean/slow; land beyond, rotate before, wait 2 minutes." },
     // ATC
-    { t: "Controller flow", p: "atc.html#flow", topic: "ATC", k: "ground tower departure center approach handoff magnetic winds headings", s: "Ground to Tower to Departure to Center to Approach to Ground." },
     { t: "Departure & arrival sequence", p: "atc.html#sequences", topic: "ATC", k: "ATIS ground control tower approach taxi clearance", s: "ATIS first, then Ground, then Tower." },
     { t: "Non-towered communications", p: "atc.html#non-towered", topic: "ATC", k: "non-towered nontowered CTAF common traffic advisory frequency self-announce UNICOM MULTICOM 122.9 airport advisory winds active runway request", s: "Self-announce on CTAF; UNICOM/FSS give an airport advisory; MULTICOM is always 122.9." },
     { t: "Transponder & squawk codes", p: "atc.html#transponder", topic: "ATC", k: "squawk 1200 7500 7600 7700 mode c ADS-B VFR 121.5 122.2", s: "1200 VFR, 7500 hijack, 7600 lost comms, 7700 emergency." },

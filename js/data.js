@@ -103,7 +103,7 @@ window.PPL_DATA = {
     { t: "ACS: Aeronautical decision-making (ADM)", p: "acs.html#adm", topic: "ACS", k: "ADM hazardous attitudes antidotes anti-authority impulsivity invulnerability macho resignation PAVE DECIDE risk management situational awareness bias", s: "5 hazardous attitudes + antidotes; PAVE; DECIDE." },
     { t: "ACS: Runway status lights (RWSL)", p: "acs.html#lighting", topic: "ACS", k: "runway status lights RWSL REL runway entrance lights THL takeoff hold lights red automatic", s: "RWSL: automatic red REL/THL; a red light overrides a clearance." },
     { t: "ACS: Diversion & lost procedures", p: "acs.html#diversion-lost", topic: "ACS", k: "diversion alternate divert lost procedures five c climb communicate confess comply conserve 7700", s: "Diversion technique; lost = the 5 C's." },
-    { t: "ACS: Spin, unusual-attitude & IMC recovery", p: "acs.html#recovery", topic: "ACS", k: "spin recovery PARE power ailerons rudder elevator unusual attitude nose high nose low inadvertent IMC IIMC UIMC 180 degree turn spatial disorientation", s: "PARE spin recovery; unusual-attitude & IIMC recovery." },
+    { t: "ACS: Spin recovery", p: "acs.html#recovery", topic: "ACS", k: "spin recovery PARE power ailerons rudder elevator", s: "PARE spin recovery." },
     // Testing Supplement
     { t: "Testing supplement cheatsheet (what to look up)", p: "supplement.html", topic: "Supplement", k: "testing supplement FAA-CT-8080-2 8080 figures legends look up lookup akts airman knowledge test provided booklet reference memorize vs which figure", s: "Which study topics you can look up in the test supplement (figures/legends) vs. must memorize." },
     { t: "Supplement: figures for performance, weather & charts", p: "supplement.html#performance", topic: "Supplement", k: "density altitude figure 8 weight balance 32 crosswind 36 metar 12 taf 15 winds aloft 17 sectional legend 1 VOR 28 wind triangle 68 attitude indicator 7 airport signs markings 64 65 VASI 47", s: "Figure numbers for density altitude, W&B, METAR/TAF, sectional charts, VOR and more." },
@@ -288,7 +288,6 @@ window.PPL_DATA = {
     { topic: "ACS", q: "Airworthiness Directive vs SAIB?", a: "AD = mandatory; Special Airworthiness Information Bulletin = advisory only." },
     { topic: "ACS", q: "Spin recovery — PARE?", a: "Power idle, Ailerons neutral, Rudder full opposite the spin, Elevator forward to break the stall." },
     { topic: "ACS", q: "Lost procedure — the 5 C's?", a: "Climb, Communicate, Confess, Comply, Conserve (squawk 7700 if it's an emergency)." },
-    { topic: "ACS", q: "Inadvertent IMC (VFR into clouds) — what do you do?", a: "Trust the instruments and make a 180° level turn back to VMC; climb if terrain requires; get help (ATC / 121.5)." },
     { topic: "ACS", q: "Vacuum/gyro failure — which instruments are lost?", a: "Attitude indicator and heading indicator; turn coordinator, airspeed, altimeter, VSI and compass keep working (partial panel)." },
     { topic: "ACS", q: "A VFR flight plan — what must you do with it?", a: "Activate it with Flight Service after departure and close it on arrival; SAR begins 30 min after your ETA if you don't close it." },
     { topic: "ACS", q: "Runway Status Lights (RWSL)?", a: "Automatic red lights (REL/THL) independent of ATC — never enter or depart on red; a red light overrides an ATC clearance." },

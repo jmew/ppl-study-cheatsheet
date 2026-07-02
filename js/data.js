@@ -84,7 +84,7 @@ window.PPL_DATA = {
     { t: "Magnetic variation", p: "navigation-planning.html#variation", topic: "Navigation Planning", k: "variation isogonic agonic east is least west is best add subtract true magnetic heading", s: "East is least (subtract), west is best (add) — true to magnetic." },
     { t: "Speed, distance & time", p: "navigation-planning.html#speed-distance-time", topic: "Navigation Planning", k: "speed distance time triangle dead reckoning groundspeed knot nautical mile per hour E6-B formula", s: "D = S × T; 1 knot = 1 NM per hour.", cap: "Distance on top; speed and time on the bottom. Side-by-side = multiply; one over the other = divide." },
     // Human Factors
-    { t: "Oxygen & hypoxia", p: "human-factors.html#hypoxia", topic: "Human Factors", k: "hypoxia 8000 oxygen 12500 14000 15000 hypoxic hypemic stagnant histotoxic water time of useful consciousness TUC", s: "Hypoxia above ~8,000 ft; supplemental O2 rules; time of useful consciousness." },
+    { t: "Oxygen & hypoxia", p: "human-factors.html#hypoxia", topic: "Human Factors", k: "hypoxia 8000 oxygen 12500 14000 15000 hypoxic hypemic stagnant histotoxic water", s: "Hypoxia above ~8,000 ft; supplemental O2 rules." },
     { t: "Carbon monoxide", p: "human-factors.html#carbon-monoxide", topic: "Human Factors", k: "carbon monoxide CO loss of muscular power heater exhaust", s: "CO causes loss of muscular power; from the cabin heater." },
     { t: "Night vision", p: "human-factors.html#night-vision", topic: "Human Factors", k: "night vision off-center peripheral scan dark adapt rods", s: "Use off-center viewing at night; the center of vision is weak." },
     { t: "Illusions & disorientation", p: "human-factors.html#illusions", topic: "Human Factors", k: "haze illusion farther IMC spatial disorientation acceleration climb runway slope leans coriolis vestibular head movement", s: "Haze = farther; accel/decel feel like climb/descent; the leans & Coriolis." },
@@ -282,7 +282,6 @@ window.PPL_DATA = {
     { topic: "Human Factors", q: "In IMC, acceleration and deceleration can feel like?", a: "A climb and a descent — trust the instruments." },
     { topic: "Human Factors", q: "Supplemental oxygen — 12,500 / 14,000 / 15,000 ft rules?", a: "Crew O₂ above 12,500 MSL after 30 min; crew at all times above 14,000; every occupant must be provided O₂ above 15,000." },
     { topic: "Human Factors", q: "What does IMSAFE stand for?", a: "Illness, Medication, Stress, Alcohol, Fatigue, Emotion/Eating." },
-    { topic: "Human Factors", q: "Time of useful consciousness at 18,000 vs 20,000 ft?", a: "~20–30 minutes at 18,000 ft; only 5–12 minutes at 20,000 ft." },
     { topic: "Human Factors", q: "Scuba diving: how long before flying?", a: "12 hours (flight up to 8,000 ft, no-decompression dive); 24 hours (flight above 8,000 ft, or after a dive needing a controlled ascent)." },
     { topic: "Human Factors", q: "Hyperventilation — cause and fix?", a: "Breathing too fast blows off CO₂; symptoms mimic hypoxia. Fix by slowing the breathing rate; ensure oxygen first if at altitude." },
     { topic: "Human Factors", q: "The leans vs the Coriolis illusion?", a: "The leans = false sensation of banking (most common). Coriolis = abrupt head movement in a turn causes severe tumbling — avoid sudden head movements." },

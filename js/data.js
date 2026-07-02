@@ -80,6 +80,7 @@ window.PPL_DATA = {
     { t: "GPS & RAIM", p: "navigation.html#gps", topic: "Navigation", k: "GPS limitation heading track RAIM integrity accuracy", s: "GPS doesn't know heading; RAIM checks accuracy." },
     { t: "NAVAID symbols", p: "navigation.html#navaids", topic: "Navigation", k: "VOR VORTAC VOR DME hexagon symbol true virgins make dull companions variation deviation", s: "Hexagon = VOR; +tabs = VORTAC; in a square = VOR/DME." },
     // Navigation Planning
+    { t: "Course vs. heading", p: "navigation-planning.html#course-heading", topic: "Navigation Planning", k: "true course TC true heading TH magnetic heading MH wind correction angle WCA variation over the ground nose points chart plot", s: "TC (over the ground) → +wind → TH → +variation → MH." },
     { t: "Magnetic variation", p: "navigation-planning.html#variation", topic: "Navigation Planning", k: "variation isogonic agonic east is least west is best add subtract true magnetic heading", s: "East is least (subtract), west is best (add) — true to magnetic." },
     { t: "Speed, distance & time", p: "navigation-planning.html#speed-distance-time", topic: "Navigation Planning", k: "speed distance time triangle dead reckoning groundspeed knot nautical mile per hour E6-B formula", s: "D = S × T; 1 knot = 1 NM per hour.", cap: "Distance on top; speed and time on the bottom. Side-by-side = multiply; one over the other = divide." },
     // Human Factors
@@ -259,7 +260,6 @@ window.PPL_DATA = {
     { topic: "Weather Reports", q: "What does 'convective' mean in a forecast?", a: "Thunderstorms." },
     { topic: "Weather Reports", q: "When is an outlook briefing used?", a: "When departure is 6 or more hours away." },
     { topic: "Weather Reports", q: "What do you tell the briefer when requesting a weather briefing?", a: "That you're a pilot, whether it's VFR or IFR, and your aircraft ID (N-number) — plus route, altitude, and timing." },
-    { topic: "Weather Reports", q: "Flight categories — VFR, MVFR, IFR, LIFR?", a: "VFR: ceiling >3,000 ft and vis >5 SM. MVFR: 1,000–3,000 ft and/or 3–5 SM. IFR: 500–<1,000 ft and/or 1–<3 SM. LIFR: <500 ft and/or <1 SM." },
     { topic: "Weather Reports", q: "What is a significant weather prog chart for?", a: "Forecasting hazards (IFR/MVFR areas, turbulence, freezing levels) by altitude block — to decide which areas and altitudes to avoid." },
     // Navigation
     { topic: "Navigation", q: "What is a VOR radial?", a: "A magnetic course FROM the station." },

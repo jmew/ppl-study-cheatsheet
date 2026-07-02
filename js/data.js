@@ -89,8 +89,6 @@ window.PPL_DATA = {
     { t: "Night vision", p: "human-factors.html#night-vision", topic: "Human Factors", k: "night vision off-center peripheral scan dark adapt rods", s: "Use off-center viewing at night; the center of vision is weak." },
     { t: "Illusions & disorientation", p: "human-factors.html#illusions", topic: "Human Factors", k: "haze illusion farther IMC spatial disorientation acceleration climb runway slope leans coriolis vestibular head movement", s: "Haze = farther; accel/decel feel like climb/descent; the leans & Coriolis." },
     { t: "Fitness to fly (IMSAFE)", p: "human-factors.html#fitness", topic: "Human Factors", k: "IMSAFE illness medication stress alcohol fatigue emotion eating checklist", s: "IMSAFE personal go/no-go checklist." },
-    { t: "Hyperventilation", p: "human-factors.html#hyperventilation", topic: "Human Factors", k: "hyperventilation carbon dioxide CO2 breathing tingling mimics hypoxia slow breathing paper bag", s: "Blows off CO2; mimics hypoxia; slow your breathing." },
-    { t: "Scuba diving before flying", p: "human-factors.html#scuba", topic: "Human Factors", k: "scuba diving decompression sickness nitrogen wait 12 24 hours 8000 ft altitude", s: "Wait 12 hr (to 8,000 ft) or 24 hr (above 8,000 ft / decompression dive)." },
     // FAR/AIM
     { t: "FAR/AIM: what to read", p: "far-aim.html#roadmap", topic: "FAR/AIM", k: "far aim part 1 43 61 91 830 chapter roadmap what to read sections study", s: "Roadmap of the key FAR parts and AIM chapters — and where each is taught." },
     { t: "Definitions: the three 'nights'", p: "far-aim.html#definitions", topic: "FAR/AIM", k: "night definition civil twilight calendar month logging position lights sunset sunrise part 1", s: "Logging vs. passenger-currency vs. position-lights night; calendar month." },
@@ -282,8 +280,6 @@ window.PPL_DATA = {
     { topic: "Human Factors", q: "In IMC, acceleration and deceleration can feel like?", a: "A climb and a descent — trust the instruments." },
     { topic: "Human Factors", q: "Supplemental oxygen — 12,500 / 14,000 / 15,000 ft rules?", a: "Crew O₂ above 12,500 MSL after 30 min; crew at all times above 14,000; every occupant must be provided O₂ above 15,000." },
     { topic: "Human Factors", q: "What does IMSAFE stand for?", a: "Illness, Medication, Stress, Alcohol, Fatigue, Emotion/Eating." },
-    { topic: "Human Factors", q: "Scuba diving: how long before flying?", a: "12 hours (flight up to 8,000 ft, no-decompression dive); 24 hours (flight above 8,000 ft, or after a dive needing a controlled ascent)." },
-    { topic: "Human Factors", q: "Hyperventilation — cause and fix?", a: "Breathing too fast blows off CO₂; symptoms mimic hypoxia. Fix by slowing the breathing rate; ensure oxygen first if at altitude." },
     { topic: "Human Factors", q: "The leans vs the Coriolis illusion?", a: "The leans = false sensation of banking (most common). Coriolis = abrupt head movement in a turn causes severe tumbling — avoid sudden head movements." },
     // ACS
     { topic: "ACS", q: "The 5 hazardous attitudes?", a: "Anti-authority, Impulsivity, Invulnerability, Macho, Resignation." },

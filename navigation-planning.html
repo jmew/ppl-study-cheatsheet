@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Navigation Planning — PPL Study Guide</title>
     <meta name="description" content="PPL navigation planning (E6-B): magnetic variation with 'east is least, west is best', the speed-distance-time triangle, and the knot defined as 1 NM per hour." />
-    <link rel="stylesheet" href="css/style.css?v=20260702j" />
+    <link rel="stylesheet" href="css/style.css?v=20260702k" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
     <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
   </head>
@@ -33,6 +33,22 @@
               </tbody>
             </table>
           </div>
+        </section>
+
+        <!-- WIND TRIANGLE -->
+        <section class="section" id="wind-triangle">
+          <h2>The wind triangle</h2>
+          <p>Add the three vectors to solve a leg: the <span class="k-blue">air vector</span> (where the nose points) plus the <span class="k-red">wind</span> gives the <span class="k-green">ground vector</span> (your actual track):</p>
+          <figure class="diagram">
+            <img src="images/wind-triangle.jpg" loading="lazy" width="1600" height="868"
+                 alt="The VFR wind triangle: a red wind vector (direction and speed) from C to A, a blue air vector (true heading and true airspeed) from A to B, and a green ground vector (true course and groundspeed, the resultant) from C to B; the angle between the air and ground vectors is the wind correction angle." />
+          </figure>
+          <ul class="mb-0">
+            <li><span class="k-red">Wind vector</span> — wind <strong>direction &amp; speed</strong>.</li>
+            <li><span class="k-blue">Air vector</span> — <strong>true heading &amp; true airspeed</strong> (through the air mass).</li>
+            <li><span class="k-green">Ground vector</span> — <strong>true course &amp; groundspeed</strong> (the resultant path over the ground).</li>
+            <li><span class="k-amber">Wind correction angle (WCA)</span> — the angle between the air and ground vectors; crab into the wind by this much to hold your course.</li>
+          </ul>
         </section>
 
         <!-- VARIATION -->
@@ -144,8 +160,8 @@
       </div>
     </main>
 
-    <script src="js/data.js?v=20260702j"></script>
-    <script src="js/search.js?v=20260702j"></script>
-    <script src="js/main.js?v=20260702j"></script>
+    <script src="js/data.js?v=20260702k"></script>
+    <script src="js/search.js?v=20260702k"></script>
+    <script src="js/main.js?v=20260702k"></script>
   </body>
 </html>

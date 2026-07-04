@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Weather Reports — PPL Study Guide</title>
     <meta name="description" content="PPL weather reports: METAR & TAF decoding, sky cover (CLR/FEW/SCT/BKN/OVC), weather codes, winds-aloft decoding, AIRMET/SIGMET and briefings." />
-    <link rel="stylesheet" href="css/style.css?v=20260702l" />
+    <link rel="stylesheet" href="css/style.css?v=20260702m" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
     <script>(function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();</script>
   </head>
@@ -187,18 +187,29 @@
             <div class="callout__label">When you call, give…</div>
             <p class="mb-0">Identify yourself up front: <strong>that you're a pilot</strong>, <strong>VFR or IFR</strong>, and your <strong>aircraft ID</strong> (N-number) — then your route, altitude, and timing.</p>
           </div>
+        </section>
 
-          <h3>Prognostic charts</h3>
-          <div class="callout callout--note">
-            <div class="callout__label">Significant weather prog charts</div>
-            <p class="mb-0">A <span class="k-blue">significant weather prognostic ("prog") chart</span> forecasts hazards — IFR/MVFR areas, turbulence, and freezing levels — split into <strong>altitude blocks (panels)</strong>, so you can see <strong>which areas and altitudes to avoid</strong>. (The interactive <a href="acs.html#weather">GFA</a> is the modern replacement.)</p>
+        <!-- WEATHER CHARTS -->
+        <section class="section" id="weather-charts">
+          <h2>Weather charts at a glance</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Chart</th><th>Type</th><th>Shows</th><th>Watch for</th></tr></thead>
+              <tbody>
+                <tr><td><span class="k-blue">Surface Analysis</span></td><td><span class="k-green">Observed</span></td><td>Highs/lows, fronts, isobars, temps, winds</td><td>Tightly-packed <strong>isobars</strong> = steep pressure gradient = <strong>strong winds</strong></td></tr>
+                <tr><td><span class="k-blue">Weather Depiction</span></td><td><span class="k-green">Observed</span></td><td>Big-picture VFR / MVFR / IFR areas (a map of METARs)</td><td><strong>Shaded</strong> = IFR; contoured but <strong>unshaded</strong> = MVFR</td></tr>
+                <tr><td><span class="k-blue">Radar Summary</span></td><td><span class="k-green">Observed</span></td><td>Precipitation type, intensity, movement, echo tops</td><td><strong>Precipitation only</strong> — not clouds or fog</td></tr>
+                <tr><td><span class="k-blue">Sig. Weather Prog ("prog")</span></td><td><span class="k-amber">Forecast</span></td><td>Forecast IFR/MVFR/VFR, turbulence, freezing levels (4 panels)</td><td>Low-level = surface to <span class="k-num">24,000 ft</span>; check the "valid at" time</td></tr>
+                <tr><td><span class="k-blue">GFA</span></td><td><span class="k-amber">Forecast</span></td><td>Interactive route wx: clouds, flight category, precip, icing, turbulence</td><td>Replaced the text <strong>Area Forecast (FA)</strong>; slider runs <span class="k-num">&minus;14 h</span> to <span class="k-num">+15 h</span></td></tr>
+              </tbody>
+            </table>
           </div>
         </section>
       </div>
     </main>
 
-    <script src="js/data.js?v=20260702l"></script>
-    <script src="js/search.js?v=20260702l"></script>
-    <script src="js/main.js?v=20260702l"></script>
+    <script src="js/data.js?v=20260702m"></script>
+    <script src="js/search.js?v=20260702m"></script>
+    <script src="js/main.js?v=20260702m"></script>
   </body>
 </html>

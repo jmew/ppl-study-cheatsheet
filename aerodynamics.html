@@ -8,7 +8,7 @@
       name="description"
       content="PPL aerodynamics: the four forces, parasite vs induced drag, left-turning tendencies, axes & controls, stability, stalls, spins, load factor and ground effect."
     />
-    <link rel="stylesheet" href="css/style.css?v=20260702r" />
+    <link rel="stylesheet" href="css/style.css?v=20260702s" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f6feb'%3E%3Cpath d='M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L11 19v-5.5z'/%3E%3C/svg%3E" />
     <script>
       (function () { try { var t = localStorage.getItem("ppl-theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.setAttribute("data-theme", t); } catch (e) {} })();
@@ -191,7 +191,11 @@
           </ul>
 
           <h3>What changes stall speed</h3>
-          <p>A wing always stalls at its <strong>critical angle of attack</strong>, which stays constant. What shifts is the <strong>indicated speed</strong> at which you reach it:</p>
+          <p>A wing always stalls at its <strong>critical angle of attack</strong>, which stays constant. What shifts is the <strong>indicated speed</strong> at which you reach it.</p>
+          <div class="callout callout--tip">
+            <div class="callout__label">The key idea</div>
+            <p class="mb-0">Indicated stall speed tracks the <strong>lift the wing must produce</strong>: the <strong>more lift required, the higher</strong> the stall speed (less lift → lower). That's why more <strong>weight</strong>, more <strong>load factor</strong>, or a <strong>forward CG</strong> (its tail-down force adds to the load the wing carries) all raise it.</p>
+          </div>
           <div class="table-wrap">
             <table>
               <thead><tr><th>Factor</th><th>Condition</th><th>Indicated stall speed<span style="display:block;text-transform:none;letter-spacing:0;font-weight:400;font-size:.9em;opacity:.85;margin-top:2px">(how hard the wing has to work)</span></th><th>Critical AoA</th><th>Why</th></tr></thead>
@@ -253,8 +257,8 @@
       </div>
     </main>
 
-    <script src="js/data.js?v=20260702r"></script>
-    <script src="js/search.js?v=20260702r"></script>
-    <script src="js/main.js?v=20260702r"></script>
+    <script src="js/data.js?v=20260702s"></script>
+    <script src="js/search.js?v=20260702s"></script>
+    <script src="js/main.js?v=20260702s"></script>
   </body>
 </html>
